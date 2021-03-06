@@ -27,10 +27,6 @@ jobs:
           dev: no
           php_version: 7.2
           version: 1
-      - name: Install curl, unzip, rsync and openssh-client
-        run: apt-get update && apt-get install -y curl openssh-client rsync unzip
-      - name: Install composer
-        run: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
       - name: Build site files
         run: ./vendor/bin/jigsaw build production
       - name: Rsync to server
