@@ -1,5 +1,5 @@
 ---
-extends: _layouts.main
+extends: _layouts.portfolio
 title: WatchGecko
 date: Clive Walkden
 section: content

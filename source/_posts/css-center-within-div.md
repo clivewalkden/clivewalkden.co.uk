@@ -1,5 +1,5 @@
 ---
-extends: _layouts.main
+extends: _layouts.post
 id: 59
 title: CSS center content within a div
 short_intro: Here's an old bit of code that I found to position something centrally inside an element.
@@ -14,6 +14,7 @@ section: content
 ---
 
 Here's an old bit of code that I found to position something centrally inside an element.
+
 ```css
 #idOfTheDiv {
     width: 400px; /* here you put the width that you need */

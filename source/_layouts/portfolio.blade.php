@@ -2,9 +2,13 @@
 
 @section('body')
     <div class="flex mb-8">
+        @if ($page->getPrevious())
         <a href="{{ $page->getPrevious()->getPath() }}" title="{{ $page->getPrevious()->title }}" class="flex-none text-sm self-center">Previous Project</a>
+        @endif
         <h2 class="flex-grow font-serif text-3xl font-normal text-center">{{ $page->title }}</h2>
+        @if ($page->getNext())
         <a href="{{ $page->getNext()->getPath() }}" title="{{ $page->getPrevious()->title }}" class="flex-none text-sm self-center">Next Project</a>
+        @endif
     </div>
     <div class="grid grid-cols-3 gap-2">
         <div class="col-span-2">

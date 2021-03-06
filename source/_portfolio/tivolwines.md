@@ -1,5 +1,5 @@
 ---
-extends: _layouts.main
+extends: _layouts.portfolio
 title: Tivoli Wines
 date: Clive Walkden
 section: content
