@@ -31,10 +31,10 @@ jobs:
         run: ./vendor/bin/jigsaw build production
       - name: Rsync to server
         uses: burnett01/rsync-deployments@4.1
-          with:
-            switches: -avzr --delete
-            path: public_html/
-            remote_path: /var/www/clivewalkden.co.uk/html/
-            remote_host: 35.202.238.191
-            remote_user: clivewalkden
-            remote_key: ${{ secrets.DEPLOY_KEY }}
+        with:
+          switches: -avzr --delete
+          path: public_html/
+          remote_path: /var/www/clivewalkden.co.uk/html/
+          remote_host: 35.202.238.191
+          remote_user: clivewalkden
+          remote_key: ${{ secrets.DEPLOY_KEY }}
