@@ -10,15 +10,13 @@
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
         <link href="//fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
     </head>
-    <body class="text-gray-900 font-default antialiased">
-        @include('_partials/dropdown')
-        {{-- Wrapper --}}
-        <div class="pt-16">
-            @include('_partials/header')
-            <div role="main" class="container">
-                @yield('body')
-            </div>
-        </div>
+    <body class="text-gray-900 font-default antialiased leading-normal tracking-normal">
+    @include('_partials/dropdown')
+    {{-- Wrapper --}}
+    @include('_partials/header')
+    <div role="main" class="container shadow-lg mx-auto bg-white mt-24 md:mt-18">
+        @yield('body')
+    </div>
     @include('_partials.up')
     @include('_partials.footer')
     </body>

@@ -18,16 +18,19 @@ module.exports = {
       gray: colors.warmGray,
       black: colors.black,
       white: colors.white,
+      yellow: colors.amber,
+      green: colors.emerald,
+      red: colors.red,
     },
     container: {
       center: true,
-      screens: {
-        sm: "100%",
-        md: "100%",
-        lg: "940px",
-        xl: "940px",
-        "2xl": "940px"
-      }
+      // screens: {
+      //   sm: "100%",
+      //   md: "100%",
+      //   lg: "940px",
+      //   xl: "940px",
+      //   "2xl": "940px"
+      // }
     },
     fontFamily: {
       'sans': [

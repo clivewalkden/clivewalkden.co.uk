@@ -7,8 +7,10 @@ url: https://www.toylander.com
 launched: 2017-03-24
 featured: false
 section: content
-technologies: [Ecommerce,jQuery,Responsive,Magento 2]
+technologies: [Ecommerce,Magento 2,Linux,Security]
 image_main: toylander-main.png
+intro: A Magento 2 build for a custom build electric car for children.
+seo: false
 ---
 
 <p class="mb-2">Toylander have been producing superior quality electric vehicle kits that children just love to drive since 1987.</p>
