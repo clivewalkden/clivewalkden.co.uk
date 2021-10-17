@@ -1,52 +1,69 @@
 @extends('_layouts.main')
 
 @section('body')
-    <h1>My Blog</h1>
-    <div class="mt-10 pt-12 pb-10 border-t border-solid border-gray-200 grid grid-cols-3 gap-2">
-        <div class="col-span-2">
-            {{-- Filter posts by category --}}
-            @php
-            $results = ($page->seo_link) ? $posts->where('category', $page->seo_link) : $posts;
-            @endphp
-            {{-- Output the blog posts --}}
-            @foreach ($results as $post)
-                <div class="pt-6 pr-10 pb-16 mb-4 relative text-gray-500">
-                    <a href="{{ $post->getPath() }}">
-                        <img alt="" title="" src="">
-                    </a>
-                    <h2 class="my-2 ml-40 text-xl">
-                        <a href="{{ $post->getPath() }}">{{ $post->title }}</a>
-                    </h2>
-                    <div class="float-left text-right border-r border-solid border-gray-100 pr-4 ml-2.5 text-xs italic font-serif">
-                        <p class="leading-5">
-                            <time datetime="{{ date(DATE_ATOM, $post->published) }}">{{ date('j. F Y', $post->published) }}</time>
-                            <br />
-                            in <a href="{{ $post->category }}" class="text-gray-400">{{ $post->category }}</a>
-                            <br />
-                            by {{ $post->author }}
-                        </p>
-                    </div>
-                    <div class="float-right text-xs">
-                        {{ $post->short_intro }}
-                    </div>
-                    <a href="{{ $post->getPath() }}" class="px-4 py-2 mt-5 ml-40 inline-block rounded bg-gray-800 text-white italic hover:bg-primary text-xs clear-both">Read more</a>
-                </div>
-            @endforeach
+
+    {{-- Filter posts by category --}}
+    @php
+        $results = ($page->seo_link) ? $posts->where('category', $page->seo_link) : $posts;
+    @endphp
+
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="flex flex-col lg:flex-row">
+            <div class="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
+                <h1 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                    My Blog Articles<br class="hidden md:block" />
+                    Things you may find useful
+                    <span class="inline-block text-yellow-400">or not</span>
+                </h1>
+            </div>
+            <div class="lg:w-1/2">
+                <p class="text-base text-gray-700">
+                    These articles below are a collection of things I've either found useful, felt were worth sharing or needed to get out of my head. Please don't judge to harshly, many of these weren't meant for others eyes.
+                </p>
+            </div>
         </div>
-        <aside>
-            <div>
-                @yield('content')
+        @include('_partials.hr')
+    </div>
+
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="grid gap-10 row-gap-8 lg:grid-cols-5">
+            <div class="flex flex-col space-y-8 lg:col-span-4">
+                @foreach ($results as $post)
+                <div class="mb-2 pb-10 border-b">
+                    <time datetime="{{ date(DATE_ATOM, $post->published) }}" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                        {{ date('j. F Y', $post->published) }}
+                    </time>
+                    <div class="mb-3">
+                        <a href="{{ $post->getPath() }}" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                            <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                {{ $post->title }}
+                            </p>
+                        </a>
+                    </div>
+                    <p class="mb-4 text-base text-gray-700 md:text-lg">
+                        {{ $post->short_intro }}
+                    </p>
+                    @include('_partials.author', ['author_name' => 'Clive Walkden', 'author_url' => '/about', 'author_image' => 'clive-walkden.jpg'])
+                </div>
+                @endforeach
             </div>
-            <div>
-                <h3>Blog Categories</h3>
-                <ul>
-                    @foreach ($categories as $category)
-                        <li>
-                            <a href="{{ $category->getPath() }}" title="{{ $category->title }}">{{ $category->title }} ({{ $posts->where('category', $category->seo_link)->count() }})</a>
-                        </li>
-                    @endforeach
-                </ul>
+            <div class="lg:col-span-1">
+                <div>
+                    @yield('content')
+                </div>
+                <div>
+                    <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Blog Categories</h3>
+                    <div class="max-w-lg space-y-3 sm:mx-auto lg:max-w-xl">
+                        @foreach ($categories as $category)
+                        <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="{{ $category->getPath() }}" title="{{ $category->title }}" class="text-gray-800">
+                                {{ $category->title }} ({{ $posts->where('category', $category->seo_link)->count() }})
+                            </a>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
-        </aside>
+        </div>
     </div>
 @endsection

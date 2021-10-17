@@ -226,6 +226,10 @@ return [
             'path' => 'blog/{category}/{filename}',
             'sort' => '-published'
         ],
+        'recipes' => [
+            'path' => 'recipes/{filename}',
+            'sort' => 'id',
+        ],
         'categories' => [
             'path' => 'blog/{seo_link}',
             'sort' => 'title',

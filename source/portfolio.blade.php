@@ -9,7 +9,7 @@
             <p class="text-base text-gray-700 md:text-lg sm:px-4">
                 Sites I've either built or been responsible for the updates or maintenance of.
             </p>
-            <hr class="w-full my-8 border-gray-300" />
+            @include('_partials.hr')
         </div>
         <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2">
             @foreach ($portfolio as $site)

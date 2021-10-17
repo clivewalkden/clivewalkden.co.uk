@@ -19,6 +19,15 @@ body > header {
     background: url(/assets/images/dropdown_bg.png) center top repeat;
 }
 
+.content > pre {
+    overflow: auto;
+    @apply mb-5 bg-gray-800 text-white p-4;
+}
+
+.content > p {
+    @apply text-base text-gray-700 mb-5;
+}
+
 div.footer-wrapper {
     background: url(/assets/images/footer_arrow.png) center top no-repeat,url(/assets/images/dropdown_bg.png) center top repeat;
 }
