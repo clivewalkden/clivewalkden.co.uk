@@ -9,6 +9,7 @@ meta_description: This function outputs a string that is filename friendly.
 published: 2011-11-21 00:00:00
 hide: false
 category: php
+hero:
 author: Clive Walkden
 section: content
 ---

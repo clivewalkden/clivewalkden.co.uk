@@ -5,6 +5,7 @@
     {{-- Filter posts by category --}}
     @php
         $results = ($page->seo_link) ? $posts->where('category', $page->seo_link) : $posts;
+        $category = ($page->seo_link) ? $categories->where('seo_link', $page->seo_link) : false;
     @endphp
 
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -18,7 +19,11 @@
             </div>
             <div class="lg:w-1/2">
                 <p class="text-base text-gray-700">
-                    These articles below are a collection of things I've either found useful, felt were worth sharing or needed to get out of my head. Please don't judge to harshly, many of these weren't meant for others eyes.
+                    @if ($category)
+                        @yield('content')
+                    @else
+                        These articles below are a collection of things I've either found useful, felt were worth sharing or needed to get out of my head. Please don't judge to harshly, many of these weren't meant for others eyes.
+                    @endif
                 </p>
             </div>
         </div>
@@ -49,17 +54,19 @@
             </div>
             <div class="lg:col-span-1">
                 <div>
-                    @yield('content')
-                </div>
-                <div>
                     <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Blog Categories</h3>
                     <div class="max-w-lg space-y-3 sm:mx-auto lg:max-w-xl">
                         @foreach ($categories as $category)
+                            @php
+                            $count = $posts->where('category', $category->seo_link)->count()
+                            @endphp
+                            @unless($count == 0)
                         <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
                             <a href="{{ $category->getPath() }}" title="{{ $category->title }}" class="text-gray-800">
-                                {{ $category->title }} ({{ $posts->where('category', $category->seo_link)->count() }})
+                                {{ $category->title }} ({{ $count }})
                             </a>
                         </div>
+                            @endunless
                         @endforeach
                     </div>
                 </div>

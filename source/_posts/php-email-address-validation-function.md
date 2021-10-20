@@ -9,6 +9,7 @@ meta_description: One PHP function that i like to use in my validation routines 
 published: 2013-02-28 00:00:00
 hide: false
 category: php
+hero:
 author: Clive Walkden
 section: content
 ---

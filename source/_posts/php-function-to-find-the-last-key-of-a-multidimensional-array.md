@@ -9,6 +9,7 @@ meta_description: This function is great for retrieving the last key of a multid
 published: 2011-07-20 00:00:00
 hide: false
 category: php
+hero:
 author: Clive Walkden
 section: content
 ---

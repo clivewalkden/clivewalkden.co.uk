@@ -9,6 +9,7 @@ meta_description: I've been using the jQuery library now for a few months and th
 published: 2010-11-01 00:00:00
 hide: false
 category: php
+hero:
 author: Clive Walkden
 section: content
 ---

@@ -9,6 +9,7 @@ meta_description: Ever wondered how to install linux wireless network drivers on
 published: 2011-12-09 00:00:00
 hide: false
 category: linux
+hero:
 author: Clive Walkden
 section: content
 ---

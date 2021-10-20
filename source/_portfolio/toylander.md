@@ -1,21 +1,24 @@
 ---
 extends: _layouts.portfolio
 id: 53
-title: Toylander
+title: Magento 2 Website Build
+client: Toylander
 status: Live
 url: https://www.toylander.com
 launched: 2017-03-24
+finished: false
 featured: false
 section: content
-technologies: [Ecommerce,Magento 2,Linux,Security]
-image_main: toylander-main.png
+technologies: [Magento 2,Less,HTML5,CSS3,Composer,PHP,Knockout JS]
+infrastructure: [Linux,Cluster,High Availability,WAF,Percona,Nginx,Zabbix,Redis,Elasticsearch,Google Cloud]
+image_main: toylander-home.png
 intro: A Magento 2 build for a custom build electric car for children.
-seo: false
+seo: true
 ---
 
-<p class="mb-2">Toylander have been producing superior quality electric vehicle kits that children just love to drive since 1987.</p>
+Toylander have been producing superior quality electric vehicle kits that children just love to drive since 1987.
 
-<p class="mb-2">All their manuals contain easy to read workshop drawings for those who like to manufacture the toy cars themselves.</p>
+All their manuals contain easy to read workshop drawings for those who like to manufacture the toy cars themselves.
 
-<p class="mb-2">They also have all individual parts, ready cut body panels and a range of kits, available from stock.</p>
+They also have all individual parts, ready cut body panels and a range of kits, available from stock.
 

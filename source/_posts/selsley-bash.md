@@ -9,6 +9,7 @@ meta_description: Last weekend we finally got to try out our Bajas on Selsley co
 published: 2008-04-29 00:00:00
 hide: false
 category: general
+hero:
 author: Clive Walkden
 section: content
 ---

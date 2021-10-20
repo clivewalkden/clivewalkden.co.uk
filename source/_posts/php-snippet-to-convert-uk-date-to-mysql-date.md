@@ -9,6 +9,7 @@ meta_description: A simple PHP preg_replace statement that will convert uk date 
 published: 2012-02-23 00:00:00
 hide: false
 category: php
+hero:
 author: Clive Walkden
 section: content
 ---

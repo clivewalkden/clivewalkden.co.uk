@@ -9,6 +9,7 @@ meta_description: I had an interesting experience the other day where an applica
 published: 2010-11-21 00:00:00
 hide: false
 category: pc
+hero:
 author: Clive Walkden
 section: content
 ---

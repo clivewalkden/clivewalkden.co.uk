@@ -9,6 +9,7 @@ meta_description: The Heartbeat of Liberty City GTA IV Easter Egg
 published: 2008-04-30 00:00:00
 hide: false
 category: ps3
+hero:
 author: Clive Walkden
 section: content
 ---

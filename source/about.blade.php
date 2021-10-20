@@ -73,6 +73,6 @@ meta_description: I'm a 31 year old PHP developer from the UK. My skills lie in 
         </div>
     </div>
 
-    @include('_partials.experience-segment')
+    @include('_partials.experience-segment', ['block_title' => 'Experience'])
 
 @endsection

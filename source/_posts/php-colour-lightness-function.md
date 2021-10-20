@@ -9,6 +9,7 @@ meta_description: Here's a quick little function which can be used to return you
 published: 2011-06-30 00:00:00
 hide: false
 category: php
+hero:
 author: Clive Walkden
 section: content
 ---

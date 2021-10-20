@@ -9,6 +9,7 @@ meta_description: Been over a month since i posted last and for good reason, Chr
 published: 2008-01-31 00:00:00
 hide: false
 category: general
+hero:
 author: Clive Walkden
 section: content
 ---

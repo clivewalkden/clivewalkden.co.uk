@@ -22,7 +22,11 @@
         </div>
 
         <!--image-->
-        <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url('/assets/images/blog/categories/{{ $category->seo_link }}.jpg'); height: 75vh;"></div>
+        @if ($page->hero)
+            <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded bg-center" style="background-image:url('/assets/images/blog/articles/{{ $page->hero }}'); height: 75vh;"></div>
+        @else
+            <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded bg-center" style="background-image:url('/assets/images/blog/categories/{{ $category->seo_link }}.jpg'); height: 75vh;"></div>
+        @endif
 
         <!--Container-->
         <div class="container max-w-5xl mx-auto -mt-32">

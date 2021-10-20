@@ -9,6 +9,7 @@ meta_description: Here's an old bit of code that I found to position something c
 published: 2001-07-23
 hide: false
 category: css
+hero:
 author: Clive Walkden
 section: content
 ---

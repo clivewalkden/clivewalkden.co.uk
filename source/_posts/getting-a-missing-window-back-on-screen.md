@@ -9,6 +9,7 @@ meta_description: Following from my last post, here is the method to get your IP
 published: 2011-06-28 00:00:00
 hide: false
 category: php
+hero:
 author: Clive Walkden
 section: content
 ---

@@ -9,6 +9,7 @@ meta_description: Been using this class now for my sites for a while it's just t
 published: 2007-09-23
 hide: false
 category: php
+hero:
 author: Clive Walkden
 section: content
 ---

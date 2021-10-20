@@ -3,10 +3,9 @@ use Carbon\Carbon;
 ?>
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 
-    <div class="max-w-xl mb-2 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 border-b border-primary">
-        <h2 class="mb-4 font-sans text-3xl font-bold tracking-tight text-title sm:text-4xl sm:leading-none">Experience</h2>
-    </div>
-    <div class="flex flex-col gap-4">
+    @includeWhen($block_title, '_partials.title', ['block_title' => $block_title])
+
+    <div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
         @foreach ($experience as $exp)
             @php
                 $perc = ($exp->length/$page->start->diffInYears(Carbon::now())) * 100;

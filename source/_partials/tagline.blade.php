@@ -22,12 +22,12 @@
             </p>
             <div class="flex items-center">
                 <a
-                        href="/"
+                        href="/blog/"
                         class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-400 hover:bg-yellow-700 focus:shadow-outline focus:outline-none"
                 >
                     Blog Articles
                 </a>
-                <a href="/" aria-label=""
+                <a href="/portfolio/" aria-label=""
                    class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-700">Portfolio</a>
             </div>
         </div>

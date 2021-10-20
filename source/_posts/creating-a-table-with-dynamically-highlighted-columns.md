@@ -9,6 +9,7 @@ meta_description: Found a great article on how to create dynamically highlighted
 published: 2007-09-29 00:00:00
 hide: false
 category: html5
+hero:
 author: Clive Walkden
 section: content
 ---

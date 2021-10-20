@@ -224,7 +224,10 @@ return [
         ],
         'posts' => [
             'path' => 'blog/{category}/{filename}',
-            'sort' => '-published'
+            'sort' => '-published',
+            'filter' => function ($item) {
+                return !$item->hide;
+            }
         ],
         'recipes' => [
             'path' => 'recipes/{filename}',
@@ -257,7 +260,7 @@ return [
                     'seo_link' => 'mysql',
                     'seo_title' => 'MySQL Posts',
                     'seo_description' => 'How to write your database queries in MySQL and the best performance for your PHP Website.',
-                    'content' => '',
+                    'content' => 'How to write your database queries in MySQL and the best performance for your PHP Website.',
                 ],
                 [
                     'title' => 'jQuery',
@@ -291,7 +294,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'apple-mac',
                     'seo_title' => 'Apple Posts Blog Posts',
                     'seo_description' => 'Tips on how to maximise the use of your Mac software and hardware. Also some tips on Web Development using your Mac.',
-                    'content' => '',
+                    'content' => 'Tips on how to maximise the use of your Mac software and hardware. Also some tips on Web Development using your Mac.',
                 ],
                 [
                     'title' => 'Photography',
@@ -299,7 +302,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'photography',
                     'seo_title' => 'Photography Posts',
                     'seo_description' => 'Read some of my observations of photography and some of my albums.',
-                    'content' => '',
+                    'content' => 'Read some of my observations of photography and some of my albums.',
                 ],
                 [
                     'title' => 'Linux',
@@ -307,7 +310,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'linux',
                     'seo_title' => 'Linux Posts',
                     'seo_description' => 'Some of my experiences using different Linux distro&#39;s for Web Development and PHP, MySQL Website Development.',
-                    'content' => '',
+                    'content' => 'Some of my experiences using different Linux distro&#39;s for Web Development and PHP, MySQL Website Development.',
                 ],
                 [
                     'title' => 'HTML5',
@@ -323,7 +326,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'general',
                     'seo_title' => 'General News and Articles',
                     'seo_description' => 'My blog articles that don\'t fit in to any specific category. News from around the world and generic articles I\'ve read.',
-                    'content' => '',
+                    'content' => 'My blog articles that don\'t fit in to any specific category. News from around the world and generic articles I\'ve read.',
                 ],
                 [
                     'title' => 'Xbox',
@@ -331,7 +334,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'xbox',
                     'seo_title' => 'Xbox Posts',
                     'seo_description' => 'Xbox 360 posts about games and hardware for the Microsoft Console.',
-                    'content' => '',
+                    'content' => 'Xbox 360 posts about games and hardware for the Microsoft Console.',
                 ],
                 [
                     'title' => 'PS3',
@@ -339,7 +342,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'ps3',
                     'seo_title' => 'PS3 Posts',
                     'seo_description' => 'The Sony PS3 has been my favourite console for many years, read some of my game reviews and news articles I\'ve seen on the web.',
-                    'content' => '',
+                    'content' => 'The Sony PS3 has been my favourite console for many years, read some of my game reviews and news articles I\'ve seen on the web.',
                 ],
                 [
                     'title' => 'Android',
@@ -347,7 +350,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'android',
                     'seo_title' => 'Android Posts',
                     'seo_description' => 'Blog posts discussing the Android operating system and apps associated with it.',
-                    'content' => '',
+                    'content' => 'Blog posts discussing the Android operating system and apps associated with it.',
                 ],
                 [
                     'title' => 'PC',
@@ -355,7 +358,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'pc',
                     'seo_title' => 'PC Posts',
                     'seo_description' => 'Windows software, hardware and general Microsoft Windows tips and tricks for using your computer to the maximum.',
-                    'content' => '',
+                    'content' => 'Windows software, hardware and general Microsoft Windows tips and tricks for using your computer to the maximum.',
                 ],
                 [
                     'title' => 'Bitcoin',
@@ -371,7 +374,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'wii',
                     'seo_title' => 'Wii Posts',
                     'seo_description' => 'Some of my old posts on the Wii system and games.',
-                    'content' => '',
+                    'content' => 'Some of my old posts on the Wii system and games.',
                 ],
                 [
                     'title' => 'PSP',
@@ -379,12 +382,12 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'psp',
                     'seo_title' => 'PSP Posts',
                     'seo_description' => 'My Sony PSP articles about games, themes and applications.',
-                    'content' => '',
+                    'content' => 'My Sony PSP articles about games, themes and applications.',
                 ]
             ]
         ]
     ],
     'selected' => function ($page, $section) {
-        return Str::contains($page->getPath(), $section) ? 'selected' : '';
+        return $page->getPath() == $section || Str::contains($page->getPath(), $section) ? 'inline-block py-2 px-4 text-white no-underline' : 'inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4';
     },
 ];
