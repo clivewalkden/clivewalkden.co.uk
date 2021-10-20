@@ -1,4 +1,4 @@
-<header class="bg-gray-800 p-2 mt-0 fixed w-full z-10 top-0">
+<header class="bg-gray-800 p-8 mt-0 fixed w-full z-10 top-0">
     <div class="container mx-auto flex flex-wrap items-center">
         <div class="flex w-1/2 justify-center md:justify-start text-white">
             <a href="/" class="text-white no-underline hover:text-white hover:no-underline">

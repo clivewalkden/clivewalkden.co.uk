@@ -220,7 +220,7 @@ return [
             ]
         ],
         'portfolio' => [
-            'sort' => '-id',
+            'sort' => '-launched',
         ],
         'posts' => [
             'path' => 'blog/{category}/{filename}',
@@ -230,7 +230,6 @@ return [
             }
         ],
         'recipes' => [
-            'path' => 'recipes/{filename}',
             'sort' => 'id',
         ],
         'categories' => [

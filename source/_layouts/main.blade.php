@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="canonical" href="{{ $page->getUrl() }}">
         <meta name="description" content="{{ $page->meta_description }}">
+        <link rel="icon" href="/favicon.ico">
         <title>{{ $page->meta_title }}</title>
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
@@ -14,7 +15,7 @@
     @include('_partials/dropdown')
     {{-- Wrapper --}}
     @include('_partials/header')
-    <div role="main" class="container shadow-lg mx-auto bg-white mt-24 md:mt-18">
+    <div role="main" class="container shadow-lg mx-auto bg-white mt-24 md:mt-28">
         @yield('body')
     </div>
     @include('_partials.up')

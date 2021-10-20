@@ -16,4 +16,6 @@ intro: A Magento 2 build for an international watch strap retailer.
 seo: false
 ---
 
-Here is a site
+WatchGecko was founded in 2010 with a mission to provide a contemporary range of better quality watch straps to consumer and wholesale markets. Since then they have also developed several brand names, StrapJunkie and ZULUDIVER to satisfy increasing customer demand.
+
+We advised the client that Magento would be the ideal solution for them. With Magento's flexibility and leading ecommerce platform we were able to produce a beautiful looking site while giving the client all the extra reporting and product information that they needed.

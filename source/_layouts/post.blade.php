@@ -23,9 +23,9 @@
 
         <!--image-->
         @if ($page->hero)
-            <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded bg-center" style="background-image:url('/assets/images/blog/articles/{{ $page->hero }}'); height: 75vh;"></div>
+            <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-12 rounded bg-center" style="background-image:url('/assets/images/blog/articles/{{ $page->hero }}'); height: 75vh;"></div>
         @else
-            <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded bg-center" style="background-image:url('/assets/images/blog/categories/{{ $category->seo_link }}.jpg'); height: 75vh;"></div>
+            <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-12 rounded bg-center" style="background-image:url('/assets/images/blog/categories/{{ $category->seo_link }}.jpg'); height: 75vh;"></div>
         @endif
 
         <!--Container-->
@@ -51,6 +51,6 @@
         </div>
 
         {{-- Latest Articles --}}
-        @include('_partials.blog-segment')
+        @include('_partials.blog-segment', ['block_title' => 'Latest Articles'])
     </div>
 @endsection

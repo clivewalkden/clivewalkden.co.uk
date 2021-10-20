@@ -5,7 +5,7 @@ title: Magento 2 Site build
 client: Sensory Direct
 status: Live
 url: https://www.sensorydirect.com
-launched: 2014-12-16 00:00:00
+launched: 2020-09-08 10:00:00
 finished: false
 featured: false
 section: content

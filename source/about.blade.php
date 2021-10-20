@@ -21,9 +21,7 @@ meta_description: I'm a 31 year old PHP developer from the UK. My skills lie in 
         <div class="grid gap-10 lg:grid-cols-2">
             <div class="lg:pr-10">
                 <h5 class="mb-4 text-4xl font-extrabold leading-none">
-                    The quick, brown fox<br class="hidden md:block" />
-                    jumps over
-                    <span class="inline-block text-yellow-400">a lazy dog</span>
+                    Other Interests
                 </h5>
                 <p class="mb-6 text-gray-900">
                     Another passion of mine is PC gaming, having grown up with an Amiga, i moved to the PC in 1999 and have enjoyed many different genres of gaming. RPG (Role Playing Games) are my favourite at the moment with Elder Scrolls IV: Skyrim taking up many hours.

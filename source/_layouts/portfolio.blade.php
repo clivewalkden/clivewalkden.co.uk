@@ -35,7 +35,7 @@ use Carbon\Carbon;
     <div class="bg-yellow-400">
         <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div class="grid grid-cols-2 gap-x-24">
-                <div class="">
+                <div class="content">
                     <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
                         Description</h3>
                     @yield('content')
