@@ -9,6 +9,24 @@ return [
     'meta_title' => 'PHP, MySQL, HTML5, CSS3 and jQuery developer in Gloucestershire | Clive Walkden',
     'meta_description' => 'I\'m a PHP developer from the UK currently working for SOZO Design. My skills lie in website development using PHP, MySQL, HTML5, CSS3 and jQuery.',
     'start' => Carbon::parse('2001-01-01'),
+    'social' => [
+        'email' => [
+            'title' => 'Email',
+            'icon'  => 'bx-envelope',
+            'href'  => 'mailto:contact@clivewalkden.co.uk',
+            'effect'=> 'bx-tada-hover',
+        ],
+        'twitter' => [
+            'title'     => 'Twitter',
+            'icon'  => 'bxl-twitter',
+            'href'  => 'https://twitter.com/clivewalkden',
+        ],
+        'github'    => [
+            'title' => 'Github',
+            'icon'  => 'bxl-github',
+            'href'  => 'https://github.com/clivewalkden'
+        ]
+    ],
     'collections' => [
         'experience' => [
             'sort' => ['-in_use','-length'],

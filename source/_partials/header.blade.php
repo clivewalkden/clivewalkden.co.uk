@@ -3,7 +3,7 @@
         <div class="flex w-1/2 justify-center md:justify-start text-white">
             <a href="/" class="text-white no-underline hover:text-white hover:no-underline">
                 <h1 class="text-3xl pl-2" style="text-shadow: 1px 1px 0 #ffae00">Clive Walkden</h1>
-                <span class="font-serif italic items-center text-gray-200 pl-2 text-xs lg:text-base">SysOps, Magento 2, PHP and my general mind dumps.</span>
+                <span class="font-serif italic items-center text-gray-200 pl-2 text-xs lg:text-base hidden md:block">SysOps, Magento 2, PHP and my general mind dumps.</span>
             </a>
         </div>
 

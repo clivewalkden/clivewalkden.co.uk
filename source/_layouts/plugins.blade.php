@@ -12,12 +12,12 @@ use Carbon\Carbon;
     @endphp
     <div>
         <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
-            <div class="flex items-center">
-                <div class="flex-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+                <div class="mt-16 md:mt-0 text-center md:text-left">
                     <h1 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">{{ $page->title }}</h1>
                 </div>
-                <div class="flex-1 mt-8 bg-cover bg-no-repeat h-64 bg-top-9 border-l border-r border-t border-white rounded-t-lg shadow-md"
-                     style="background-image: url('/assets/images/portfolio/{{ $page->image_main }}')">
+                <div class="mt-2 md:mt-8 bg-contain bg-no-repeat h-40 md:h-64 bg-top-9 border-l border-r border-t border-white rounded-t-lg shadow-md"
+                     style="background-image: url('/assets/images/portfolio/{{ $page->image_small ?? $page->image_main }}')">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 80"
                          class="text-white border-b fill-current border-soft rounded-tl-md rounded-tr-md">
                         <g data-name="TOP BAR">
@@ -35,8 +35,8 @@ use Carbon\Carbon;
     </div>
 
     <div class="bg-yellow-400">
-        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div class="grid grid-cols-2 gap-x-24">
+        <div class="px-4 py-6 md:pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24">
                 <div class="content">
                     <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
                         Description</h3>
@@ -130,6 +130,16 @@ use Carbon\Carbon;
                         </a>
                     </div>
                     @endif
+                    <div>
+                        <h4 class="mb-2 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm-leading-none">
+                            Works with
+                        </h4>
+                    </div>
+                    <div>
+                        @foreach($page->supported_versions as $version)
+                            <div>{{ $version }}</div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

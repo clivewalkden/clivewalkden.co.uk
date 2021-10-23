@@ -15,7 +15,7 @@ use Carbon\Carbon;
                     <h1 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">{{ $page->title }}</h1>
                 </div>
                 <div class="flex-1 mt-8 bg-cover bg-no-repeat h-64 bg-top-9 border-l border-r border-t border-white rounded-t-lg shadow-md"
-                     style="background-image: url('/assets/images/portfolio/{{ $page->image_main }}')">
+                     style="background-image: url('/assets/images/portfolio/{{ $page->image_small ?? $page->image_main }}')">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 80"
                          class="text-white border-b fill-current border-soft rounded-tl-md rounded-tr-md">
                         <g data-name="TOP BAR">

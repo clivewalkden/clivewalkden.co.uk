@@ -15,7 +15,11 @@
             @foreach ($portfolio as $site)
                 <a href="{{ $site->getPath() }}" aria-label="View Item">
                     <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                        @if ($site->github_user)
+                            <img class="object-contain w-full h-56 md:h-64 xl:h-80"
+                         @else
+                            <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                         @endif
                              src="/assets/images/portfolio/{{ $site->image_main }}" alt=""/>
                         <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                             <p class="mb-4 text-lg font-bold text-gray-100">{{ $site->title }}</p>

@@ -28,42 +28,6 @@ body > header {
     @apply text-base text-gray-700 mb-5;
 }
 
-div.footer-wrapper {
+footer.footer {
     background: url(/assets/images/footer_arrow.png) center top no-repeat,url(/assets/images/dropdown_bg.png) center top repeat;
-}
-
-div.footer-wrapper .social a {
-    background: url(/assets/images/socialicons.png) no-repeat #444;
-}
-
-div.footer-wrapper .social a.facebook {
-    background-position: -26px 0;
-}
-
-div.footer-wrapper .social a.dribble {
-    background-position: -208px 0;
-}
-
-div.footer-wrapper .social a.fivehundredpx {
-    background-position: -130px 0;
-}
-
-div.footer-wrapper .social a.flickr {
-    background-position: -78px -1px;
-}
-
-div.footer-wrapper .social a.vimeo {
-    background-position: -182px 0;
-}
-
-div.footer-wrapper .social a.youtube {
-    background-position: -156px 0;
-}
-
-div.footer-wrapper .social a.pinterest {
-    background-position: -260px 0;
-}
-
-div.footer-wrapper .social a.feed {
-    background-position: -648px 0;
 }

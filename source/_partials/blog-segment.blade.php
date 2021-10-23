@@ -10,13 +10,13 @@
             @php
             $category = $categories->where('seo_link', $post->category)->first()
             @endphp
-        <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+        <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border">
             @if ($post->hero)
                 <img src="/assets/images/blog/articles/{{ $post->hero }}" class="object-cover w-full h-64" alt="" />
             @else
                 <img src="/assets/images/blog/categories/{{ $category->seo_link }}.jpg" class="object-cover w-full h-64" alt="" />
             @endif
-            <div class="p-5 border border-t-0">
+            <div class="p-5">
                 <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
                     <a href="{{ $category->getPath() }}" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="traveling">
                         {{ $category->title }}

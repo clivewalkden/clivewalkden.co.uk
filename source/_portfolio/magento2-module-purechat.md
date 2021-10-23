@@ -15,7 +15,8 @@ launched: 2018-03-17
 lastupdate: 2019-01-25
 finished: false
 featured: false
-image_main: magento-2.jpg
+image_main: github-repo.png
+image_small: github-repo-small.png
 supported_versions: [Magento 2.2,Magento 2.3,Magento 2.4]
 section: summary
 intro: A plugin for Magento 2 that outputs the PureChat javascript code into the website
