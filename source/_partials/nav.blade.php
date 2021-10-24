@@ -1,19 +1,16 @@
-<nav class="absolute bottom-6 right-0 uppercase font-black text-xs leading-3 z-50">
-    <ul class="list-none m-0 p-0">
-        <li class="float-left block relative text-gray-200">
-            <a href="/" class="text-black border-b-2 border-white pt-1 pr-2 pb-5 pl-2 hover:border-primary hover:text-primary">Home</a>
+<nav class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 justify-end" id="nav-content">
+    <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+        <li class="mr-3">
+            <a href="/" class="{{ $page->selected('') }}">Home</a>
         </li>
-        <li class="float-left block relative text-gray-200">
-            <a href="/portfolio/" class="text-black border-b-2 border-white pt-1 pr-2 pb-5 pl-2 hover:border-primary hover:text-primary">Portfolio</a>
+        <li class="mr-3">
+            <a href="/portfolio/" class="{{ $page->selected('portfolio') }}">Portfolio</a>
         </li>
-        <li class="float-left block relative text-gray-200">
-            <a href="/" class="text-black border-b-2 border-white pt-1 pr-2 pb-5 pl-2 hover:border-primary hover:text-primary">Scripts</a>
+        <li class="fmr-3">
+            <a href="/blog/" class="{{ $page->selected('blog') }}">Blog</a>
         </li>
-        <li class="float-left block relative text-gray-200">
-            <a href="/blog/" class="text-black border-b-2 border-white pt-1 pr-2 pb-5 pl-2 hover:border-primary hover:text-primary">Blog</a>
-        </li>
-        <li class="float-left block relative text-gray-200">
-            <a href="/about/" class="text-black border-b-2 border-white pt-1 pr-2 pb-5 pl-2 hover:border-primary hover:text-primary">About</a>
+        <li class="mr-3">
+            <a href="/about/" class="{{ $page->selected('about') }}">About</a>
         </li>
     </ul>
 </nav>

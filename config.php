@@ -1,19 +1,254 @@
 <?php
 
 use Illuminate\Support\Str;
+use Carbon\Carbon;
 
 return [
     'production' => false,
     'baseUrl' => 'https://clivewalkden.co.uk',
     'meta_title' => 'PHP, MySQL, HTML5, CSS3 and jQuery developer in Gloucestershire | Clive Walkden',
     'meta_description' => 'I\'m a PHP developer from the UK currently working for SOZO Design. My skills lie in website development using PHP, MySQL, HTML5, CSS3 and jQuery.',
+    'start' => Carbon::parse('2001-01-01'),
+    'social' => [
+        'email' => [
+            'title' => 'Email',
+            'icon'  => 'bx-envelope',
+            'href'  => 'mailto:contact@clivewalkden.co.uk',
+            'effect'=> 'bx-tada-hover',
+        ],
+        'twitter' => [
+            'title'     => 'Twitter',
+            'icon'  => 'bxl-twitter',
+            'href'  => 'https://twitter.com/clivewalkden',
+        ],
+        'github'    => [
+            'title' => 'Github',
+            'icon'  => 'bxl-github',
+            'href'  => 'https://github.com/clivewalkden'
+        ]
+    ],
     'collections' => [
+        'experience' => [
+            'sort' => ['-in_use','-length'],
+            'items' => [
+                [
+                    'title' => 'PHP',
+                    'start' => Carbon::parse('2002-01-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2002-01-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'HTML',
+                    'start' => Carbon::parse('2001-01-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2001-01-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'CSS',
+                    'start' => Carbon::parse('2003-01-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2003-01-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Python',
+                    'start' => Carbon::parse('2015-01-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2015-01-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Linux',
+                    'start' => Carbon::parse('2011-05-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2011-05-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Windows',
+                    'start' => Carbon::parse('2001-01-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2001-01-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Mac OSX',
+                    'start' => Carbon::parse('2005-01-01'),
+                    'end' => Carbon::parse('2019-12-01'),
+                    'length' => Carbon::parse('2005-01-01')->diffInYears(Carbon::parse('2019-12-01')),
+                    'in_use' => false,
+                ],
+                [
+                    'title' => 'Shell Scripting',
+                    'start' => Carbon::parse('2014-01-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2014-01-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Ansible',
+                    'start' => Carbon::parse('2018-06-18'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2018-06-18')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Terraform',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'CentOS',
+                    'start' => Carbon::parse('2011-05-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2011-05-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+//                Dates from here need confirming
+                [
+                    'title' => 'AWS',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Google Cloud',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'MySQL',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'jQuery',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => false,
+                ],
+                [
+                    'title' => 'React',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Javascript',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Magento',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Magento 2',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Apache',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'NGINX',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Laravel',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'AlpineJS',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Ubuntu',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Packer',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Docker',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Kubernetes',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Git',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
+                    'title' => 'Composer',
+                    'start' => Carbon::parse('2020-05-22'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ]
+            ]
+        ],
         'portfolio' => [
-            'sort' => '-id',
+            'sort' => '-launched',
         ],
         'posts' => [
             'path' => 'blog/{category}/{filename}',
-            'sort' => '-published'
+            'sort' => '-published',
+            'filter' => function ($item) {
+                return !$item->hide;
+            }
+        ],
+        'recipes' => [
+            'sort' => 'id',
         ],
         'categories' => [
             'path' => 'blog/{seo_link}',
@@ -42,7 +277,7 @@ return [
                     'seo_link' => 'mysql',
                     'seo_title' => 'MySQL Posts',
                     'seo_description' => 'How to write your database queries in MySQL and the best performance for your PHP Website.',
-                    'content' => '',
+                    'content' => 'How to write your database queries in MySQL and the best performance for your PHP Website.',
                 ],
                 [
                     'title' => 'jQuery',
@@ -76,7 +311,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'apple-mac',
                     'seo_title' => 'Apple Posts Blog Posts',
                     'seo_description' => 'Tips on how to maximise the use of your Mac software and hardware. Also some tips on Web Development using your Mac.',
-                    'content' => '',
+                    'content' => 'Tips on how to maximise the use of your Mac software and hardware. Also some tips on Web Development using your Mac.',
                 ],
                 [
                     'title' => 'Photography',
@@ -84,7 +319,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'photography',
                     'seo_title' => 'Photography Posts',
                     'seo_description' => 'Read some of my observations of photography and some of my albums.',
-                    'content' => '',
+                    'content' => 'Read some of my observations of photography and some of my albums.',
                 ],
                 [
                     'title' => 'Linux',
@@ -92,7 +327,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'linux',
                     'seo_title' => 'Linux Posts',
                     'seo_description' => 'Some of my experiences using different Linux distro&#39;s for Web Development and PHP, MySQL Website Development.',
-                    'content' => '',
+                    'content' => 'Some of my experiences using different Linux distro&#39;s for Web Development and PHP, MySQL Website Development.',
                 ],
                 [
                     'title' => 'HTML5',
@@ -108,7 +343,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'general',
                     'seo_title' => 'General News and Articles',
                     'seo_description' => 'My blog articles that don\'t fit in to any specific category. News from around the world and generic articles I\'ve read.',
-                    'content' => '',
+                    'content' => 'My blog articles that don\'t fit in to any specific category. News from around the world and generic articles I\'ve read.',
                 ],
                 [
                     'title' => 'Xbox',
@@ -116,7 +351,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'xbox',
                     'seo_title' => 'Xbox Posts',
                     'seo_description' => 'Xbox 360 posts about games and hardware for the Microsoft Console.',
-                    'content' => '',
+                    'content' => 'Xbox 360 posts about games and hardware for the Microsoft Console.',
                 ],
                 [
                     'title' => 'PS3',
@@ -124,7 +359,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'ps3',
                     'seo_title' => 'PS3 Posts',
                     'seo_description' => 'The Sony PS3 has been my favourite console for many years, read some of my game reviews and news articles I\'ve seen on the web.',
-                    'content' => '',
+                    'content' => 'The Sony PS3 has been my favourite console for many years, read some of my game reviews and news articles I\'ve seen on the web.',
                 ],
                 [
                     'title' => 'Android',
@@ -132,7 +367,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'android',
                     'seo_title' => 'Android Posts',
                     'seo_description' => 'Blog posts discussing the Android operating system and apps associated with it.',
-                    'content' => '',
+                    'content' => 'Blog posts discussing the Android operating system and apps associated with it.',
                 ],
                 [
                     'title' => 'PC',
@@ -140,7 +375,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'pc',
                     'seo_title' => 'PC Posts',
                     'seo_description' => 'Windows software, hardware and general Microsoft Windows tips and tricks for using your computer to the maximum.',
-                    'content' => '',
+                    'content' => 'Windows software, hardware and general Microsoft Windows tips and tricks for using your computer to the maximum.',
                 ],
                 [
                     'title' => 'Bitcoin',
@@ -156,7 +391,7 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'wii',
                     'seo_title' => 'Wii Posts',
                     'seo_description' => 'Some of my old posts on the Wii system and games.',
-                    'content' => '',
+                    'content' => 'Some of my old posts on the Wii system and games.',
                 ],
                 [
                     'title' => 'PSP',
@@ -164,12 +399,22 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'seo_link' => 'psp',
                     'seo_title' => 'PSP Posts',
                     'seo_description' => 'My Sony PSP articles about games, themes and applications.',
-                    'content' => '',
+                    'content' => 'My Sony PSP articles about games, themes and applications.',
                 ]
             ]
         ]
     ],
     'selected' => function ($page, $section) {
-        return Str::contains($page->getPath(), $section) ? 'selected' : '';
+        return $page->getPath() == $section || Str::contains($page->getPath(), $section) ? 'inline-block py-2 px-4 text-white no-underline' : 'inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4';
     },
+    'sitemap_exclude' => [
+        '.htaccess',
+        'favicon.ico',
+        'apple-touch-icon.png',
+        'apple-touch-icon-precomposed.png',
+        'apple-touch-icon-72x72-precomposed.png',
+        'apple-touch-icon-114x114-precomposed.png',
+        'apple-touch-icon-57x57-precomposed.png',
+
+    ],
 ];
