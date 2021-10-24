@@ -41,7 +41,11 @@ use Carbon\Carbon;
                     @yield('content')
                     @if(!$page->finished)
                         <a class="px-4 py-2 my-5 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
-                           href="{{ $page->url }}" target="_blank" title="Launch {{ $page->title }}">
+                           href="{{ $page->url }}" target="_blank" title="Launch {{ $page->title }}"
+                           @unless($page->seo)
+                               rel="external nofollow"
+                           @endif
+                            >
                             View site
                         </a>
                     @endif
@@ -90,13 +94,19 @@ use Carbon\Carbon;
                 </div>
             </div>
         </div>
-
+        @if($page->summary)
         <hr/>
 
-        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 content">
             <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
                 Summary</h3>
+            <ul class="list-disc list-inside">
+            @foreach($page->summary as $summary)
+                <li>{{ $summary }}</li>
+            @endforeach
+            </ul>
         </div>
+        @endif
     </div>
 
     @include('_partials.portfolio-segment', ['block_title' => 'More Work'])

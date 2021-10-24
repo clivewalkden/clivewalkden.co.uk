@@ -44,19 +44,19 @@ use Carbon\Carbon;
                     <br/>
                     @if($page->url)
                         <a class="px-4 py-2 my-5 inline-block rounded bg-secondary text-white italic hover:bg-gray-500"
-                           href="{{ $page->url }}" target="_blank" title="{{ $page->title }} code / repository">
+                           href="{{ $page->url }}" target="_blank" rel="external" title="{{ $page->title }} code / repository">
                             View module
                         </a>
                     @endif
                     @if($page->docs)
                         <a class="px-4 py-2 my-5 inline-block rounded bg-secondary text-white italic hover:bg-gray-500"
-                           href="{{ $page->docs }}" target="_blank" title="{{ $page->title }} documentation">
+                           href="{{ $page->docs }}" target="_blank" rel="external" title="{{ $page->title }} documentation">
                             View docs
                         </a>
                     @endif
                     @if($page->issues)
                         <a class="px-4 py-2 my-5 inline-block rounded bg-secondary text-white italic hover:bg-gray-500"
-                           href="{{ $page->issues }}" target="_blank" title="{{ $page->title }} issue tracker">
+                           href="{{ $page->issues }}" target="_blank" rel="external" title="{{ $page->title }} issue tracker">
                             View issues
                         </a>
                     @endif

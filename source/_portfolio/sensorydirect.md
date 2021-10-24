@@ -12,8 +12,9 @@ section: content
 technologies: [Magento 2,Less,HTML5,CSS3,Composer,PHP,Knockout JS]
 infrastructure: [Linux,Cluster,High Availability,WAF,Percona,Nginx,Zabbix,Redis,Elasticsearch]
 image_main: sensorydirect-home.png
-intro: A Magento 2 build for a.
+intro: A Magento 2 build for sensory toys and equipment seller.
+summary: [Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Module suggestion to improve sales and user experience,Security service setup and configuration,Server migration planning and execution]
 seo: false
 ---
 
-Here is a site
+Sensory Direct is a trusted UK seller of sensory toys and equipment for autism and special needs, including weighted blankets, weighted jackets and more.

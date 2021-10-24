@@ -13,6 +13,7 @@ technologies: [PHP,HTML5,CSS3,jQuery,Bespoke CMS,Flash,PayPal]
 infrastructure: [cPanel,MySQL,Apache]
 image_main: uberrc-home.png
 intro: Build an ecommerce shop and CMS to sell Remote Control Car parts internationally
+summary: [Custom CMS build,Bespoke ecommerce build,PayPal integration,Testing,Flash header build]
 seo: false
 ---
 

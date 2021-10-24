@@ -26,15 +26,15 @@ jobs:
         with:
           dev: no
           php_version: 7.4
-          version: 1
+          version: 2
       - name: Build site files
         run: ./vendor/bin/jigsaw build production -q
-      - name: Rsync to server
-        uses: burnett01/rsync-deployments@4.1
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
-          switches: -avzr --delete
-          path: /github/workspace/public_html/
-          remote_path: /var/www/clivewalkden.co.uk/html
-          remote_host: 34.122.172.83
-          remote_user: clivewalkden
-          remote_key: ${{ secrets.DEPLOY_KEY }}
+          version: '276.0.0'
+          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+      - run: gsutil -m rsync -d -c -r build_production gs://clivewalkden.co.uk
+      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://clivewalkden.co.uk/**/*.html
+      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://clivewalkden.co.uk/assets/*.js
+      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://clivewalkden.co.uk/assets/*.css

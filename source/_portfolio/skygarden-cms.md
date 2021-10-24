@@ -13,6 +13,7 @@ technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive,SagePay]
 infrastructure: [Linux,Cluster,High Availability,MariaDB,Apache,Zabbix]
 image_main: skygarden-home.png
 intro: Bespoke CMS build with ecommerce added post launch
+summary: [Client project scoping to determine the best solution,Custom CMS build,Bespoke ecommerce build,SagePay integration,Google Advertising,Testing]
 seo: true
 ---
 

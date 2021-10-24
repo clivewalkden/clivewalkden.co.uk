@@ -13,6 +13,7 @@ technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive,SagePay]
 infrastructure: [Linux,Cluster,High Availability,MariaDB,Apache,Zabbix]
 image_main: mosaicsearch-home.png
 intro: Bespoke CMS build
+summary: [Client project scoping to determine the best solution,Custom CMS build,Testing]
 seo: true
 ---
 

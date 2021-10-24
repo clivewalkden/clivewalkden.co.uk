@@ -13,6 +13,7 @@ technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive,SagePay]
 infrastructure: [Linux,Cluster,High Availability,MariaDB,Apache,Zabbix]
 image_main: janespantry-new-home.png
 intro: Facelift of existing site and update to the codebase
+summary: [Site backend rebuild with updated bespoke CMS,Redesigned purchase process with latest payment standards,Improved account security features]
 seo: true
 ---
 

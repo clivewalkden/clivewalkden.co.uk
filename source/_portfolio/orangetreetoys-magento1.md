@@ -13,6 +13,7 @@ technologies: [Magento,SASS,HTML5,CSS3,Composer,PHP,Prototype JS]
 infrastructure: [Linux,Cloud,WAF,Percona,Nginx,Zabbix,Redis]
 image_main: orangetreetoys-home.png
 intro: A Magento build for a toy designer and wholesaler.
+summary: [Client project scoping to determine the best solution,Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Custom module creation for client specific functionality,Module suggestion to improve sales and user experience,Security service setup and configuration,Server migration planning and execution]
 seo: true
 ---
 

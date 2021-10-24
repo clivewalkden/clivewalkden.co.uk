@@ -5,6 +5,7 @@
 /.idea/
 /.vscode/
 npm-debug.log
+gcp-storage-key.json
 
 # Optional ignores
 # /build_staging/

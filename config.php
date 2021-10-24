@@ -101,6 +101,13 @@ return [
                     'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
                     'in_use' => true,
                 ],
+                [
+                    'title' => 'CentOS',
+                    'start' => Carbon::parse('2011-05-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2011-05-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
 //                Dates from here need confirming
                 [
                     'title' => 'AWS',
@@ -166,7 +173,7 @@ return [
                     'in_use' => true,
                 ],
                 [
-                    'title' => 'nginx',
+                    'title' => 'NGINX',
                     'start' => Carbon::parse('2020-05-22'),
                     'end' => Carbon::now(),
                     'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
@@ -188,13 +195,6 @@ return [
                 ],
                 [
                     'title' => 'Ubuntu',
-                    'start' => Carbon::parse('2020-05-22'),
-                    'end' => Carbon::now(),
-                    'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
-                    'in_use' => true,
-                ],
-                [
-                    'title' => 'CentOS',
                     'start' => Carbon::parse('2020-05-22'),
                     'end' => Carbon::now(),
                     'length' => Carbon::parse('2020-05-22')->diffInYears(Carbon::now()),
@@ -407,4 +407,14 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
     'selected' => function ($page, $section) {
         return $page->getPath() == $section || Str::contains($page->getPath(), $section) ? 'inline-block py-2 px-4 text-white no-underline' : 'inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4';
     },
+    'sitemap_exclude' => [
+        '.htaccess',
+        'favicon.ico',
+        'apple-touch-icon.png',
+        'apple-touch-icon-precomposed.png',
+        'apple-touch-icon-72x72-precomposed.png',
+        'apple-touch-icon-114x114-precomposed.png',
+        'apple-touch-icon-57x57-precomposed.png',
+
+    ],
 ];

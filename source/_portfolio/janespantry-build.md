@@ -13,6 +13,7 @@ technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive,SagePay]
 infrastructure: [Linux,cPanel,MariaDB,Apache,Zabbix]
 image_main: janes-pantry-original-home.jpg
 intro: Bespoke Ecommerce and CMS build
+summary: [Client project scoping to determine the best solution,Custom CMS build,Bespoke ecommerce build,SagePay integration,Google Advertising,Testing,Celebration Cake section planning and build]
 seo: true
 ---
 

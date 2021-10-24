@@ -26875,6 +26875,11 @@ body > header {
   color: rgba(68, 64, 60, var(--tw-text-opacity));
 }
 
+.content > ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
 footer.footer {
   background: url(/assets/images/footer_arrow.png) center top no-repeat,url(/assets/images/dropdown_bg.png) center top repeat;
 }

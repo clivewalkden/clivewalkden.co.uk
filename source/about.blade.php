@@ -13,6 +13,9 @@ meta_description: I'm a 31 year old PHP developer from the UK. My skills lie in 
                 Passionate about Cloud technologies
             </h2>
             <p class="text-base text-gray-700 md:text-lg sm:px-4">
+                <a href="https://u.magento.com/certification/directory/dev/744392/" target="_blank" class="text-gray-300 block float-right ml-4">
+                    <img src="/assets/images/middle_frontend_developer.png" alt="" title="">
+                </a>
                 I'm a {{ $age }} year old PHP developer from the UK. My skills lie in website development using <a href="/blog/php/" class="text-primary">PHP</a>, MySQL, <a href="/blog/html5/" class="text-primary">HTML5</a>, <a href="/blog/css/" class="text-primary">CSS3</a> and <a href="/blog/jquery/" class="text-primary">jQuery</a>. Having co-run my own design agency and seeing the major advances in the internet I thought I’d contribute a little of my knowledge to the community in general.
             </p>
             <hr class="w-full my-8 border-gray-300" />

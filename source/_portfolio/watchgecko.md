@@ -13,6 +13,7 @@ technologies: [Magento 2,Less,HTML5,CSS3,Composer,PHP,Knockout JS]
 infrastructure: [Linux,Cluster,High Availability,WAF,Percona,Nginx,Zabbix,Redis,Elasticsearch]
 image_main: watchgecko-home.png
 intro: A Magento 2 build for an international watch strap retailer.
+summary: [Client project scoping to determine the best solution,Braintree payment integration,PayPal payment integration,Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Custom module creation for client specific functionality,Module suggestion to improve sales and user experience,Security service setup and configuration,Server migration planning and execution]
 seo: false
 ---
 
