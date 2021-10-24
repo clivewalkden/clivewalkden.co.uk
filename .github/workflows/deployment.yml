@@ -21,6 +21,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Composer install jigsaw and all requirements
         uses: php-actions/composer@v5
         with:
@@ -29,12 +30,11 @@ jobs:
           version: 2
       - name: Build site files
         run: ./vendor/bin/jigsaw build production -q
-      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+
+      - name: Deploy files
+        uses: google-github-actions/upload-cloud-storage@main
         with:
-          version: '276.0.0'
-          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-      - run: gsutil -m rsync -d -c -r build_production gs://clivewalkden.co.uk
-      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://clivewalkden.co.uk/**/*.html
-      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://clivewalkden.co.uk/assets/*.js
-      - run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://clivewalkden.co.uk/assets/*.css
+          credentials: ${{ secrets.GCP_CREDENTIALS }}
+          path: build_production
+          destination: clivewalkden.co.uk
+          parent: false
