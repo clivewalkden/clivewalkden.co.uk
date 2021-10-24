@@ -35,6 +35,6 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@main
         with:
           credentials: ${{ secrets.GCP_CREDENTIALS }}
-          path: build_production
+          path: public_html
           destination: clivewalkden.co.uk
           parent: false

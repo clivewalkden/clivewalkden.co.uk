@@ -1,4 +1,5 @@
 /build_local/
+/public_html/
 /cache/
 /node_modules/
 /vendor/
