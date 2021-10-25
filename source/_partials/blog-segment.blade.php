@@ -1,5 +1,5 @@
 @php
-    $articles = $posts->take(3);
+    $articles = $posts->whereNotIn('id', [$page->id])->take(3);
 @endphp
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 
@@ -12,9 +12,9 @@
             @endphp
         <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border">
             @if ($post->hero)
-                <img src="/assets/images/blog/articles/{{ $post->hero }}" class="object-cover w-full h-64" alt="" />
+                {!! $page->image("/assets/images/blog/articles/" . $post->hero, 595, 335, ['title' => "", 'alt' => "", 'class' => 'object-cover w-full h-64']) !!}
             @else
-                <img src="/assets/images/blog/categories/{{ $category->seo_link }}.jpg" class="object-cover w-full h-64" alt="" />
+                {!! $page->image("/assets/images/blog/categories/" . $category->seo_link . ".jpg", 595, 335, ['title' => "", 'alt' => "", 'class' => 'object-cover w-full h-64']) !!}
             @endif
             <div class="p-5">
                 <p class="mb-3 text-xs font-semibold tracking-wide uppercase">

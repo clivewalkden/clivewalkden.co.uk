@@ -13,12 +13,19 @@ meta_description: I'm a 31 year old PHP developer from the UK. My skills lie in 
                 Passionate about Cloud technologies
             </h2>
             <p class="text-base text-gray-700 md:text-lg sm:px-4">
-                <a href="https://u.magento.com/certification/directory/dev/744392/" target="_blank" class="text-gray-300 block float-right ml-4">
-                    <img src="/assets/images/middle_frontend_developer.png" alt="" title="">
+                <a href="https://u.magento.com/certification/directory/dev/744392/" target="_blank"
+                   class="text-gray-300 block float-right ml-4">
+                    {!! $page->image("/assets/images/middle_frontend_developer.png", 64, 114, ['title' => 'Magento Certified Frontend Developer', 'alt' => 'Magento Certified Frontend Developer', 'resize' => true]) !!}
                 </a>
-                I'm a {{ $age }} year old PHP developer from the UK. My skills lie in website development using <a href="/blog/php/" class="text-primary">PHP</a>, MySQL, <a href="/blog/html5/" class="text-primary">HTML5</a>, <a href="/blog/css/" class="text-primary">CSS3</a> and <a href="/blog/jquery/" class="text-primary">jQuery</a>. Having co-run my own design agency and seeing the major advances in the internet I thought I’d contribute a little of my knowledge to the community in general.
+                I'm a {{ $age }} year old PHP developer from the UK. My skills lie in website development using <a
+                        href="/blog/php/" class="text-primary">PHP</a>, MySQL, <a href="/blog/html5/"
+                                                                                  class="text-primary">HTML5</a>, <a
+                        href="/blog/css/" class="text-primary">CSS3</a> and <a href="/blog/jquery/"
+                                                                               class="text-primary">jQuery</a>. Having
+                co-run my own design agency and seeing the major advances in the internet I thought I’d contribute a
+                little of my knowledge to the community in general.
             </p>
-            <hr class="w-full my-8 border-gray-300" />
+            <hr class="w-full my-8 border-gray-300"/>
         </div>
     </div>
 
@@ -29,15 +36,19 @@ meta_description: I'm a 31 year old PHP developer from the UK. My skills lie in 
                     Other Interests
                 </h5>
                 <p class="mb-6 text-gray-900">
-                    Another passion of mine is PC gaming, having grown up with an Amiga, i moved to the PC in 1999 and have enjoyed many different genres of gaming. RPG (Role Playing Games) are my favourite at the moment with Elder Scrolls IV: Skyrim taking up many hours.
+                    Another passion of mine is PC gaming, having grown up with an Amiga, i moved to the PC in 1999 and
+                    have enjoyed many different genres of gaming. RPG (Role Playing Games) are my favourite at the
+                    moment with Elder Scrolls IV: Skyrim taking up many hours.
                 </p>
                 <p class="mb-6 text-gray-900">
-                    As well as a web developer I am one of the founders of UberThemes which specialised in PHP Nuke Themes for Gamers, UberRC which manufacturers parts for RC (Remote Control) cars, mainly HPI, Traxxas and Losi.
+                    As well as a web developer I am one of the founders of UberThemes which specialised in PHP Nuke
+                    Themes for Gamers, UberRC which manufacturers parts for RC (Remote Control) cars, mainly HPI,
+                    Traxxas and Losi.
                 </p>
                 <p class="mb-6 text-gray-900">
                     I hope you enjoy the site and find it useful.
                 </p>
-                <hr class="mb-5 border-primary" />
+                <hr class="mb-5 border-primary"/>
                 <div class="flex items-center space-x-4">
                     @foreach ($page->social as $sm)
                         @include('_partials.social', $sm)
@@ -45,7 +56,7 @@ meta_description: I'm a 31 year old PHP developer from the UK. My skills lie in 
                 </div>
             </div>
             <div>
-                <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96" src="/assets/images/clive-walkden.jpg" alt="" />
+                {!! $page->image("/assets/images/clive-walkden.jpg", 588, 384, ['class' => 'object-cover w-full h-56 rounded shadow-lg sm:h-96 Sirv', 'title' => 'Clive Walkden', 'alt' => 'Clive Walkden', 'resize' => true, 'data-options' => 'fit:contain']) !!}
             </div>
         </div>
     </div>

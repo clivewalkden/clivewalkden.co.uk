@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Str;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
+use Illuminate\Support\Arr;
 
 return [
     'production' => false,
@@ -12,24 +13,24 @@ return [
     'social' => [
         'email' => [
             'title' => 'Email',
-            'icon'  => 'bx-envelope',
-            'href'  => 'mailto:contact@clivewalkden.co.uk',
-            'effect'=> 'bx-tada-hover',
+            'icon' => 'bx-envelope',
+            'href' => 'mailto:contact@clivewalkden.co.uk',
+            'effect' => 'bx-tada-hover',
         ],
         'twitter' => [
-            'title'     => 'Twitter',
-            'icon'  => 'bxl-twitter',
-            'href'  => 'https://twitter.com/clivewalkden',
+            'title' => 'Twitter',
+            'icon' => 'bxl-twitter',
+            'href' => 'https://twitter.com/clivewalkden',
         ],
-        'github'    => [
+        'github' => [
             'title' => 'Github',
-            'icon'  => 'bxl-github',
-            'href'  => 'https://github.com/clivewalkden'
+            'icon' => 'bxl-github',
+            'href' => 'https://github.com/clivewalkden'
         ]
     ],
     'collections' => [
         'experience' => [
-            'sort' => ['-in_use','-length'],
+            'sort' => ['-in_use', '-length'],
             'items' => [
                 [
                     'title' => 'PHP',
@@ -417,4 +418,61 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
         'apple-touch-icon-57x57-precomposed.png',
 
     ],
+    'sirv' => [
+        'cdn_url' => 'https://clivewalkden.sirv.com',
+        'profile' => 'personal'
+    ],
+    'image' => function ($page, $src, $width = null, $height = null, $settings = []) {
+        $tags = '';
+        $url_arguments = [];
+
+        if ($page->sirv):
+            $url_arguments['profile'] = $page->sirv['profile'];
+            if (Arr::has($settings, 'resize')):
+                Arr::forget($settings, 'resize');
+                if ($width):
+                    $url_arguments['w'] = $width;
+                endif;
+                if ($height):
+                    $url_arguments['h'] = $height;
+                endif;
+            endif;
+        endif;
+
+        // Check if data-options is set in setting
+        // remove src setting and replace with data-src
+        // $settings = Arr::add($settings,'data-options','fit:cover');
+        if (Arr::has($settings, 'data-options')):
+            Arr::add($settings, 'data-src', $src);
+            Arr::forget($settings, 'src');
+        endif;
+
+        if ($src) {
+            if ($page->sirv):
+                $sorted_url_arguments = Arr::sort($url_arguments);
+                $src = $page->sirv['cdn_url'] . $src . '?' . http_build_query($sorted_url_arguments);
+            endif;
+            $settings = Arr::add($settings,'src', $src);
+        }
+
+        if ($width) {
+            $settings = Arr::add($settings, 'width', $width);
+        }
+
+        if ($height) {
+            $settings = Arr::add($settings, 'height', $height);
+        }
+
+        if ($settings):
+            $sorted = Arr::sort($settings);
+            $tags = implode(' ', array_map(
+                function ($k, $v) {
+                    return $k . '="' . htmlspecialchars($v) . '"';
+                },
+                array_keys($sorted), $sorted
+            ));
+        endif;
+
+        return "<img {$tags}/>";
+    },
 ];
