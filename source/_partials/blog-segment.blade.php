@@ -9,7 +9,7 @@
         @foreach ($articles as $post)
             @php
             $category = $categories->where('seo_link', $post->category)->first();
-            $date = ($page->updated_at) ? $page->updated_at : $page->published;
+            $date = ($post->updated_at) ? $post->updated_at : $post->published;
             @endphp
         <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border">
             @if ($post->hero)
