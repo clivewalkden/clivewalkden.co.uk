@@ -34,9 +34,12 @@
         <div class="grid gap-10 row-gap-8 lg:grid-cols-5">
             <div class="flex flex-col space-y-8 lg:col-span-4">
                 @foreach ($results as $post)
+                    @php
+                    $date = ($post->updated_at) ? $post->updated_at : $post->published;
+                    @endphp
                 <div class="mb-2 pb-10 border-b">
-                    <time datetime="{{ date(DATE_ATOM, $post->published) }}" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
-                        {{ date('j. F Y', $post->published) }}
+                    <time datetime="{{ date(DATE_ATOM, $date) }}" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                        {{ date('j. F Y', $date) }}
                     </time>
                     <div class="mb-3">
                         <a href="{{ $post->getPath() }}" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">

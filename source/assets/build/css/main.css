@@ -26857,6 +26857,12 @@ body > header {
   background: url(/assets/images/dropdown_bg.png) center top repeat;
 }
 
+.content > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
 .content > pre {
   overflow: auto;
   margin-bottom: 1.25rem;
@@ -26873,6 +26879,11 @@ body > header {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgba(68, 64, 60, var(--tw-text-opacity));
+}
+
+.content > hr {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .content > ul {

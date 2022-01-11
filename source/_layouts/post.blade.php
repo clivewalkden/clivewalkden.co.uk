@@ -3,12 +3,20 @@
 @section('body')
     @php
         $category = $categories->where('seo_link', $page->category)->first();
+        $date = ($page->updated_at) ? $page->updated_at : $page->published;
+        $updated = (bool)$page->updated_at;
     @endphp
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <!--Title-->
         <div class="text-center">
             <p class="text-sm md:text-base text-yellow-500 font-bold">
-                <time datetime="{{ date('Y-m-d\TH:i:sP', $page->published) }}">{{ date('j F Y', $page->published) }}</time>
+                @if ($updated)
+                    Originally Posted:
+                    <time datetime="{{ date('Y-m-d\TH:i:sP', $page->published) }}">{{ date('j F Y', $page->published) }}</time>
+                    <span class="text-gray-900">/</span>
+                    Last Updated:
+                @endif
+                <time datetime="{{ date('Y-m-d\TH:i:sP', $date) }}">{{ date('j F Y', $date) }}</time>
                 <span class="text-gray-900">/</span> <a href="{{ $category->getPath() }}">{{ $category->title }}</a>
             </p>
             <div class="flex">
