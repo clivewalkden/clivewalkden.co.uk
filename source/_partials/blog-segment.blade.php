@@ -8,7 +8,8 @@
     <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
         @foreach ($articles as $post)
             @php
-            $category = $categories->where('seo_link', $post->category)->first()
+            $category = $categories->where('seo_link', $post->category)->first();
+            $date = ($page->updated_at) ? $page->updated_at : $page->published;
             @endphp
         <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border">
             @if ($post->hero)
@@ -21,7 +22,7 @@
                     <a href="{{ $category->getPath() }}" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="traveling">
                         {{ $category->title }}
                     </a>
-                    <span class="text-gray-600">— <time datetime="{{ date('Y-m-d\TH:i:sP', $post->published) }}">{{ date('j F Y', $post->published) }}</time></span>
+                    <span class="text-gray-600">— <time datetime="{{ date('Y-m-d\TH:i:sP', $date) }}">{{ date('j F Y', $date) }}</time></span>
                 </p>
                 <a href="{{ $post->getPath() }}" aria-label="Article" title="{{ $post->meta_title }}" class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400">
                     {{ $post->title }}
