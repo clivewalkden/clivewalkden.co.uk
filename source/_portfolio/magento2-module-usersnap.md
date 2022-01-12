@@ -1,25 +1,26 @@
 ---
 extends: _layouts.plugins
-id: 5
-title: Magento 2 DB Sync Bash Script
+id: 4
+title: Magento 2 Usersnap Module
 status: Live
-url: https://github.com/clivewalkden/bash-magento2-db-sync
-issues: https://github.com/clivewalkden/bash-magento2-db-sync/issues
-docs: https://github.com/clivewalkden/bash-magento2-db-sync/blob/master/README.md
+url: https://github.com/clivewalkden/Magento2_Usersnap
+issues: https://github.com/clivewalkden/Magento2_Usersnap/issues
+docs: https://github.com/clivewalkden/Magento2_Usersnap/blob/master/README.md
 badge_style: flat-square
 github_user: clivewalkden
-github_repo: bash-magento2-db-sync
-launched: 2020-07-09
-lastupdate: 2021-09-21
+github_repo: Magento2_Usersnap
+packagist_user: clivewalkden
+packagist_repo: magento2-usersnap
+launched: 2016-05-11
+lastupdate: 2021-10-26
 finished: false
 featured: false
 image_main: github-repo.png
 image_small: github-repo-small.png
-supported_versions: [Magento 2.0,Magento 2.1,Magento 2.2,Magento 2.3,Magento 2.4]
+supported_versions: [Magento 2.2,Magento 2.3,Magento 2.4]
 section: summary
-intro: A bash script to syncronise databases from production to staging or development.
+intro: A plugin for Magento 2 that outputs the Usersnap javascript code into the website
 ---
 
-This script was written to allow a quick an easy method of copying a production database to staging or development environments. It has the ability to remove sensitive data such as customer and order data as well as custom table exclusions via a conf file.
+A plugin for Magento 2 that outputs the Usersnap javascript code into the website
 
-This system is used at SOZO to keep all staging and development environments database content current while excluding our clients customer data for data protection reasons.

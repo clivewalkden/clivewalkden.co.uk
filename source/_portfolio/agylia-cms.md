@@ -6,7 +6,7 @@ client: Agylia
 status: Live
 url: https://www.agylia.com
 launched: 2016-01-28 00:00:00
-finished: false
+finished: 2022-01-12 00:00:00
 featured: false
 section: content
 technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive]

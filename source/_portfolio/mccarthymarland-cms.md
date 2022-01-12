@@ -6,7 +6,7 @@ client: McCarthy Marland
 status: Live
 url: https://www.mccarthywaste.co.uk
 launched: 2014-04-30 00:00:00
-finished: false
+finished: 2021-11-13 00:00:00
 featured: false
 section: content
 technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive,SagePay]

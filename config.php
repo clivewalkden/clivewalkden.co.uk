@@ -238,7 +238,7 @@ return [
             ]
         ],
         'portfolio' => [
-            'sort' => '-launched',
+            'sort' => ['-launched','-lastupdate'],
         ],
         'posts' => [
             'path' => 'blog/{category}/{filename}',
