@@ -26863,6 +26863,11 @@ body > header {
   font-weight: 700;
 }
 
+.content > h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
 .content > pre {
   overflow: auto;
   margin-bottom: 1.25rem;

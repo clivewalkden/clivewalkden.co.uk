@@ -6,8 +6,8 @@ meta_description: This article will help you invest what Bitcoin you have into s
 title: Bitcoin Investment Websites
 short_intro: This article will help you invest what Bitcoin you have into systems that will increase your holding
 intro: I've been a Bitcoin follower now for just over 12 months. In that time i've built up some coin from mining, gambling and other methods. In this article I'll explain some of the methods i'm now using to help increase my coins since mining isn't an option.
-published: 2013-11-24 09:10:00
-updated_at: 2022-01-11 20:49:00
+published: 2022-01-11 20:49:00
+first_published: 2013-11-24 09:10:00
 hide: false
 category: bitcoin
 hero:

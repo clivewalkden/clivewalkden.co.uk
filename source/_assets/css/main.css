@@ -23,6 +23,10 @@ body > header {
     @apply text-center mb-4 font-bold;
 }
 
+.content > h3 {
+    @apply mb-4 font-bold;
+}
+
 .content > pre {
     overflow: auto;
     @apply mb-5 bg-gray-800 text-white p-4;
