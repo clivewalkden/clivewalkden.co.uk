@@ -86,7 +86,8 @@
             },
             "author": {
                 "@type": "Person",
-                "name": "{{ $page->author }}"
+                "name": "{{ $page->author }}",
+                "url": "https://clivewalkden.co.uk/about/"
             },
             "articleBody": "{{ strip_tags($page->getContent()) }}"
         }
