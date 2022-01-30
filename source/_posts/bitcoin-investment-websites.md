@@ -27,7 +27,9 @@ Last update: **11th January 2022**
 </a>
 An online bitcoin mining simulator. Build your virtual data center and start mining bitcoins while having fun. 
 
-RollerCoin is an online, virtual bitcoin mining game where you compete against your friends to mine bitcoins. It takes the concept of bitcoin mining, but instead of the sophisticated Blockchain and processing algorithms, RollerCoin lets you test your skills, complete missions, undertake tasks, and play games to build your mining empire.
+<a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" title="RollerCoin">RollerCoin</a> is an online, virtual bitcoin mining game where you compete against your friends to mine bitcoins. It takes the concept of bitcoin mining, but instead of the sophisticated Blockchain and processing algorithms, RollerCoin lets you test your skills, complete missions, undertake tasks, and play games to build your mining empire.
+
+See my blog post giving you a [RollerCoin Intro](/blog/bitcoin/rollercoin-intro) and further info.
 
 ---
 
