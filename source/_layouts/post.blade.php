@@ -72,7 +72,7 @@
             "mainEntityOfPage": "True",
             "image": {
                 "@type": "imageObject",
-                "url": "https://www.clivewalkden.co.uk/assets/images/blog/articles/{{ $page->hero }}",
+                "url": "https://www.clivewalkden.co.uk/assets/images/blog/articles/{{ $page->hero ?? $category->seo_link.'.jpg' }}",
                 "height": "600",
                 "width": "800"
             },
