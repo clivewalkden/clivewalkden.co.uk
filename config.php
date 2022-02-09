@@ -7,8 +7,9 @@ use Illuminate\Support\Arr;
 return [
     'production' => false,
     'baseUrl' => 'https://clivewalkden.co.uk',
-    'meta_title' => 'PHP, MySQL, HTML5, CSS3 and jQuery developer in Gloucestershire | Clive Walkden',
-    'meta_description' => 'I\'m a PHP developer from the UK currently working for SOZO Design. My skills lie in website development using PHP, MySQL, HTML5, CSS3 and jQuery.',
+    'meta_title' => 'Dev Ops Engineer and Magento 2 Developer in Gloucestershire',
+    'meta_description' => 'I\'m the CTO for SOZO Design in Cheltenham, UK. I also build Magento 2 sites and other PHP projects. I\'m also interested in Crypto and Security.',
+    'copyright' => 'Copyright ©2013-'.Carbon::now()->year.' Clive Walkden',
     'start' => Carbon::parse('2001-01-01'),
     'social' => [
         'email' => [

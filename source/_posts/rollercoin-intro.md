@@ -15,13 +15,13 @@ section: content
 ---
 
 ### What is it?
-<img alt="RollerCoin Games" src="/assets/images/blog/articles/rollercoin-games.jpg" class="md:float-right md:w-2/5 md:pl-8" /><a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" title="RollerCoin">RollerCoin</a> is an online, virtual bitcoin mining game where you compete against your friends to mine bitcoins. It takes the concept of bitcoin mining, but instead of the sophisticated Blockchain and processing algorithms, <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" title="RollerCoin">RollerCoin</a> lets you test your skills, complete missions, undertake tasks, and play games to build your mining empire. 
+<img alt="RollerCoin Games" src="/assets/images/blog/articles/rollercoin-games.jpg" class="md:float-right md:w-2/5 md:pl-8" /><a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> is an online, virtual bitcoin mining game where you compete against your friends to mine bitcoins. It takes the concept of bitcoin mining, but instead of the sophisticated Blockchain and processing algorithms, <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> lets you test your skills, complete missions, undertake tasks, and play games to build your mining empire. 
 
 ### How do I play?
-Simply <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" title="RollerCoin">create your account</a>, customise your avatar and start playing games to increase your mining power. 
+Simply <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">create your account</a>, customise your avatar and start playing games to increase your mining power. 
 
 ### What is RLT?
-RLT is RollerToken - the main <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" title="RollerCoin">RollerCoin</a> in-game currency, which is used to purchase miners and other equipment. This is a token you can mine through <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" title="RollerCoin">RollerCoin</a> but isn't listed on any exchanges. You can convert other currencies to RLT to use in game. 1 RLT is roughly equivalent to 1 USD.
+RLT is RollerToken - the main <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> in-game currency, which is used to purchase miners and other equipment. This is a token you can mine through <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> but isn't listed on any exchanges. You can convert other currencies to RLT to use in game. 1 RLT is roughly equivalent to 1 USD.
 
 ### How much can I earn?
 That depends on several things, the number of games you play in a day, the number of miners your have in your racks, the power of the network.
@@ -50,4 +50,4 @@ Also in the loot drops you can get power-ups, bonus RLT and even free miners. Si
 ### Overall
 I highly recommend this site, it's fun and keeps me coming back to it day after day. I'll be exploring the site further in future articles so keep coming back for more information.
 
-Don't forget, signing up with <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" title="RollerCoin">this link</a> gets you 1000 Sataoshi to start your <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" title="RollerCoin">RollerCoin</a> adventure!
+Don't forget, signing up with <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">this link</a> gets you 1000 Sataoshi to start your <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> adventure!
