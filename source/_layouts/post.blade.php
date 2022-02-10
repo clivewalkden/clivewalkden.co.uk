@@ -16,16 +16,16 @@
                     Last Updated:
                 @endif
                 <time datetime="{{ date('Y-m-d\TH:i:sP', $page->published) }}">{{ date('j F Y', $page->published) }}</time>
-                <span class="text-gray-900">/</span> <a href="{{ $category->getPath() }}">{{ $category->title }}</a>
+                <span class="text-gray-900">/</span> <a href="{{ $category->getPath() }}/">{{ $category->title }}</a>
             </p>
             <div class="flex">
                 @if ($page->getPrevious())
-                    <a href="{{ $page->getPrevious()->getPath() }}" title="{{ $page->getPrevious()->title }}"
+                    <a href="{{ $page->getPrevious()->getPath() }}/" title="{{ $page->getPrevious()->title }}"
                        class="flex-none text-sm self-center">Previous Article</a>
                 @endif
                 <h1 class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none flex-grow text-center">{{ $page->title }}</h1>
                 @if ($page->getNext())
-                    <a href="{{ $page->getNext()->getPath() }}" title="{{ $page->getNext()->title }}"
+                    <a href="{{ $page->getNext()->getPath() }}/" title="{{ $page->getNext()->title }}"
                        class="flex-none text-sm self-center">Next Article</a>
                 @endif
             </div>

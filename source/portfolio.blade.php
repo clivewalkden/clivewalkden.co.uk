@@ -13,7 +13,7 @@
         </div>
         <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2">
             @foreach ($portfolio as $site)
-                <a href="{{ $site->getPath() }}" aria-label="View Item">
+                <a href="{{ $site->getPath() }}/" aria-label="View Item">
                     <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                         @if ($site->github_user)
                             @php

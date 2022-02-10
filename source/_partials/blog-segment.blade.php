@@ -19,18 +19,18 @@
             @endif
             <div class="p-5">
                 <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
-                    <a href="{{ $category->getPath() }}" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="traveling">
+                    <a href="{{ $category->getPath() }}/" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="traveling">
                         {{ $category->title }}
                     </a>
                     <span class="text-gray-600">— <time datetime="{{ date('Y-m-d\TH:i:sP', $date) }}">{{ date('j F Y', $date) }}</time></span>
                 </p>
-                <a href="{{ $post->getPath() }}" aria-label="Article" title="{{ $post->meta_title }}" class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400">
+                <a href="{{ $post->getPath() }}/" aria-label="Article" title="{{ $post->meta_title }}" class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400">
                     {{ $post->title }}
                 </a>
                 <p class="mb-5 text-gray-700">
                     {{ $post->short_intro }}
                 </p>
-                @include('_partials.author', ['author_name' => 'Clive Walkden', 'author_url' => '/about', 'author_image' => 'clive-walkden.jpg'])
+                @include('_partials.author', ['author_name' => 'Clive Walkden', 'author_url' => '/about/', 'author_image' => 'clive-walkden.jpg'])
             </div>
         </div>
         @endforeach

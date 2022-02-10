@@ -50,4 +50,6 @@ Also in the loot drops you can get power-ups, bonus RLT and even free miners. Si
 ### Overall
 I highly recommend this site, it's fun and keeps me coming back to it day after day. I'll be exploring the site further in future articles so keep coming back for more information.
 
-Don't forget, signing up with <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">this link</a> gets you 1000 Sataoshi to start your <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> adventure!
+<p class="p-4 text-gray-900 font-semibold bg-yellow-200 rounded-md">
+Signing up with <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin" class="bg-yellow-300 underline">this link</a> gets you 1000 Sataoshi to start your <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> adventure! This link is an affiliate link, I do earn a percentage if you spend money or play on the site.
+</p>

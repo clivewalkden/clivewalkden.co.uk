@@ -42,7 +42,7 @@
                         {{ date('j. F Y', $date) }}
                     </time>
                     <div class="mb-3">
-                        <a href="{{ $post->getPath() }}" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                        <a href="{{ $post->getPath() }}/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
                             <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
                                 {{ $post->title }}
                             </p>
@@ -51,7 +51,7 @@
                     <p class="mb-4 text-base text-gray-700 md:text-lg">
                         {{ $post->short_intro }}
                     </p>
-                    @include('_partials.author', ['author_name' => 'Clive Walkden', 'author_url' => '/about', 'author_image' => 'clive-walkden.jpg'])
+                    @include('_partials.author', ['author_name' => 'Clive Walkden', 'author_url' => '/about/', 'author_image' => 'clive-walkden.jpg'])
                 </div>
                 @endforeach
             </div>
@@ -65,7 +65,7 @@
                             @endphp
                             @unless($count == 0)
                         <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
-                            <a href="{{ $category->getPath() }}" title="{{ $category->title }}" class="text-gray-800">
+                            <a href="{{ $category->getPath() }}/" title="{{ $category->title }}" class="text-gray-800">
                                 {{ $category->title }} ({{ $count }})
                             </a>
                         </div>
