@@ -6,7 +6,7 @@ client: Mosaic Search
 status: Live
 url: https://www.mosaic-search.co.uk
 launched: 2013-09-09 00:00:00
-finished: false
+finished: 2022-02-10 00:00:00
 featured: false
 section: content
 technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive,SagePay]
