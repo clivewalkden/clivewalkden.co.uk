@@ -19,4 +19,4 @@ seo: true
 
 Mosaic Executive Search leverage their global reach, years of recruitment experience and the professional capabilities of their Executive&nbsp;Search Specialists to enable companies to fulfil their talent selection needs successfully and to help candidates locate their next leadership position.
 
-The website is built with PHP, MySQL and SASS and is fully responsive. The front end and responsive development was built by <a href="http://matt-snook.co.uk/" target="_blank" title="Matt Snook Web Design and Graphic Design Cheltenham">Matt Snook</a> and I built the CMS. The ongoing SEO is with Christian Goodrich.
+The website is built with PHP, MySQL and SASS and is fully responsive. The front end and responsive development was built by <a href="https://snook.studio/" target="_blank" rel="external" title="Matt Snook Web Design and Graphic Design Cheltenham">Matt Snook</a> and I built the CMS. The ongoing SEO is with Christian Goodrich.

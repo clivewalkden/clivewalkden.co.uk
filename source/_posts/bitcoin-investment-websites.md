@@ -15,7 +15,7 @@ author: Clive Walkden
 section: content
 ---
 
-I've been a Bitcoin follower now for just over 12 months. In that time i&#39;ve built up some coin from mining, gambling and other methods. In this article I&#39;ll explain some of the methods i&#39;m now using to help increase my coins since mining has become pointless on anything less than an ASIC. If you&#39;re unsure what bitcoin is then please read my <a href="/blog/bitcoin/what-is-bitcoin.php">starter article</a>.
+I've been a Bitcoin follower now for just over 12 months. In that time i&#39;ve built up some coin from mining, gambling and other methods. In this article I&#39;ll explain some of the methods i&#39;m now using to help increase my coins since mining has become pointless on anything less than an ASIC. If you&#39;re unsure what bitcoin is then please read my <a href="/blog/bitcoin/what-is-bitcoin/">starter article</a>.
 
 This article will be updated regularly so that you can see how each is doing and new sites will be added as and when they are tested and return results.
 

@@ -19,4 +19,4 @@ seo: true
 
 Set up as Greenfix in 1988 as an environmental stablisation company. In 1996 we became green roof pioneers and one of the founder members of GRO (Green Roof Organisation). Seperated from Greenfix in 2007 to become Sky Garden Ltd and now partner multiple waterproofing manufactures throughout the UK.
 
-The Sky Garden website is built with PHP and MySQL, is fully responsive and contains some great uses of parallax. The front end and responsive build was done by by me colleague <a href="http://matt-snook.co.uk/" target="_blank" title="Matt Snook Web Design and Graphic Design Cheltenham">Matt Snook</a> and i was responsible for the CMS.
+The Sky Garden website is built with PHP and MySQL, is fully responsive and contains some great uses of parallax. The front end and responsive build was done by my colleague <a href="https://snook.studio/" target="_blank" rel="external" title="Matt Snook Web Design and Graphic Design Cheltenham">Matt Snook</a> and i was responsible for the CMS.

@@ -19,4 +19,4 @@ seo: true
 
 VSC Security provide high calibre security consultancy and protective services that are ethically delivered and enable your business to work successfully in challenging geopolitical environments.
 
-The website is built with PHP, MySQL and SASS and is fully responsive. The front end and responsive development was built by&nbsp;<a href="http://www.matt-snook.co.uk" target="_blank">Matt Snook</a>&nbsp;and I built the CMS to the clients specific brief.
+The website is built with PHP, MySQL and SASS and is fully responsive. The front end and responsive development was built by <a href="https://snook.studio/" target="_blank" rel="external">Matt Snook</a> and I built the CMS to the clients specific brief.

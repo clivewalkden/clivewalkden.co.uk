@@ -13,13 +13,13 @@
             @endphp
         <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border">
             @if ($post->hero)
-                {!! $page->image("/assets/images/blog/articles/" . $post->hero, 595, 335, ['title' => "", 'alt' => "", 'class' => 'object-cover w-full h-64']) !!}
+                {!! $page->image("/assets/images/blog/articles/" . $post->hero, 595, 335, ['title' => $post->title, 'alt' => $post->meta_title, 'class' => 'object-cover w-full h-64']) !!}
             @else
-                {!! $page->image("/assets/images/blog/categories/" . $category->seo_link . ".jpg", 595, 335, ['title' => "", 'alt' => "", 'class' => 'object-cover w-full h-64']) !!}
+                {!! $page->image("/assets/images/blog/categories/" . $category->seo_link . ".jpg", 595, 335, ['title' => $category->title, 'alt' => $category->seo_title, 'class' => 'object-cover w-full h-64']) !!}
             @endif
             <div class="p-5">
                 <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
-                    <a href="{{ $category->getPath() }}/" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="traveling">
+                    <a href="{{ $category->getPath() }}/" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="{{ $category->title }}">
                         {{ $category->title }}
                     </a>
                     <span class="text-gray-600">— <time datetime="{{ date('Y-m-d\TH:i:sP', $date) }}">{{ date('j F Y', $date) }}</time></span>

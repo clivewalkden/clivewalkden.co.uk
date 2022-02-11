@@ -24,7 +24,7 @@
                                 $class="object-cover w-full h-56 md:h-64 xl:h-80"
                             @endphp
                         @endif
-                        {!! $page->image("/assets/images/portfolio/" . $site->image_main, 390, 320  , ['title' => "", 'alt' => "", 'class' => $class, 'resize' => true]) !!}
+                        {!! $page->image("/assets/images/portfolio/" . $site->image_main, 390, 320  , ['title' => $site->title, 'alt' => $site->title, 'class' => $class, 'resize' => true]) !!}
                         <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                             <p class="mb-4 text-lg font-bold text-gray-100">{{ $site->title }}</p>
                             <p class="text-sm tracking-wide text-gray-300">

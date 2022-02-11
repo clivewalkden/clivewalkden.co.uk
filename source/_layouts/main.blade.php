@@ -5,7 +5,9 @@
         @include('_partials.sirv')
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="canonical" href="{{ $page->getUrl() }}">
+        @if($page->getUrl() != $page->baseUrl)
+        <link rel="canonical" href="{{ $page->getUrl() }}/">
+        @endif
         <meta name="description" content="{{ $page->meta_description }}">
         <link rel="icon" href="/favicon.ico">
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
