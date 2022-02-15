@@ -20,7 +20,7 @@ I've found a way to circumvent the need to enter orders to view the page, it doe
 
 For this to work you need to have 1 successful order in the system as we need to reference this in the update.
 
-Open `/app/code/core/Mage/Checkout/controllers/OnepageController.php` you need to look for the successAction() method around line 275 as this is method that controlls the success page logic. It should look very similiar to the code below.
+Open `/app/code/core/Mage/Checkout/controllers/OnepageController.php` you need to look for the successAction() method around line 275 as this is method that controls the success page logic. It should look very similar to the code below.
 
 ```php
 public function successAction()

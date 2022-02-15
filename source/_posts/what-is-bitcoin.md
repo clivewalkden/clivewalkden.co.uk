@@ -35,7 +35,7 @@ When the currency was first launched in 2009 the calculations were all performed
 
 While it's unsteady beginings have caused the exchange rate of the crypto currency to plummet a couple of times, it seems that it has matured and bounced back stronger than ever.
 
-With the security of Bitcoin exchanges getting better the level of trust that investors have in this currency is increasing. Last year in August a ponzi scheme was un-earthed which severely damaged the reputation and value of Bitcoin with it dropping from $12 per Bitcoin to just $8 in a matter of days. In September, <a href="https://bitfloor.com/" rel="nofollow" target="_blank">bitfloor</a> (a Bitcoin exchange) was hacked and lost 24000 Bitcoins, this severley damaged confidence. These scams and hacks have made the Bitcoin community much more weary of sites using the currency.
+With the security of Bitcoin exchanges getting better the level of trust that investors have in this currency is increasing. Last year in August a ponzi scheme was un-earthed which severely damaged the reputation and value of Bitcoin with it dropping from $12 per Bitcoin to just $8 in a matter of days. In September, <a href="https://bitfloor.com/" rel="nofollow" target="_blank">bitfloor</a> (a Bitcoin exchange) was hacked and lost 24000 Bitcoins, this severely damaged confidence. These scams and hacks have made the Bitcoin community much more weary of sites using the currency.
 
 Bitcoins can be used for purchasing lots of goods online as well as exchanging into other currency such as USD or GBP using Bitcoin exchanges.
 

@@ -20,7 +20,7 @@ If, like me, you run a command line Linux distro then seeing useful stats like d
 df -h
 ```
 
-You should see something similiar to the image below.
+You should see something similar to the image below.
 
 <img src="/images/uploaded/blog/articles/viewing-disk-space-remaining-in-linux-command-line-main-original.png" />
 

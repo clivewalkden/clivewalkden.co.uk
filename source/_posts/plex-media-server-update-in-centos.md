@@ -16,7 +16,7 @@ section: content
 
 I've been using <a href="https://plex.tv/" target="_blank">Plex Media Server</a> now for nearly a year and unfortunately if you run the system through Cent OS command line there is no automatic way of updating it. This little guide will go through the process of ssh&#39;ing&nbsp;into your media server, downloading the latest version and then manually installing it.
 
-To see which version of Plex you are running simply log into your web interface for your media server and go to Settings &gt; Server &gt; General you will see something similiar to the screenshot below.
+To see which version of Plex you are running simply log into your web interface for your media server and go to Settings &gt; Server &gt; General you will see something similar to the screenshot below.
 
 <img alt="Plex Media Server Server Settings - General" src="/assets/images/blog/articles//plex-media-server-settings-general.png" />
 

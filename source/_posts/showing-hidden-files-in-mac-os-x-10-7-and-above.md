@@ -26,7 +26,7 @@ To enable hidden files/folders in finder windows:
 4. Now hold &lsquo;alt&rsquo; on the keyboard and right click on the Finder icon
 5. Click on Relaunch
 
-When Finder relaunches you should see all your hidden files and folders. If you ever want to reverse the command and re-hide all hidden files and folders. Go through the same proceedure except change step 2 to:
+When Finder relaunches you should see all your hidden files and folders. If you ever want to reverse the command and re-hide all hidden files and folders. Go through the same procedure except change step 2 to:
 ```shell
 defaults write com.apple.Finder AppleShowAllFiles NO
 ```

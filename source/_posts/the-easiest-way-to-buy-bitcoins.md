@@ -20,7 +20,7 @@ They offer multiple methods of payment ranging from meeting someone and paying w
 
 ### Global Bitcoin Marketplace
 
-The people trading are based all round the world so you could buy Bitcoins in almost any currency or denomination. It costs nothing to buy and only 1% (currently) to sell your crypto to anyone who wants it. After every transaction you are given the ability to rate the transaction, this is public so can be seen by every other buyer and seller. Similiar to ebay ratings this allows you to see who may be a better seller or buyer.
+The people trading are based all round the world so you could buy Bitcoins in almost any currency or denomination. It costs nothing to buy and only 1% (currently) to sell your crypto to anyone who wants it. After every transaction you are given the ability to rate the transaction, this is public so can be seen by every other buyer and seller. Similar to ebay ratings this allows you to see who may be a better seller or buyer.
 
 ### Tried and Tested
 
