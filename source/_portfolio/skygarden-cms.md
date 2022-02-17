@@ -15,6 +15,8 @@ image_main: skygarden-home.png
 intro: Bespoke CMS build with ecommerce added post launch
 summary: [Client project scoping to determine the best solution,Custom CMS build,Bespoke ecommerce build,SagePay integration,Google Advertising,Testing]
 seo: true
+meta_title: Bespoke CMS and Ecommerce build for Sky Garden
+meta_description: Bespoke CMS build with ecommerce added post launch
 ---
 
 Set up as Greenfix in 1988 as an environmental stablisation company. In 1996 we became green roof pioneers and one of the founder members of GRO (Green Roof Organisation). Separated from Greenfix in 2007 to become Sky Garden Ltd and now partner multiple waterproofing manufactures throughout the UK.

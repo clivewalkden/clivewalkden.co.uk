@@ -14,6 +14,8 @@ infrastructure: [Linux,Cluster,High Availability,WAF,Percona,Nginx,Zabbix,Redis,
 image_main: attwoolls-home.png
 intro: A Magento 2 build for a camping supplies retailer.
 summary: [Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Module suggestion to improve sales and user experience,Security service setup and configuration,Magento 2.4 backend upgrade]
+meta_title: Magento 2 Site Build for Attwoolls Outdoors
+meta_description: A Magento 2 build for a camping supplies retailer.
 seo: true
 ---
 

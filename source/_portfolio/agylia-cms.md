@@ -13,7 +13,9 @@ technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive]
 infrastructure: [Linux,Cluster,High Availability,MariaDB,Apache,Zabbix]
 image_main: agylia-home.png
 intro: Build a CMS to control the company marketing for their learning management system
-summary: [Client project scoping to determine the best solution,Custom CMS build,Testing] 
+summary: [Client project scoping to determine the best solution,Custom CMS build,Testing]
+meta_title: PHP Content Management System Build for Agylia
+meta_description: Build a CMS to control the company marketing for their learning management system.
 seo: true
 ---
 

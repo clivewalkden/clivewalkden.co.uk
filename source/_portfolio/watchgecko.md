@@ -15,6 +15,8 @@ image_main: watchgecko-home.png
 intro: A Magento 2 build for an international watch strap retailer.
 summary: [Client project scoping to determine the best solution,Braintree payment integration,PayPal payment integration,Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Custom module creation for client specific functionality,Module suggestion to improve sales and user experience,Security service setup and configuration,Server migration planning and execution]
 seo: false
+meta_title: Magento 2 Site Build for WatchGecko
+meta_description: A Magento 2 build for an international watch strap retailer.
 ---
 
 WatchGecko was founded in 2010 with a mission to provide a contemporary range of better quality watch straps to consumer and wholesale markets. Since then they have also developed several brand names, StrapJunkie and ZULUDIVER to satisfy increasing customer demand.

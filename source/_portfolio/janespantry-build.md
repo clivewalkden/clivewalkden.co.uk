@@ -15,6 +15,8 @@ image_main: janes-pantry-original-home.jpg
 intro: Bespoke Ecommerce and CMS build
 summary: [Client project scoping to determine the best solution,Custom CMS build,Bespoke ecommerce build,SagePay integration,Google Advertising,Testing,Celebration Cake section planning and build]
 seo: true
+meta_title: Bespoke Ecommerce build for Janes Pantry
+meta_description: Bespoke Ecommerce and CMS build
 ---
 
 Janes Pantry is a local family run bakery in Gloucestershire. They also provide fresh Buffet services, Celebration Cakes and Wholesale Bakery.

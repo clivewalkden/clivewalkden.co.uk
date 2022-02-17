@@ -14,6 +14,8 @@ infrastructure: [GCloud Storage,GCloud Load Balancer,GCloud CDN,Sirv Image CDN]
 image_main: clivewalkden-home.png
 intro: An update from the old SOZOcms version of my site to the new static generated Jigsaw build
 summary: [Migration of data from existing site,Infrastucture planning and configuration]
+meta_title: Jigsaw Static Website Build for myself
+meta_description: An update from the old SOZOcms version of my site to the new static generated Jigsaw build.
 seo: true
 ---
 

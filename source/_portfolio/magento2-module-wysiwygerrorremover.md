@@ -20,6 +20,8 @@ image_small: github-repo-small.png
 supported_versions: [Magento 2.4]
 section: summary
 intro: Removes the error message displayed when saving a CMS page in Magento 2.4.2 or higher.
+meta_title: Magento 2 WYSIWYG Error Remover Module
+meta_description: Removes the error message displayed when saving a CMS page in Magento 2.4.2 or higher.
 ---
 
 After testing our latest Magento 2.4.3 upgrades we noticed that when saving a CMS page in the admin you got an error returned.

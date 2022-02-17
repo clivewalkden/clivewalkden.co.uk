@@ -15,6 +15,8 @@ image_main: toylander-home.png
 intro: A Magento 2 build for a custom build electric car for children.
 summary: [Client project scoping to determine the best solution,WorldPay payment integration,Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Module suggestion to improve sales and user experience,Security service setup and configuration,Server migration planning and execution,Magento 2.4 backend upgrade]
 seo: true
+meta_title: Magento 2 Site Build for Toylander
+meta_description: A Magento 2 build for a custom build electric car for children.
 ---
 
 Toylander have been producing superior quality electric vehicle kits that children just love to drive since 1987.

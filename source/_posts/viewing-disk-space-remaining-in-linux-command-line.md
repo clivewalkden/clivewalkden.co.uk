@@ -24,7 +24,7 @@ You should see something similar to the image below.
 
 <img src="/images/uploaded/blog/articles/viewing-disk-space-remaining-in-linux-command-line-main-original.png" />
 
-The -h simply puts the drive space into human readable format eg. 10K, 45G, 1.1T.
+The -h simply puts the drive space into human-readable format eg. 10K, 45G, 1.1T.
 
 There are other options available for the df command but nothing else that needs covering in this post.
 

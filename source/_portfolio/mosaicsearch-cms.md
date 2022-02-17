@@ -15,6 +15,8 @@ image_main: mosaicsearch-home.png
 intro: Bespoke CMS build
 summary: [Client project scoping to determine the best solution,Custom CMS build,Testing]
 seo: true
+meta_title: Bespoke CMS and Ecommerce build for Mosaic Search
+meta_description: Bespoke CMS build
 ---
 
 Mosaic Executive Search leverage their global reach, years of recruitment experience and the professional capabilities of their Executive&nbsp;Search Specialists to enable companies to fulfil their talent selection needs successfully and to help candidates locate their next leadership position.

@@ -15,6 +15,8 @@ image_main: frasersbudgens-home.png
 intro: Bespoke CMS build with members area for customers
 summary: [Client project scoping to determine the best solution,Custom CMS build,Testing]
 seo: true
+meta_title: Bespoke CMS and members area build for Frasers Budgens
+meta_description: Bespoke CMS build with members area for customers
 ---
 
 Fraser's Budgens are based in Marlborough and Yarnton, stocking over 200 local products which represent the best food and drink our areas have to offer.

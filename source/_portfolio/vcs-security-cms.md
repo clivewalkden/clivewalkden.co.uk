@@ -15,6 +15,8 @@ image_main: vsc-security-home.png
 intro: Bespoke CMS build
 summary: [Client project scoping to determine the best solution,Custom CMS build,Testing]
 seo: true
+meta_title: Bespoke CMS Build for VSC Security
+meta_description: Bespoke CMS build
 ---
 
 VSC Security provide high calibre security consultancy and protective services that are ethically delivered and enable your business to work successfully in challenging geopolitical environments.

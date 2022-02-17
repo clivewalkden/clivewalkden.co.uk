@@ -15,6 +15,8 @@ image_main: orangetreetoys-home.png
 intro: A Magento build for a toy designer and wholesaler.
 summary: [Client project scoping to determine the best solution,Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Custom module creation for client specific functionality,Module suggestion to improve sales and user experience,Security service setup and configuration,Server migration planning and execution]
 seo: true
+meta_title: Magento 1 Site Build for Orangetree Toys
+meta_description: A Magento build for a toy designer and wholesaler.
 ---
 
 Orange Tree Toys was first established in 2000, and is run by two sisters, Anuja Wilson and Lamani Simons. All their products are designed here in the UK by Anuja, the Creative Director, who is constantly looking for inspiration for exciting products.

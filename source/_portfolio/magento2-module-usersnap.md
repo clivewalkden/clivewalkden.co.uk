@@ -20,6 +20,8 @@ image_small: github-repo-small.png
 supported_versions: [Magento 2.2,Magento 2.3,Magento 2.4]
 section: summary
 intro: A plugin for Magento 2 that outputs the Usersnap javascript code into the website
+meta_title: Magento 2 Usersnap Module
+meta_description: A plugin for Magento 2 that outputs the Usersnap javascript code into the website
 ---
 
 A plugin for Magento 2 that outputs the Usersnap javascript code into the website

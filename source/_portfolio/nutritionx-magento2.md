@@ -2,7 +2,7 @@
 extends: _layouts.portfolio
 id: 56
 title: Magento 2 Site build
-client: Nutrition X
+client: NutritionX
 status: Live
 url: https://www.nutritionx.co.uk/
 launched: 2020-10-01 10:00:00
@@ -15,6 +15,8 @@ image_main: nutritionx-home.png
 intro: A Magento 2 build for an award winning sports nutrition site.
 summary: [Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Module suggestion to improve sales and user experience,Security service setup and configuration]
 seo: false
+meta_title: Magento 2 Site Build for NutritionX
+meta_description: A Magento 2 build for an award winning sports nutrition site.
 ---
 
 NutritionX are here to change the game in sports nutrition. From their scientifically-formulated supplements created by world-leading nutritionists, to their expert-led consultancy services and dedication to clean sport through rigorous supplement testing, they look at the whole picture to ensure you perform at your peak.

@@ -15,6 +15,8 @@ image_main: mccarthymarland-home.png
 intro: Bespoke CMS build
 summary: [Client project scoping to determine the best solution,Custom CMS build,Testing]
 seo: true
+meta_title: Bespoke CMS and Ecommerce build for McCarthy Marland
+meta_description: Bespoke CMS build
 ---
 
 McCarthy Marland is based in Bristol city centre and have been serving Bristol and the South West since 2001.&nbsp;Their central location, highly experienced team and cutting edge waste segregation technology truly set them apart from their peers.

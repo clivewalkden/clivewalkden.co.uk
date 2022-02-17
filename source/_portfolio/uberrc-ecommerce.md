@@ -15,6 +15,8 @@ image_main: uberrc-home.png
 intro: Build an ecommerce shop and CMS to sell Remote Control Car parts internationally
 summary: [Custom CMS build,Bespoke ecommerce build,PayPal integration,Testing,Flash header build]
 seo: false
+meta_title: PHP Ecommerce and Content Management System Build
+meta_description: Build an ecommerce shop and CMS to sell Remote Control Car parts internationally
 ---
 
 UberRC offer RC owners the very best in custom components to make the most of their beloved car's. Be it protecting their investment from dirt and muck with our custom designed windows or shock socks to complementing their RC with the strength and lightness of Carbon Fibre products.

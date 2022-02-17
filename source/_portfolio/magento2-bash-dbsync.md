@@ -18,6 +18,8 @@ image_small: github-repo-small.png
 supported_versions: [Magento 2.0,Magento 2.1,Magento 2.2,Magento 2.3,Magento 2.4]
 section: summary
 intro: A bash script to syncronise databases from production to staging or development.
+meta_title: Magento 2 DB Sync Bash Script
+meta_description: A bash script to syncronise databases from production to staging or development.
 ---
 
 This script was written to allow a quick an easy method of copying a production database to staging or development environments. It has the ability to remove sensitive data such as customer and order data as well as custom table exclusions via a conf file.
