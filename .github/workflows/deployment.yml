@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Composer install jigsaw and all requirements
-        uses: php-actions/composer@v5
+        uses: php-actions/composer@v6
         with:
           dev: no
           php_version: 7.4
