@@ -22,7 +22,7 @@ df -h
 
 You should see something similar to the image below.
 
-<img src="/images/uploaded/blog/articles/viewing-disk-space-remaining-in-linux-command-line-main-original.png" />
+<img alt="CLI Output from df -h command in Linux" src="/images/uploaded/blog/articles/viewing-disk-space-remaining-in-linux-command-line-main-original.png" />
 
 The -h simply puts the drive space into human-readable format eg. 10K, 45G, 1.1T.
 

@@ -4,7 +4,7 @@ id: 40
 title: jQuery A Beginning
 short_intro: I've been using jQuery now for a few months and thought I'd share some observations.
 intro: I've been using the jQuery library now for a few months and thought I'd share some observations.
-meta_title: jQuery A Beginning
+meta_title: jQuery a beginning from a developers perspective
 meta_description: I've been using the jQuery library now for a few months and thought I'd share some observations.
 published: 2010-10-30 00:00:00
 hide: false

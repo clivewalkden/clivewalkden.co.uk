@@ -73,7 +73,7 @@ use Carbon\Carbon;
                     </div>
                     <div>
                         <a href="{{ $page->url }}" target="_blank" rel="external">
-                            <img src="https://img.shields.io/github/v/tag/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
+                            <img alt="Github Latest Tag" src="https://img.shields.io/github/v/tag/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
                         </a>
                     </div>
                     @endif
@@ -106,7 +106,7 @@ use Carbon\Carbon;
                     </div>
                     <div>
                         <a href="{{ $page->url }}" target="_blank" rel="external">
-                            <img src="https://img.shields.io/github/license/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
+                            <img alt="License Type" src="https://img.shields.io/github/license/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
                         </a>
                     </div>
                     @endif
@@ -116,7 +116,7 @@ use Carbon\Carbon;
                     </div>
                     <div>
                         <a href="{{ $page->url }}" target="_blank" rel="external">
-                            <img src="https://img.shields.io/badge/launched-{{ $start }}-blue?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
+                            <img alt="Date Launched Badge" src="https://img.shields.io/badge/launched-{{ $start }}-blue?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
                         </a>
                     </div>
                     @if($page->github_user && $page->github_repo)
@@ -126,7 +126,7 @@ use Carbon\Carbon;
                     </div>
                     <div>
                         <a href="{{ $page->url }}" target="_blank" rel="external">
-                            <img src="https://img.shields.io/github/last-commit/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
+                            <img alt="Date Last Updated Badge" src="https://img.shields.io/github/last-commit/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
                         </a>
                     </div>
                     @endif

@@ -4,7 +4,7 @@ id: 20
 title: Selsley Bash
 short_intro: Last weekend we finally got to try out our Bajas on Selsley common.
 intro: Last weekend we finally got to try out our Bajas on Selsley common.
-meta_title: Selsley Bash
+meta_title: Selsley Baja Bash from UberRC
 meta_description: Last weekend we finally got to try out our Bajas on Selsley common.
 published: 2008-04-29 00:00:00
 hide: false

@@ -1,5 +1,5 @@
 ---
 extends: _layouts.blog
-meta_title: Blog | Clive Walkden
-meta_description: I'm a 31 year old PHP developer from the UK. My skills lie in website development using PHP, MySQL, HTML5, CSS3 and jQuery.
+meta_title: My latest development, devops and gaming blog posts
+meta_description: Blog articles I've written that cover website development, gaming and devops. Mainly for my own benefit, but maybe useful to others.
 ---

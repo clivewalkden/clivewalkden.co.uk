@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 id: 20220130
-meta_title: RollerCoin Intro
+meta_title: RollerCoin Introduction to virtual Bitcoin mining
 meta_description: An introduction to the RollerCoin site and how you can use it to mine your own coins 
 title: RollerCoin Intro
 short_intro: An introduction to the RollerCoin site and how you can use it to mine your own coins

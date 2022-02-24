@@ -1,4 +1,8 @@
-@extends('_layouts.main')
+---
+extends: _layouts.main
+meta_title: Portfolio of websites and plugins / modules
+meta_description: Here is an example of works I've completed either individually or as part of a team.
+---
 
 @section('body')
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">

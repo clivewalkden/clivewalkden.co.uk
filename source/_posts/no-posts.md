@@ -4,7 +4,7 @@ id: 18
 title: No Posts
 short_intro: Been over a month since i posted last and for good reason, Christmas was a busy time for me with expanding work and decreasing time.
 intro: Been over a month since i posted last and for good reason, Christmas was a busy time for me with expanding work and decreasing time.
-meta_title: No Posts
+meta_title: No Posts for a while due to Christmas
 meta_description: Been over a month since i posted last and for good reason, Christmas was a busy time for me with expanding work and decreasing time.
 published: 2008-01-31 00:00:00
 hide: false

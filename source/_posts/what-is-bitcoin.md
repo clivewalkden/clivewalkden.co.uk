@@ -4,7 +4,7 @@ id: 55
 title: What is Bitcoin?
 short_intro: A little primer into the world of the Bitcoin Cryptocurrency
 intro: Bitcoin has reached an all time high recently, this guide explains what you need to do to start using the cryptocurrency
-meta_title: What is Bitcoin?
+meta_title: What is the cryptocoin Bitcoin?
 meta_description: A little primer into what Bitcoin is and a little history
 published: 2013-03-06 14:33:00
 hide: false

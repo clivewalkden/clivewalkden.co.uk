@@ -2,10 +2,10 @@
 extends: _layouts.post
 id: 61
 title: Butterfly on Buddleia
-short_intro: Whilst I was waiting for my Train the other day i decided to take a little walk with my camera.
-intro: Whilst I was waiting for my Train the other day i decided to take a little walk with my camera. Within a couple of minutes I found this huge Buddleia covered in Butterflies. Luckily for me the sun came out and this was what got.
-meta_title: Butterfly on Buddleia
-meta_description: Whilst I was waiting for my Train the other day i decided to take a little walk with my camera. Photographed with my Sony A37 and Minolta 75-300mm AF Zoom
+short_intro: Whilst I was waiting for my Train the other day I decided to take a little walk with my camera.
+intro: Whilst I was waiting for my Train the other day I decided to take a little walk with my camera. Within a couple of minutes I found this huge Buddleia covered in Butterflies. Luckily for me the sun came out and this was what got.
+meta_title: Butterfly on Buddleia Sony A37 photograph
+meta_description: Whilst I was waiting for my Train the other day I decided to take a little walk with my camera. Photographed with my Sony A37 and Minolta 75-300mm AF Zoom
 published: 2013-08-22 09:21:00
 hide: false
 category: photography

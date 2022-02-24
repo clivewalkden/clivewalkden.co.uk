@@ -2,10 +2,10 @@
 extends: _layouts.post
 id: 46
 title: PHP Colour lightness function
-short_intro: Here's a quick little function which can be used to return your IP address. Not as useful as the next method but a simple quick solution
-intro: Here's a quick little function which can be used to return your IP address. Not as useful as the next method but a simple quick solution
+short_intro: A PHP function to return the lightness of a colour from a hex value
+intro: A PHP function to return the lightness of a colour from a hex value
 meta_title: PHP Colour lightness function
-meta_description: Here's a quick little function which can be used to return your IP address. Not as useful as the next method but a simple quick solution
+meta_description: A PHP function to return the lightness of a colour from a hex value
 published: 2011-06-30 00:00:00
 hide: false
 category: php

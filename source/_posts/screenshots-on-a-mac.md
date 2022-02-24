@@ -2,10 +2,10 @@
 extends: _layouts.post
 id: 41
 title: Screenshots on a Mac
-short_intro: I've been using jQuery now for a few months and thought I'd share some observations.
-intro: I've been using the jQuery library now for a few months and thought I'd share some observations.
+short_intro: Just a quick article outlining the different methods of capturing screen output on a Mac.
+intro: Just a quick article outlining the different methods of capturing screen output on a Mac.
 meta_title: Screenshots on a Mac
-meta_description: I've been using the jQuery library now for a few months and thought I'd share some observations.
+meta_description: Just a quick article outlining the different methods of capturing screen output on a Mac.
 published: 2010-10-31 00:00:00
 hide: false
 category: apple-mac

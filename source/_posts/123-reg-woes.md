@@ -4,7 +4,7 @@ id: 9
 title: 123-Reg Woes!!
 short_intro: I've been using 123-reg now for approximately 5 years and have never had a problem up until earlier this week when I was transferring a couple of domains, for new clients, into my account. The first was a .com and the second a .co.uk.
 intro: I've been using 123-reg now for approximately 5 years and have never had a problem up until earlier this week when I was transferring a couple of domains, for new clients, into my account. The first was a .com and the second a .co.uk.
-meta_title: 123-Reg Woes!!
+meta_title: An article about my 123-Reg woes
 meta_description: I've been using 123-reg now for approximately 5 years and have never had a problem up until earlier this week when I was transferring a couple of domains, for new clients, into my account. The first was a .com and the second a .co.uk.
 published: 2007-09-29 00:00:00
 hide: false
