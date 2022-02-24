@@ -15,7 +15,7 @@
             @if ($post->hero)
                 {!! $page->image("/assets/images/blog/articles/" . $post->hero, 595, 335, ['title' => $post->title, 'alt' => $post->meta_title, 'class' => 'object-cover w-full h-64']) !!}
             @else
-                {!! $page->image("/assets/images/blog/categories/" . $category->seo_link . ".jpg", 595, 335, ['title' => $category->title, 'alt' => $category->seo_title, 'class' => 'object-cover w-full h-64']) !!}
+                {!! $page->image("/assets/images/blog/categories/" . $category->seo_link . ".jpg", 595, 335, ['title' => $category->title, 'alt' => $category->meta_title, 'class' => 'object-cover w-full h-64']) !!}
             @endif
             <div class="p-5">
                 <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
