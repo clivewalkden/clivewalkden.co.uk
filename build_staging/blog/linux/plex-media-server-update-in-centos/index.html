@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+                <link rel="preconnect" href="https://scripts.sirv.com" crossorigin>
+<link rel="preconnect" href="https://clivewalkden.sirv.com" crossorigin>
+<link rel="dns-prefetch" href="https://scripts.sirv.com">
+<link rel="dns-prefetch" href="https://clivewalkden.sirv.com">
+<script src="https://scripts.sirv.com/sirv.nospin.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="canonical" href="https://clivewalkden.co.uk/blog/linux/plex-media-server-update-in-centos/">
+                <meta name="description" content="If you want to update your version of Plex Media Server for Cent OS then you&#039;d best be happy using command line">
+        <link rel="icon" href="/favicon.ico">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <title>Plex Media Server Cent OS update</title>
+        <link rel="stylesheet" href="/assets/build/css/main.css">
+        <script defer src="/assets/build/js/main.js"></script>
+        <link href="//fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    </head>
+    <body class="text-gray-900 font-default antialiased leading-normal tracking-normal">
+        
+    <header class="bg-gray-800 p-8 mt-0 fixed w-full z-10 top-0">
+    <div class="container mx-auto flex flex-wrap items-center">
+        <div class="flex w-1/2 justify-center md:justify-start text-white">
+            <a href="/" class="text-white no-underline hover:text-white hover:no-underline">
+                <h1 class="text-3xl pl-2" style="text-shadow: 1px 1px 0 #ffae00">Clive Walkden</h1>
+                <span class="font-serif italic items-center text-gray-200 pl-2 text-xs lg:text-base hidden md:block">SysOps, Magento 2, PHP and my general mind dumps.</span>
+            </a>
+        </div>
+
+        <div class="w-full lg:hidden flex justify-end flex-1 md:float-right">
+            <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
+                        Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                </svg>
+            </button>
+        </div>
+
+        <nav class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 justify-end" id="nav-content">
+    <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+        <li class="mr-3">
+            <a href="/" class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Home</a>
+        </li>
+        <li class="mr-3">
+            <a href="/portfolio/" class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Portfolio</a>
+        </li>
+        <li class="fmr-3">
+            <a href="/blog/" class="inline-block py-2 px-4 text-white no-underline">Blog</a>
+        </li>
+        <li class="mr-3">
+            <a href="/about/" class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">About</a>
+        </li>
+    </ul>
+</nav>    </div>
+</header>
+    <div role="main" class="container shadow-lg mx-auto bg-white mt-24 md:mt-28">
+                <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <!--Title-->
+        <div class="text-center">
+            <p class="text-sm md:text-base text-yellow-500 font-bold">
+                                <time datetime="2014-07-18T11:27:11+00:00">18 July 2014</time>
+                <span class="text-gray-900">/</span> <a href="/blog/linux/">Linux</a>
+            </p>
+            <div class="flex">
+                                    <a href="/blog/jquery/php-time-equivalent-for-javascript/" title="PHP Time() Equivalent for Javascript"
+                       class="flex-none text-sm self-center">Previous Article</a>
+                                <h1 class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none flex-grow text-center">Plex Media Server Cent OS Update</h1>
+                                    <a href="/blog/linux/running-linux-commands-in-the-background/" title="Running Linux Commands in the Background"
+                       class="flex-none text-sm self-center">Next Article</a>
+                            </div>
+        </div>
+
+        <!--image-->
+                    <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-12 rounded bg-center"
+                 style="background-image:url('/assets/images/blog/articles/plex-media-server-update-in-centos.png'); height: 75vh;"></div>
+        
+    <!--Container-->
+        <div class="container max-w-5xl mx-auto -mt-32">
+
+            <div class="mx-0 sm:mx-6">
+
+                <div class="bg-white w-full p-8 md:p-24 text-lg text-gray-700 content">
+                    <!--Post Content-->
+                    <p>I've been using <a href="https://plex.tv/" target="_blank">Plex Media Server</a> now for nearly a year and unfortunately if you run the system through Cent OS command line there is no automatic way of updating it. This little guide will go through the process of ssh&#39;ing&nbsp;into your media server, downloading the latest version and then manually installing it.</p>
+
+<p>To see which version of Plex you are running simply log into your web interface for your media server and go to Settings &gt; Server &gt; General you will see something similar to the screenshot below.</p>
+
+<p><img alt="Plex Media Server Server Settings - General" src="/assets/images/blog/articles//plex-media-server-settings-general.png" /></p>
+
+<p>Now check the <a href="https://plex.tv/downloads" target="_blank">Plex website</a> to see if there is a newer version available for Cent OS. If there is then it&#39;s time to ssh into your media server.</p>
+
+<pre><code class="language-shell">ssh USER@SERVERADDRESS
+</code></pre>
+
+<p>Where USER is the user of your media server and SERVERADDRESS is the IP or domain name of your media server. Now we need to navigate to a directory that the update can be downloaded into. I download mine into /home/install using this example the code would be.</p>
+
+<pre><code class="language-shell">cd /home/install/
+</code></pre>
+
+<p>Now we need to download the update, copy the url from the plex website, as of today that would be http://downloads.plexapp.com/plex-media-server/0.9.9.12.504-3e7f93c/plexmediaserver-0.9.9.12.504-3e7f93c.x86_64.rpm now in your ssh terminal type the following</p>
+
+<pre><code class="language-shell">wget http://downloads.plexapp.com/plex-media-server/0.9.9.12.504-3e7f93c/plexmediaserver-0.9.9.12.504-3e7f93c.x86_64.rpm
+</code></pre>
+
+<p>Were the filename is the link you just copied from Plex. You should then see the download begin, if it doesn't work double check your link.</p>
+
+<p>After is has completed you need to shutdown the Plex service running on the media server. This is done with the following:</p>
+
+<pre><code class="language-shell">service plexmediaserver stop
+</code></pre>
+
+<p>After a couple of seconds you should see something similar to the following</p>
+
+<p><img alt="Plex Media Server stopped via command line in Cent OS" src="/assets/images/blog/articles//plex-media-service-stop.png" /></p>
+
+<p>Now that Plex is stopped we can run the manual install, run the following command (where the filename is the same as the file you downloaded from plex).</p>
+
+<pre><code class="language-shell">yum localupdate plexmediaserver-0.9.9.12-504-3e7f93c.x86_64.rpm
+</code></pre>
+
+<p>After a minute the update should be installed and you are ready to restart your server. Use the following command:</p>
+
+<pre><code class="language-shell">service plexmediaserver start
+</code></pre>
+
+<p><img alt="Plex Media Server started via command line in Cent OS" src="/assets/images/blog/articles/plex-media-service-start.png" /></p>
+
+<p>Congratulations, Plex is updated to the latest version.</p>
+                    <!--/ Post Content-->
+                </div>
+
+                <!--Author-->
+                <div class="flex w-full items-center font-sans p-8 md:p-24">
+                    <img class="w-10 h-10 rounded-full mr-4" src="/assets/images/clive-walkden.jpg"
+                         alt="Avatar of Clive Walkden">
+                    <div class="flex-1">
+                        <p class="text-base font-bold text-base md:text-xl leading-none">Clive Walkden</p>
+                    </div>
+                </div>
+                <!--/Author-->
+            </div>
+        </div>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Plex Media Server Cent OS Update",
+            "description": "This is a short guide showing you how to update your version of Plex Media Server in Cent OS",
+            "datePublished": "July 18, 2014",
+            "mainEntityOfPage": "True",
+            "image": {
+                "@type": "imageObject",
+                "url": "https://www.clivewalkden.co.uk/assets/images/blog/articles/plex-media-server-update-in-centos.png",
+                "height": "600",
+                "width": "800"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Clive Walkden",
+                "logo": {
+                    "@type": "imageObject",
+                    "url": "https://www.clivewalkden.co.uk/assets/images/blog/categories/general.jpg"
+                }
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Clive Walkden",
+                "url": "https://clivewalkden.co.uk/about/"
+            },
+            "articleBody": "I&#039;ve been using Plex Media Server now for nearly a year and unfortunately if you run the system through Cent OS command line there is no automatic way of updating it. This little guide will go through the process of ssh&amp;#39;ing&amp;nbsp;into your media server, downloading the latest version and then manually installing it.
+
+To see which version of Plex you are running simply log into your web interface for your media server and go to Settings &amp;gt; Server &amp;gt; General you will see something similar to the screenshot below.
+
+
+
+Now check the Plex website to see if there is a newer version available for Cent OS. If there is then it&amp;#39;s time to ssh into your media server.
+
+ssh USER@SERVERADDRESS
+
+
+Where USER is the user of your media server and SERVERADDRESS is the IP or domain name of your media server. Now we need to navigate to a directory that the update can be downloaded into. I download mine into /home/install using this example the code would be.
+
+cd /home/install/
+
+
+Now we need to download the update, copy the url from the plex website, as of today that would be http://downloads.plexapp.com/plex-media-server/0.9.9.12.504-3e7f93c/plexmediaserver-0.9.9.12.504-3e7f93c.x86_64.rpm now in your ssh terminal type the following
+
+wget http://downloads.plexapp.com/plex-media-server/0.9.9.12.504-3e7f93c/plexmediaserver-0.9.9.12.504-3e7f93c.x86_64.rpm
+
+
+Were the filename is the link you just copied from Plex. You should then see the download begin, if it doesn&#039;t work double check your link.
+
+After is has completed you need to shutdown the Plex service running on the media server. This is done with the following:
+
+service plexmediaserver stop
+
+
+After a couple of seconds you should see something similar to the following
+
+
+
+Now that Plex is stopped we can run the manual install, run the following command (where the filename is the same as the file you downloaded from plex).
+
+yum localupdate plexmediaserver-0.9.9.12-504-3e7f93c.x86_64.rpm
+
+
+After a minute the update should be installed and you are ready to restart your server. Use the following command:
+
+service plexmediaserver start
+
+
+
+
+Congratulations, Plex is updated to the latest version.
+"
+        }
+        </script>
+
+        
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+    <div class="max-w-xl mb-2 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 border-b border-primary">
+    <h2 class="mb-4 font-sans text-3xl font-bold tracking-tight text-title sm:text-4xl sm:leading-none">Latest Articles</h2>
+</div>
+    <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+                            <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border">
+                            <img title="Bitcoin" alt="Bitcoin - Cryptocurrency not just for geeks" src="https://clivewalkden.sirv.com/assets/images/blog/categories/bitcoin.jpg?profile=personal" class="object-cover w-full h-64" height="335" width="595"/>
+                        <div class="p-5">
+                <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+                    <a href="/blog/bitcoin/" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="Bitcoin">
+                        Bitcoin
+                    </a>
+                    <span class="text-gray-600">— <time datetime="2022-01-30T20:45:00+00:00">30 January 2022</time></span>
+                </p>
+                <a href="/blog/bitcoin/rollercoin-intro/" aria-label="Article" title="RollerCoin Introduction to virtual Bitcoin mining" class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400">
+                    RollerCoin Intro
+                </a>
+                <p class="mb-5 text-gray-700">
+                    An introduction to the RollerCoin site and how you can use it to mine your own coins
+                </p>
+                <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>            </div>
+        </div>
+                            <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border">
+                            <img title="Magento 2" alt="Magento 2 Blog Posts" src="https://clivewalkden.sirv.com/assets/images/blog/categories/magento-2.jpg?profile=personal" class="object-cover w-full h-64" height="335" width="595"/>
+                        <div class="p-5">
+                <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+                    <a href="/blog/magento-2/" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="Magento 2">
+                        Magento 2
+                    </a>
+                    <span class="text-gray-600">— <time datetime="2022-01-22T15:30:00+00:00">22 January 2022</time></span>
+                </p>
+                <a href="/blog/magento-2/magento2-logging/" aria-label="Article" title="Magento 2.4.x Logging" class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400">
+                    Magento 2.4.x Writing to a Log File
+                </a>
+                <p class="mb-5 text-gray-700">
+                    How to log to information to a file in different Magento 2.4.x versions
+                </p>
+                <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>            </div>
+        </div>
+                            <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border">
+                            <img title="Linux" alt="Linux command line tools, installations etc" src="https://clivewalkden.sirv.com/assets/images/blog/categories/linux.jpg?profile=personal" class="object-cover w-full h-64" height="335" width="595"/>
+                        <div class="p-5">
+                <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+                    <a href="/blog/linux/" class="transition-colors duration-200 text-title hover:text-yellow-700" aria-label="Category" title="Linux">
+                        Linux
+                    </a>
+                    <span class="text-gray-600">— <time datetime="2022-01-15T10:30:00+00:00">15 January 2022</time></span>
+                </p>
+                <a href="/blog/linux/letsencrypt-delete-certificate/" aria-label="Article" title="Letsencrypt Certbot correctly delete certificate" class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400">
+                    Letsencrypt Certbot correctly delete certificate
+                </a>
+                <p class="mb-5 text-gray-700">
+                    A quick example of how to delete a LetsEncrypt Certbot generated certificate.
+                </p>
+                <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>            </div>
+        </div>
+            </div>
+</div>    </div>
+    </div>
+    <div class="mx-auto max-w-7xl  relative mx-auto my-5 h-16">
+    <a href="#" class="block absolute left-1/2 w-16 h-16 -ml-8 bg-up bg-no-repeat bg-center opacity-60 hover:opacity-100"></a>
+</div>    <footer class="py-6 text-white footer">
+    <div class="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
+        <div class="grid justify-center lg:justify-between">
+            <div class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
+                <span>Copyright ©2013-2022 Clive Walkden</span>
+                <a href="/sitemap.xml">
+                    <span>Sitemap</span>
+                </a>
+            </div>
+            <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
+                                    <a href="mailto:contact@clivewalkden.co.uk" title="Email" target="_blank" rel="external me"
+   class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-title transition duration-200 hover:bg-yellow-700">
+    <i class="bx bx-sm bx-envelope bx-tada-hover"></i>
+</a>                                    <a href="https://twitter.com/clivewalkden" title="Twitter" target="_blank" rel="external me"
+   class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-title transition duration-200 hover:bg-yellow-700">
+    <i class="bx bx-sm bxl-twitter "></i>
+</a>                                    <a href="https://github.com/clivewalkden" title="Github" target="_blank" rel="external me"
+   class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-title transition duration-200 hover:bg-yellow-700">
+    <i class="bx bx-sm bxl-github "></i>
+</a>                            </div>
+        </div>
+    </div>
+</footer>    </body>
+</html>

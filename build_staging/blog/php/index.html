@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+                <link rel="preconnect" href="https://scripts.sirv.com" crossorigin>
+<link rel="preconnect" href="https://clivewalkden.sirv.com" crossorigin>
+<link rel="dns-prefetch" href="https://scripts.sirv.com">
+<link rel="dns-prefetch" href="https://clivewalkden.sirv.com">
+<script src="https://scripts.sirv.com/sirv.nospin.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="canonical" href="https://clivewalkden.co.uk/blog/php/">
+                <meta name="description" content="Blog posts about PHP code including PHP Functions, Classes, Scripts and general PHP Developer information.">
+        <link rel="icon" href="/favicon.ico">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <title>PHP developer code guides and findings</title>
+        <link rel="stylesheet" href="/assets/build/css/main.css">
+        <script defer src="/assets/build/js/main.js"></script>
+        <link href="//fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    </head>
+    <body class="text-gray-900 font-default antialiased leading-normal tracking-normal">
+        
+    <header class="bg-gray-800 p-8 mt-0 fixed w-full z-10 top-0">
+    <div class="container mx-auto flex flex-wrap items-center">
+        <div class="flex w-1/2 justify-center md:justify-start text-white">
+            <a href="/" class="text-white no-underline hover:text-white hover:no-underline">
+                <h1 class="text-3xl pl-2" style="text-shadow: 1px 1px 0 #ffae00">Clive Walkden</h1>
+                <span class="font-serif italic items-center text-gray-200 pl-2 text-xs lg:text-base hidden md:block">SysOps, Magento 2, PHP and my general mind dumps.</span>
+            </a>
+        </div>
+
+        <div class="w-full lg:hidden flex justify-end flex-1 md:float-right">
+            <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
+                        Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                </svg>
+            </button>
+        </div>
+
+        <nav class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 justify-end" id="nav-content">
+    <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+        <li class="mr-3">
+            <a href="/" class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Home</a>
+        </li>
+        <li class="mr-3">
+            <a href="/portfolio/" class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">Portfolio</a>
+        </li>
+        <li class="fmr-3">
+            <a href="/blog/" class="inline-block py-2 px-4 text-white no-underline">Blog</a>
+        </li>
+        <li class="mr-3">
+            <a href="/about/" class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4">About</a>
+        </li>
+    </ul>
+</nav>    </div>
+</header>
+    <div role="main" class="container shadow-lg mx-auto bg-white mt-24 md:mt-28">
+        
+    
+    
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="flex flex-col lg:flex-row">
+            <div class="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
+                <h1 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                    My Blog Articles<br class="hidden md:block" />
+                    Things you may find useful
+                    <span class="inline-block text-yellow-400">or not</span>
+                </h1>
+            </div>
+            <div class="lg:w-1/2">
+                <p class="text-base text-gray-700">
+                                            <p>PHP is my primary development language and has been so for the last 11+ years. Being a PHP developer has meant I can work on a massive variety of projects and in my time I've seen lots of different frameworks come and go. The power of PHP is the ingenuity and dedication of it developers, this is what I love and hope to give some help with my knowledge in this blog.</p>
+                                    </p>
+            </div>
+        </div>
+        <hr class="w-full my-8 border-gray-300" />    </div>
+
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="grid gap-10 row-gap-8 lg:grid-cols-5">
+            <div class="flex flex-col space-y-8 lg:col-span-4">
+                                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2014-02-09T10:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            9. February 2014
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/composer-self-update/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    Composer Self Update
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            Composer is rocking my life at the moment, I do have one small issue though.
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2013-08-21T08:21:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            21. August 2013
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-function-to-generate-a-random-password/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP function to generate a random password
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            This function will generate a random password of a given length (if specified)
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2013-08-14T08:21:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            14. August 2013
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-function-to-find-links-in-a-string/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP function to find links in a string
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            This function will allow you to search a string and convert urls to anchor tags
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2013-02-28T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            28. February 2013
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-email-address-validation-function/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP Email Address Validation Function
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            A PHP function to determine if a supplied email address is valid
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2012-02-23T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            23. February 2012
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-snippet-to-convert-uk-date-to-mysql-date/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP Snippet to convert UK date to MySQL date
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            A simple PHP preg_replace statement that will convert uk date format ready for a database
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2011-11-21T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            21. November 2011
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-filename-friendly-function/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP Filename Friendly Function
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            This function outputs a string that is filename friendly.
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2011-07-20T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            20. July 2011
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-function-to-find-the-last-key-of-a-multidimensional-array/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP Function to find the last key of a multidimensional array
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            This function is great for retrieving the last key of a multidimensional array. I use this function on a site that stores cake options such as size, shape, ribbon colour, icing colour and text fields for use in a shopping basket.
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2011-06-30T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            30. June 2011
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-colour-lightness-function/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP Colour lightness function
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            A PHP function to return the lightness of a colour from a hex value
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2011-06-28T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            28. June 2011
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/getting-a-missing-window-back-on-screen/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP Function IP if behind a proxy
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            Following from my last post, here is the method to get your IP address if you are behind a proxy. It&#039;s a much better function than the earlier post as it will almost guarantee a return result.
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2011-06-27T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            27. June 2011
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-function-to-return-your-ip-address/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP Function to return your IP address
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            Here&#039;s a quick little function which can be used to return your IP address. Not as useful as the next method but a simple quick solution
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2010-11-01T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            1. November 2010
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/useful-php-date-function/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    Useful PHP date function
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            I&#039;ve been using jQuery now for a few months and thought I&#039;d share some observations.
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                                <div class="mb-2 pb-10 border-b">
+                        <time datetime="2007-09-23T00:00:00+00:00" class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                            23. September 2007
+                        </time>
+                        <div class="mb-3">
+                            <a href="/blog/php/php-mysql-class/" aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                                    PHP MySQL Class
+                                </p>
+                            </a>
+                        </div>
+                        <p class="mb-4 text-base text-gray-700 md:text-lg">
+                            Been using this class now for my sites for a while it&#039;s just the ticket.
+                        </p>
+                        <div class="flex items-center">
+    <a href="/about/" aria-label="Author" title="Author" class="mr-3">
+        <img title="" alt="avatar" src="https://clivewalkden.sirv.com/assets/images/clive-walkden.jpg?profile=personal&amp;w=40&amp;h=40" class="object-cover w-10 h-10 rounded-full shadow-sm" width="40" height="40"/>
+    </a>
+    <div>
+        <a href="/about/" aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">Clive Walkden</a>
+        <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+    </div>
+</div>                    </div>
+                                                </div>
+            <div class="lg:col-span-1">
+                <div>
+                    <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Blog Categories</h3>
+                    <div class="max-w-lg space-y-3 sm:mx-auto lg:max-w-xl">
+                                                                                                        <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/apple-mac/" title="Apple Posts" class="text-gray-800">
+                                Apple Posts (3)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/bitcoin/" title="Bitcoin" class="text-gray-800">
+                                Bitcoin (4)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/css/" title="CSS3" class="text-gray-800">
+                                CSS3 (1)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/general/" title="General" class="text-gray-800">
+                                General (4)
+                            </a>
+                        </div>
+                                                                                                                                                                                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/jquery/" title="jQuery" class="text-gray-800">
+                                jQuery (2)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/linux/" title="Linux" class="text-gray-800">
+                                Linux (9)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/magento/" title="Magento" class="text-gray-800">
+                                Magento (3)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/magento-2/" title="Magento 2" class="text-gray-800">
+                                Magento 2 (2)
+                            </a>
+                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/pc/" title="PC" class="text-gray-800">
+                                PC (2)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/photography/" title="Photography" class="text-gray-800">
+                                Photography (1)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/php/" title="PHP" class="text-gray-800">
+                                PHP (12)
+                            </a>
+                        </div>
+                                                                                                                                    <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+                            <a href="/blog/ps3/" title="Sony PS3" class="text-gray-800">
+                                Sony PS3 (1)
+                            </a>
+                        </div>
+                                                                                                                                                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="mx-auto max-w-7xl  relative mx-auto my-5 h-16">
+    <a href="#" class="block absolute left-1/2 w-16 h-16 -ml-8 bg-up bg-no-repeat bg-center opacity-60 hover:opacity-100"></a>
+</div>    <footer class="py-6 text-white footer">
+    <div class="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
+        <div class="grid justify-center lg:justify-between">
+            <div class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
+                <span>Copyright ©2013-2022 Clive Walkden</span>
+                <a href="/sitemap.xml">
+                    <span>Sitemap</span>
+                </a>
+            </div>
+            <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
+                                    <a href="mailto:contact@clivewalkden.co.uk" title="Email" target="_blank" rel="external me"
+   class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-title transition duration-200 hover:bg-yellow-700">
+    <i class="bx bx-sm bx-envelope bx-tada-hover"></i>
+</a>                                    <a href="https://twitter.com/clivewalkden" title="Twitter" target="_blank" rel="external me"
+   class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-title transition duration-200 hover:bg-yellow-700">
+    <i class="bx bx-sm bxl-twitter "></i>
+</a>                                    <a href="https://github.com/clivewalkden" title="Github" target="_blank" rel="external me"
+   class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-title transition duration-200 hover:bg-yellow-700">
+    <i class="bx bx-sm bxl-github "></i>
+</a>                            </div>
+        </div>
+    </div>
+</footer>    </body>
+</html>
