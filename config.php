@@ -34,6 +34,13 @@ return [
             'sort' => ['-in_use', '-length'],
             'items' => [
                 [
+                    'title' => 'Go',
+                    'start' => Carbon::parse('2022-02-01'),
+                    'end' => Carbon::now(),
+                    'length' => Carbon::parse('2022-02-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
+                ],
+                [
                     'title' => 'PHP',
                     'start' => Carbon::parse('2002-01-01'),
                     'end' => Carbon::now(),
