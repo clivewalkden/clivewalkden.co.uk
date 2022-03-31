@@ -37,9 +37,10 @@ meta_description: I'm a 40 year old PHP developer from the UK. My skills lie in 
                     Other Interests
                 </h5>
                 <p class="mb-6 text-gray-900">
-                    Another passion of mine is PC gaming, having grown up with an Amiga, I moved to the PC in 1999 and
+                    Another passion of mine is gaming, having grown up with an Amiga, I moved to the PC in 1999 and
                     have enjoyed many genres of gaming. RPG (Role Playing Games) are my favourite at the
-                    moment with Elder Scrolls IV: Skyrim being my game of choice currently.
+                    moment but, Forza Horizon 3 is my game of choice currently. You may find me online in Steam or
+                    <a href="https://account.xbox.com/en-gb/profile?gamertag=clivewalkden" rel="me" target="_blank">Xbox</a>.
                 </p>
                 <p class="mb-6 text-gray-900">
                     I enjoy getting out and about with my camera (although since having children my time is limited). I
