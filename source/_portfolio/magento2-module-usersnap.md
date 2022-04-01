@@ -12,7 +12,7 @@ github_repo: Magento2_Usersnap
 packagist_user: clivewalkden
 packagist_repo: magento2-usersnap
 launched: 2016-05-11
-lastupdate: 2021-10-26
+lastupdate: 2022-04-01
 finished: false
 featured: false
 image_main: github-repo.png
@@ -24,5 +24,9 @@ meta_title: Magento 2 Usersnap Module
 meta_description: A plugin for Magento 2 that outputs the Usersnap javascript code into the website
 ---
 
-A plugin for Magento 2 that outputs the Usersnap javascript code into the website
+A plugin for Magento 2 that outputs the Usersnap javascript code into the website.
+
+Has functionality to output on the frontend or backend. 
+
+The latest version has ip restriction control to allow the module to run all the time and restrict access to certain IP addresses.
 
