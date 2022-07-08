@@ -21,10 +21,10 @@ section: content
 Simply <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">create your account</a>, customise your avatar and start playing games to increase your mining power. 
 
 ### What is RLT?
-RLT is RollerToken - the main <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> in-game currency, which is used to purchase miners and other equipment. This is a token you can mine through <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> but isn't listed on any exchanges. You can convert other currencies to RLT to use in game. 1 RLT is roughly equivalent to 1 USD.
+RLT is RollerToken - the main <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> in-game currency, which is used to purchase miners and other equipment. This is a token you can mine through <a href="https://rollercoin.com/?r=kwlqf6gu" target="_blank" rel="external" title="RollerCoin">RollerCoin</a> but isn't listed on any exchanges. You can convert other currencies to RLT to use in-game. 1 RLT is roughly equivalent to 1 USD.
 
 ### How much can I earn?
-That depends on several things, the number of games you play in a day, the number of miners your have in your racks, the power of the network.
+That depends on several things, the number of games you play in a day, the number of miners you have in your racks, and the power of the network.
 
 <img alt="RollerCoin power split" src="/assets/images/blog/articles/rollercoin-power-split.jpg" class="md:float-right md:w-2/5 md:pl-8" /> If you play 50 games a day, every day, you would have approximately 250TH/s of mining power to use in the platform. You can split the mining power across multiple coins (RLT RollerToken, BTC Bitcoin, ETH Ethereum, BNB BinanceCoin, MATIC Polygon, DOGE DogeCoin) at the same time in 1% increments.
 
@@ -35,11 +35,11 @@ Having all 250 TH/s mining RLT would give you approximately 0.0004 RLT every 10 
 Mining RLT allows you to accumulate the token used to buy miners in the game and increase your mining output further. Mining RLT doesn't give you anything that you can transfer out of the system (currently).
 
 ### How much do Miners cost?
-You can purchase miners from 2.6 RLT to 110 RLT with some limited edition one's being made available during special events. To use a miner you need to have a rack installed in your room and the miner has to be out to be generating TH's.
+You can purchase miners from 2.6 RLT to 110 RLT with some limited edition ones being made available during special events. To use a miner you need to have a rack installed in your room and the miner has to be out to be generating THs.
 
-In the latest version miners can now be upgraded with loot drops combining matching miners. For example if you have 2 RollerArc S1's, 14 Common Fans, 5 Common Wires and 2 Common Hashboards. You can combine the miner and upgrade from 150 GH/s to 450 GH/s and only take up 1 space on your rack.
+In the latest version, miners can now be upgraded with loot drops combining matching miners. For example, if you have 2 RollerArc S1s, 14 Common Fans, 5 Common Wires, and 2 Common Hashboards. You can combine the miner and upgrade from 150 GH/s to 450 GH/s and only take up 1 space on your rack.
 
-Also in the loot drops you can get power-ups, bonus RLT and even free miners. Since starting 8 weeks ago I've had a couple of miner loot drops, several RLT bonus drops of 0.01 or 0.05 RLT and plenty of bonus power drops.
+Also in the loot drops you can get power-ups, bonus RLT, and even free miners. Since starting 8 weeks ago I've had a couple of miner loot drops, several RLT bonus drops of 0.01 or 0.05 RLT, and plenty of bonus power drops.
 
 <div class="flex mb-8">
 <div class="flex-1"><img alt="RollerCoin 2x Power Hold Loot Drop" src="/assets/images/blog/articles/rollercoin-2xpower-hold-loot-drop.jpg" /></div>

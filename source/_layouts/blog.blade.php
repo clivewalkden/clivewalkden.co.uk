@@ -22,7 +22,7 @@
                     @if ($category)
                         @yield('content')
                     @else
-                        These articles below are a collection of things I've either found useful, felt were worth sharing or needed to get out of my head. Please don't judge to harshly, many of these weren't meant for others eyes.
+                        These articles below are a collection of things I've either found useful, felt were worth sharing, or needed to get out of my head. Please don't judge too harshly, many of these weren't meant for others' eyes.
                     @endif
                 </p>
             </div>

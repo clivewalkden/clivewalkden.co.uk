@@ -15,12 +15,12 @@ section: content
 ---
 
 ## What is Terraform?
-Terraform is an open-source DevOps tool that provides infrastructure as code capabilities. It allows you to create declarative configuration files that can use various cloud API's to create, update and delete your infrastructure.
+Terraform is an open-source DevOps tool that provides infrastructure as code capabilities. It allows you to create declarative configuration files that can use various cloud APIs to create, update and delete your infrastructure.
 
-Now you've had a high level overview on what it does lets get and install it on Ubuntu 18.04.
+Now you've had a high-level overview of what it does lets get and install it on Ubuntu 18.04.
 
 ## Installation
-HashiCorp provide their own repositories for installation on the main flavours of Linux.
+HashiCorp provides its own repositories for installation on the main flavours of Linux.
 
 ```shell
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -28,9 +28,9 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 sudo apt-get update && sudo apt-get install terraform
 ```
 
-Running the above commands will add the gpg key to your key store, add the repository to your list that apt gathers software from and install the latest version (1.1.7 at time or writing).
+Running the above commands will add the GPG key to your key store, add the repository to your list that apt gathers software from, and install the latest version (1.1.7 at time of writing).
 
-When completed you can run `terraform --version` to see version you have installed.
-<img alt="Terraform version on Ubuntu 18.04" src="/assets/images/blog/articles/terraform-version.png" />
+When completed you can run `terraform --version` to see the version you have installed.
+<?php echo $page->image("/assets/images/blog/articles/terraform-version.png", null, null, ['alt' => 'Terraform version on Ubuntu 18.04', 'class' => '']) ?>
 
 Now that you have the application installed locally give it a go following the tutorials provided by the <a href="https://learn.hashicorp.com/terraform" rel="external" target="_blank">HashiCorp Learn</a> website.
