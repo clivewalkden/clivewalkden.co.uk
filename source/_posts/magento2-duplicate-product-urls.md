@@ -20,7 +20,11 @@ I decided to look and see what existing products would cause the problem while w
 
 In this article, I'll run through the MySQL queries run and the reason behind them so we can see which products are affected. I hope this article helps others find duplicated product URLs in Magento 2.
 
-We'll start with the attribute `url_key` in my database it's 121 but it may not be in other installations. To get the value we'll run `SELECT eav_attribute.attribute_id FROM eav_attribute WHERE attribute_code = 'url_key' AND entity_type_id = '4';`. This query will check product-specific attributes named `url_key`.
+We'll start with the attribute `url_key` in my database it's 121 but it may not be in other installations. To get the value we'll run the following
+```mysql
+SELECT eav_attribute.attribute_id FROM eav_attribute WHERE attribute_code = 'url_key' AND entity_type_id = '4';
+``` 
+This query will check product-specific attributes named `url_key`.
 
 With that value know we can work on checking the `catalog_product_entity_varchar` table for the duplicated URLs. To do that we will be grouping the `value` field and counting the results. Any over 1 is a duplicate.
 
@@ -34,12 +38,17 @@ HAVING COUNT(`value`) > 1
 
 We are running this against the default store view, if you want to run against other stores change the `store_id` = 0 to the store in question.
 
-To combine this into a single query we can change the `121` absolute value to the subquery we generated earlier.
+To combine this into a single query we can change the `121` absolute value to the sub-query we generated earlier.
 
 ```mysql
 SELECT `value`
 FROM `catalog_product_entity_varchar`
-WHERE `attribute_id` = (SELECT `eav_attribute`.`attribute_id` FROM `eav_attribute` WHERE `attribute_code` = 'url_key' AND `entity_type_id` = '4') AND `store_id` = 0
+WHERE `attribute_id` = (
+    SELECT `eav_attribute`.`attribute_id` 
+    FROM `eav_attribute` 
+    WHERE `attribute_code` = 'url_key' AND `entity_type_id` = '4'
+    ) 
+AND `store_id` = 0
 GROUP BY `value`
 HAVING COUNT(`value`) > 1
 ```
