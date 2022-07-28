@@ -86,8 +86,8 @@ return [
                     'title' => 'Mac OSX',
                     'start' => Carbon::parse('2005-01-01'),
                     'end' => Carbon::parse('2019-12-01'),
-                    'length' => Carbon::parse('2005-01-01')->diffInYears(Carbon::parse('2019-12-01')),
-                    'in_use' => false,
+                    'length' => Carbon::parse('2005-01-01')->diffInYears(Carbon::now()),
+                    'in_use' => true,
                 ],
                 [
                     'title' => 'Shell Scripting',
