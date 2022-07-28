@@ -85,7 +85,7 @@ return [
                 [
                     'title' => 'Mac OSX',
                     'start' => Carbon::parse('2005-01-01'),
-                    'end' => Carbon::parse('2019-12-01'),
+                    'end' => Carbon::now(),
                     'length' => Carbon::parse('2005-01-01')->diffInYears(Carbon::now()),
                     'in_use' => true,
                 ],
