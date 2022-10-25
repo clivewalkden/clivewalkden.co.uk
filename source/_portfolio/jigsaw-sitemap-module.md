@@ -15,8 +15,8 @@ launched: 2021-10-24
 lastupdate: 2022-10-26
 finished: false
 featured: false
-image_main: github-repo.png
-image_small: github-repo-small.png
+image_main: jigsaw.png
+image_small: jigsaw.png
 supported_versions: [Jigsaw 1.3.16+]
 section: summary
 intro: Generates a sitemap.xml for your jigsaw site during the build process.
