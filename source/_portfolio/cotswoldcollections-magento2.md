@@ -7,7 +7,7 @@ status: Live
 url: https://www.cotswoldcollections.com/
 launched: 2020-06-11
 finished: false
-featured: false
+featured: true
 section: content
 technologies: [Magento 2,Less,HTML5,CSS3,Composer,PHP,Knockout JS,MailChimp]
 infrastructure: [Linux,AWS EC2,AWS VPC,AWS SES,WAF,Percona,Nginx,Zabbix,Redis,Elasticsearch]

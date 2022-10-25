@@ -143,7 +143,7 @@ return [
                     'start' => Carbon::parse('2007-01-01'),
                     'end' => Carbon::now(),
                     'length' => Carbon::parse('2007-01-01')->diffInYears(Carbon::now()),
-                    'in_use' => false,
+                    'in_use' => true,
                 ],
                 [
                     'title' => 'React',
@@ -162,9 +162,9 @@ return [
                 [
                     'title' => 'Magento',
                     'start' => Carbon::parse('2014-07-15'),
-                    'end' => Carbon::now(),
-                    'length' => Carbon::parse('2014-07-15')->diffInYears(Carbon::now()),
-                    'in_use' => true,
+                    'end' => Carbon::parse('2022-10-01'),
+                    'length' => Carbon::parse('2014-07-15')->diffInYears(Carbon::parse('2022-10-01')),
+                    'in_use' => false,
                 ],
                 [
                     'title' => 'Magento 2',

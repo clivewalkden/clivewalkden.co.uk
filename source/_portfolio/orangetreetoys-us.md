@@ -5,8 +5,8 @@ title: Magento 1 United States Store Addition
 client: Orangetree Toys
 status: Live
 url: https://www.orangetreetoys.com
-launched: 2019-05-31
-finished: false
+launched: 2019-05-31 00:00:00
+finished: 2022-10-01 00:00:00
 featured: false
 section: content
 technologies: [Magento,SASS,HTML5,CSS3,Composer,PHP,Prototype JS]
