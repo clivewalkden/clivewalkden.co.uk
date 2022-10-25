@@ -23,6 +23,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 ## [Unreleased]
 ### Added
 - Search capabilities for posts
+- JigsawSitemap plugin to portfolio
 
 ### Changed
 - Experience less than 1 year now displays a bit nicer
@@ -31,7 +32,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 ### Fixed
 - Blog article imagery now correctly being served from Sirv
 - SEO 404 image reports
-- Updated Jigsaw to v1.4.0
+- Updated Jigsaw to v1.3.45 (PHP 7.4 last version)
 
 
 ## [v1.0.0] - 2022-10-25
