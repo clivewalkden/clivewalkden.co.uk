@@ -293,7 +293,7 @@ return [
                     'seo_link' => 'jquery',
                     'meta_title' => 'jQuery guides, findings and plugins',
                     'meta_description' => 'jQuery Development advice, plugin and javascript usage for your Web Development projects',
-                    'content' => 'I really started using jQuery to it\'s full potential in 2011 and have been impressed with it\'s maturity since then. I\'ve developed several jQuery plugins some of which are available from my <a href="/code/">scripts section</a>. I love the interactivity you can add to a website with a relatively small amount of code.',
+                    'content' => 'I really started using jQuery to it\'s full potential in 2011 and have been impressed with it\'s maturity since then. I\'ve developed several jQuery plugins some of which are available from my <a href="/portfolio/">scripts section</a>. I love the interactivity you can add to a website with a relatively small amount of code.',
                 ],
                 [
                     'title' => 'Magento',
