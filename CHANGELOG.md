@@ -21,6 +21,11 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+### Fixed
+- Blog article imagery now correctly being served from Sirv
+- SEO 404 image reports
+- Updated Jigsaw to v1.4.0
+
 
 ## [v1.0.0] - 2022-10-25
 - Initial Stable Release
