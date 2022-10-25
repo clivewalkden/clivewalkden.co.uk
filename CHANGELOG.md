@@ -21,6 +21,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+### Changed
+- Experience less than 1 year now displays a bit nicer
+
 ### Fixed
 - Blog article imagery now correctly being served from Sirv
 - SEO 404 image reports

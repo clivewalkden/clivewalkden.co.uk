@@ -10,7 +10,10 @@ use Carbon\Carbon;
             @php
                 $perc = ($exp->length/$page->start->diffInYears(Carbon::now())) * 100;
 
-                if ($perc < 33) :
+                if ($perc == 0) :
+                    $colour = 'blue';
+                    $perc = 100;
+                elseif ($perc < 33) :
                     $colour = 'red';
                 elseif ($perc > 66) :
                     $colour = 'green';
@@ -28,7 +31,11 @@ use Carbon\Carbon;
                     </div>
                     <div class="w-full h-6 bg-gray-400 rounded-full mt-3">
                         <div class="h-full text-center text-s text-white bg-{{$colour}}-500 rounded-full" style="width: {{ $perc }}%">
-                            {{ $exp->length }} Years
+                            @if ($exp->length == 0)
+                                Still Learning
+                            @else
+                                {{ $exp->length }} Years
+                            @endif
                         </div>
                     </div>
                 </div>
