@@ -1,5 +1,6 @@
 <?php
 
+use App\Listeners\GenerateIndex;
 use CliveWalkden\JigsawSitemap\SitemapListener;
 use TightenCo\Jigsaw\Jigsaw;
 
@@ -18,4 +19,7 @@ use TightenCo\Jigsaw\Jigsaw;
  */
 $events->afterBuild([
     SitemapListener::class,
+]);
+$events->afterBuild([
+    GenerateIndex::class
 ]);

@@ -21,6 +21,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+### Added
+- Search capabilities for posts
+
 ### Changed
 - Experience less than 1 year now displays a bit nicer
 

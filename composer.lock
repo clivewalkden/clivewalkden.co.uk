@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c45be7d3b3ff651c62dfe33b3c47da6c",
+    "content-hash": "5e3d136f6e2099552c43133e4056a7b9",
     "packages": [
         {
             "name": "clivewalkden/jigsaw-sitemap",
@@ -2733,7 +2733,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }
