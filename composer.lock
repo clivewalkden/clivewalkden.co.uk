@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e3d136f6e2099552c43133e4056a7b9",
+    "content-hash": "09b4747890a867bf4fbcab220a2faabe",
     "packages": [
         {
             "name": "clivewalkden/jigsaw-sitemap",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clivewalkden/jigsaw-sitemap.git",
-                "reference": "b29bd150b1eb2ccc2b9a90e8d026e4e1c9d46906"
+                "reference": "5fb5ce32e5eef955ac363d2e52f1e01cdd8f0b23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clivewalkden/jigsaw-sitemap/zipball/b29bd150b1eb2ccc2b9a90e8d026e4e1c9d46906",
-                "reference": "b29bd150b1eb2ccc2b9a90e8d026e4e1c9d46906",
+                "url": "https://api.github.com/repos/clivewalkden/jigsaw-sitemap/zipball/5fb5ce32e5eef955ac363d2e52f1e01cdd8f0b23",
+                "reference": "5fb5ce32e5eef955ac363d2e52f1e01cdd8f0b23",
                 "shasum": ""
             },
             "require": {
@@ -54,9 +54,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/clivewalkden/jigsaw-sitemap/tree/v1.1.0"
+                "source": "https://github.com/clivewalkden/jigsaw-sitemap/tree/v1.1.1"
             },
-            "time": "2021-10-24T20:03:14+00:00"
+            "time": "2022-10-25T23:15:11+00:00"
         },
         {
             "name": "doctrine/inflector",

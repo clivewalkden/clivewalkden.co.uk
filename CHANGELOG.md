@@ -26,6 +26,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ### Changed
 - Experience less than 1 year now displays a bit nicer
+- Upgraded sitemap module to fix double slash issue
 
 ### Fixed
 - Blog article imagery now correctly being served from Sirv
