@@ -10,11 +10,13 @@ To build the site files  you can run `./vendor/bin/jigsaw build` and it will pro
 ## Production Build
 To produce the final production files you can run `./vendor/bin/jigsaw build production`. The files will be output in a public_html folder. Then run `rsync -avzr --delete public_html/* gclive:/var/www/clivewalkden.co.uk/html/` to upload them to the server.
 
+## Hosting
+The site is hosted on Cloudflare pages and auto deploys when pushed. Master branch goes to production and other branches go to [https://development.clivewalkden-co-uk.pages.dev/](https://development.clivewalkden-co-uk.pages.dev/)
+
+## Changelog
+To see the changelog open [CHANGELOG.md](./CHANGELOG.md)
+
 ## TODO
 - Add build.sh to speed up the process.
-- Finish working on the github deployment automation
-- Add all blog articles
 - Add all portfolio pieces
-- Add scripts
-- Update scripts content
 - Sort out new content
