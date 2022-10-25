@@ -21,6 +21,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.0.0] - 2022-10-25
+- Initial Stable Release
 - Added redirects for /code/ to /portfolio/
 - Added CHANGELOG.md
 - Updated README.md
