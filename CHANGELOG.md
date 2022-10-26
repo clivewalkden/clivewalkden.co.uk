@@ -22,7 +22,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 ### Changed
-- Updated renovate base branch 
+- Updated renovate base branch
+- SemverRanges config added
 
 
 ## [v1.1.0] - 2022-10-26
