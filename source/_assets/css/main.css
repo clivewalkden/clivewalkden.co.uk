@@ -36,6 +36,10 @@ body > header {
     @apply text-base text-gray-700 mb-5;
 }
 
+.content > img {
+    @apply mb-5;
+}
+
 .content > hr {
     @apply my-5;
 }

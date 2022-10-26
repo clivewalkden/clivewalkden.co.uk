@@ -17,6 +17,10 @@
             </button>
         </div>
 
+        <div id="vue-search" class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 justify-end">
+            <search></search>
+        </div>
+
         @include('_partials/nav')
     </div>
 </header>

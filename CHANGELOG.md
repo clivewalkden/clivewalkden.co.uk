@@ -22,6 +22,21 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.1.0] - 2022-10-26
+### Added
+- Search capabilities for posts
+- JigsawSitemap plugin to portfolio
+
+### Changed
+- Experience less than 1 year now displays a bit nicer
+- Upgraded sitemap module to fix double slash issue
+
+### Fixed
+- Blog article imagery now correctly being served from Sirv
+- SEO 404 image reports
+- Updated Jigsaw to v1.3.45 (PHP 7.4 last version)
+
+
 ## [v1.0.0] - 2022-10-25
 - Initial Stable Release
 - Added redirects for /code/ to /portfolio/
