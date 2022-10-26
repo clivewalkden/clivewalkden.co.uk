@@ -21,6 +21,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.1.0] - 2022-10-26
 ### Added
 - Search capabilities for posts
 - JigsawSitemap plugin to portfolio
