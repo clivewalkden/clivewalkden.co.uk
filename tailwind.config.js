@@ -12,7 +12,7 @@ module.exports = {
       'hover:text-gray-200',
     ],
     options: {
-      safelist: [/language/, /hljs/, /mce/],
+      keyframes: true
     },
   },
   theme: {
