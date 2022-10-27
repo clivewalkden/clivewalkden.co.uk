@@ -84,6 +84,6 @@ use Carbon\CarbonInterval;
         @yield("content")
 
         <!-- Rich Snippets -->
-        @include('_partials.seo-blog', ['page' => $page])
+        @include('_partials.seo-recipe', ['page' => $page])
 
 @endsection
