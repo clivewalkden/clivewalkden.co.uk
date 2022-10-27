@@ -6,6 +6,9 @@
         $updated = (bool)$page->first_published;
     @endphp
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <!-- Breadcrumbs -->
+        @include('_partials.breadcrumbs', ['links' => [1 => ['title' => 'Blog', 'link' => '/blog/'], 2 => ['title' => $category->title, 'link' => $category->getPath().'/']]])
+
         <!--Title-->
         <div class="text-center">
             <p class="text-sm md:text-base text-yellow-500 font-bold">
@@ -40,7 +43,7 @@
                  style="background-image:url('/assets/images/blog/categories/{{ $category->seo_link }}.jpg'); height: 75vh;"></div>
         @endif
 
-    <!--Container-->
+        <!--Container-->
         <div class="container max-w-5xl mx-auto -mt-32">
 
             <div class="mx-0 sm:mx-6">
@@ -62,36 +65,9 @@
                 <!--/Author-->
             </div>
         </div>
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "{{ $page->title }}",
-            "description": "{{ $page->short_intro }}",
-            "datePublished": "{{ date('F j, Y', $page->published) }}",
-            "mainEntityOfPage": "True",
-            "image": {
-                "@type": "imageObject",
-                "url": "https://www.clivewalkden.co.uk/assets/images/blog/articles/{{ $page->hero ?? $category->seo_link.'.jpg' }}",
-                "height": "600",
-                "width": "800"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Clive Walkden",
-                "logo": {
-                    "@type": "imageObject",
-                    "url": "https://www.clivewalkden.co.uk/assets/images/blog/categories/general.jpg"
-                }
-            },
-            "author": {
-                "@type": "Person",
-                "name": "{{ $page->author }}",
-                "url": "https://clivewalkden.co.uk/about/"
-            },
-            "articleBody": "{{ strip_tags($page->getContent()) }}"
-        }
-        </script>
+
+        <!-- Rich Snippets -->
+        @include('_partials.seo-blog', ['page' => $page, 'category' => $category])
 
         {{-- Latest Articles --}}
         @include('_partials.blog-segment', ['block_title' => 'Latest Articles'])

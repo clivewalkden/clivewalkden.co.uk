@@ -6,6 +6,9 @@
                 <a href="/sitemap.xml">
                     <span>Sitemap</span>
                 </a>
+                <a href="/recipes">
+                    <span>Recipes</span>
+                </a>
             </div>
             <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
                 @foreach ($page->social as $sm)
