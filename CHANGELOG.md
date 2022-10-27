@@ -21,17 +21,20 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.2.1] - 2022-10-27
 ### Changed
 - Set .nvmrc to 14.19.0 (for cloudflare)
 - Tweaked search index fields to include content
 - Asset compilation tweaks
 
 ### Removed
-- Removed highlight.js as it's need used or needed.
+- Removed highlight.js as it's need used or needed
 - Sourcemaps output
 
 ### Fixed
 - Changed h5 on about page to h3
+- Added styles into safelist for tailwind production compilation
 
 
 ## [v1.2.0] - 2022-10-27

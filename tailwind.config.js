@@ -7,6 +7,10 @@ module.exports = {
       'source/**/*.php',
       'source/**/*.vue',
     ],
+    safelist: [
+      'text-gray-400',
+      'hover:text-gray-200',
+    ],
     options: {
       safelist: [/language/, /hljs/, /mce/],
     },
