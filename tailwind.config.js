@@ -3,7 +3,6 @@ module.exports = {
   purge: {
     content: [
       'source/**/*.html',
-      'source/**/*.md',
       'source/**/*.js',
       'source/**/*.php',
       'source/**/*.vue',
