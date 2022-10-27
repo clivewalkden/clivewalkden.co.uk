@@ -48,6 +48,16 @@ body > header {
     @apply list-disc list-inside;
 }
 
+ol.recipe-methods {
+    counter-reset: li;
+}
+
+ol.recipe-methods li:before {
+    @apply bg-primary w-8 h-8 font-bold text-white text-center absolute -left-10 leading-8;
+    content: counter(li);
+    counter-increment: li;
+}
+
 footer.footer {
     background: url(/assets/images/footer_arrow.png) center top no-repeat,url(/assets/images/dropdown_bg.png) center top repeat;
 }

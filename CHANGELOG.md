@@ -22,6 +22,20 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.2.0] - 2022-10-27
+### Added
+- Recipes section with 2 recipes
+- Breadcrumbs to the blog
+
+### Changed
+- Updated renovate base branch
+- SemverRanges config added
+- Tweaked some of teh about page text
+
+### Fixed
+- Blog rich snippet data
+
+
 ## [v1.1.0] - 2022-10-26
 ### Added
 - Search capabilities for posts

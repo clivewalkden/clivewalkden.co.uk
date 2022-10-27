@@ -1,7 +1,7 @@
 ---
 extends: _layouts.main
-meta_title: About Me | Clive Walkden
-meta_description: I'm a 40 year old PHP developer from the UK. My skills lie in website development using PHP, MySQL, HTML5, CSS3 and jQuery.
+meta_title: About Me Clive Walkden
+meta_description: I'm a 41 year old Magento 2 developer and DevOps Engineer from the UK. I've been building websites for over 20 years.
 ---
 @section('body')
     @php

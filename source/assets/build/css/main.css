@@ -26219,6 +26219,26 @@ body > header {
   list-style-type: disc;
 }
 
+ol.recipe-methods {
+  counter-reset: li;
+}
+
+ol.recipe-methods li:before {
+  position: absolute;
+  left: -2.5rem;
+  height: 2rem;
+  width: 2rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 174, 0, var(--tw-bg-opacity));
+  text-align: center;
+  font-weight: 700;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  content: counter(li);
+  counter-increment: li;
+}
+
 footer.footer {
   background: url(/assets/images/footer_arrow.png) center top no-repeat,url(/assets/images/dropdown_bg.png) center top repeat;
 }
