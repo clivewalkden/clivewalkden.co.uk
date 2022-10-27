@@ -21,6 +21,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+### Fixed
+- Changed h5 on about page to h3
+
 
 ## [v1.2.0] - 2022-10-27
 ### Added
