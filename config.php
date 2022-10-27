@@ -256,7 +256,29 @@ return [
             }
         ],
         'recipes' => [
-            'sort' => 'id',
+            'sort' => '-id',
+            'ingredient_output' => function( $page ) {
+                $result = [];
+                $i = 1;
+                foreach (explode('|', $page->ingredients) as $ingredients) {
+                    list($amount, $ingredient) = explode(':', $ingredients);
+                    $result[$i] = [
+                        'amount' => $amount,
+                        'ingredient' => $ingredient,
+                    ];
+                    $i++;
+                }
+                return $result;
+            },
+            'methods_output' => function( $page ) {
+                $result = [];
+                $i = 1;
+                foreach (explode('|', $page->method) as $methods) {
+                    $result[$i] = $methods;
+                    $i++;
+                }
+                return $result;
+            }
         ],
         'categories' => [
             'path' => 'blog/{seo_link}',
