@@ -3,13 +3,16 @@ module.exports = {
   purge: {
     content: [
       'source/**/*.html',
-      'source/**/*.md',
       'source/**/*.js',
       'source/**/*.php',
       'source/**/*.vue',
     ],
+    safelist: [
+      'text-gray-400',
+      'hover:text-gray-200',
+    ],
     options: {
-      safelist: [/language/, /hljs/, /mce/],
+      keyframes: true
     },
   },
   theme: {

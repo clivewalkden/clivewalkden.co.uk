@@ -13,8 +13,7 @@ meta_description: I'm a 41 year old Magento 2 developer and DevOps Engineer from
                 Passionate about Cloud Technologies
             </h2>
             <p class="text-base text-gray-700 md:text-lg sm:px-4 lg:pb-12">
-                <a href="https://u.magento.com/certification/directory/dev/744392/" target="_blank"
-                   class="text-gray-300 block float-right ml-4">
+                <a href="https://u.magento.com/certification/directory/dev/744392/" target="_blank" class="text-gray-300 block float-right ml-4">
                     {!! $page->image("/assets/images/middle_frontend_developer.png", 64, 114, ['title' => 'Magento Certified Frontend Developer', 'alt' => 'Magento Certified Frontend Developer', 'resize' => true]) !!}
                 </a>
                 I'm a {{ $age }} year old Magento 2 developer and DevOps Engineer from the UK. I've been building
@@ -33,9 +32,9 @@ meta_description: I'm a 41 year old Magento 2 developer and DevOps Engineer from
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div class="grid gap-10 lg:grid-cols-2">
             <div class="lg:pr-10">
-                <h5 class="mb-4 text-4xl font-extrabold leading-none">
+                <h3 class="mb-4 text-4xl font-extrabold leading-none">
                     Other Interests
-                </h5>
+                </h3>
                 <p class="mb-6 text-gray-900">
                     Another passion of mine is gaming, having grown up with an Amiga, I moved to the PC in 1999 and
                     have enjoyed many genres of gaming. RPG (Role Playing Games) are my favourite at the
