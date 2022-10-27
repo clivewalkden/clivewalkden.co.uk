@@ -24,6 +24,10 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 ### Fixed
 - Changed h5 on about page to h3
 
+### Changed
+- Set .nvmrc to 14.19.0 (for cloudflare)
+- Tweaked search index fields to include content
+
 
 ## [v1.2.0] - 2022-10-27
 ### Added

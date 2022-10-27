@@ -12,6 +12,7 @@ class GenerateIndex
             return [
                 'title' => $page->title,
                 'intro' => $page->short_intro,
+                'content' => $page->getContent(),
                 'link' => rightTrimPath($jigsaw->getConfig('baseUrl')) . $page->getPath(),
             ];
         })->values());
