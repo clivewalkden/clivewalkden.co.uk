@@ -21,6 +21,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.2.0] - 2022-10-27
 ### Added
 - Recipes section with 2 recipes
 - Breadcrumbs to the blog
