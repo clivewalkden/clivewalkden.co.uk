@@ -22,6 +22,11 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.2.2] - 2022-10-31
+### Changed
+- Usersnap module text updated for latest release 
+
+
 ## [v1.2.1] - 2022-10-27
 ### Changed
 - Set .nvmrc to 14.19.0 (for cloudflare)
