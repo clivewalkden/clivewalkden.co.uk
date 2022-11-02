@@ -22,6 +22,26 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.2.3] - 2022-11-02
+### Changed
+- Updated sitemap module from v1.1.1 to v1.2.0
+- Blog article date now shown in the author space near the bottom
+- Added left right icons to blog previous/next post links
+- Added cloud icon to about page
+- SEO meta updates
+- Illuminate framework updates
+
+### Fixed
+- SEO issues detected in screaming frog
+- Styling issues with breadcrumbs
+- Image cateogry 404's
+- Page 404's added to redirects
+- Spelling fixes and updates
+- Date format in rich snippets
+- Page H1 now not my name for everything
+- Added missing styles to the tailwind safelist
+
+
 ## [v1.2.2] - 2022-10-31
 ### Changed
 - Usersnap module text updated for latest release 

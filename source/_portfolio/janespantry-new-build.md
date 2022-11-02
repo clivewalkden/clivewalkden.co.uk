@@ -4,7 +4,7 @@ id: 2
 title: Bespoke Ecommerce build
 client: Janes Pantry
 status: Live
-url: http://www.janespantry.co.uk
+url: https://www.janespantry.co.uk
 launched: 2018-03-08 10:00:00
 finished: false
 featured: false

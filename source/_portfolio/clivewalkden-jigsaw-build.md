@@ -4,7 +4,7 @@ id: 1
 title: Jigsaw Static Website Build
 client: Clive Walkden
 status: Updated and Live
-url: https://www.clivewalkden.co.uk
+url: https://clivewalkden.co.uk
 launched: 2021-10-24 00:00:00
 finished: false
 featured: false

@@ -8,7 +8,7 @@ return [
     'production' => false,
     'baseUrl' => 'https://clivewalkden.co.uk/',
     'meta_title' => 'DevOps Engineer and Magento 2 Developer in Gloucestershire',
-    'meta_description' => 'I\'m the CTO for SOZO Design in Cheltenham, UK. I also build Magento 2 sites and other PHP projects. I\'m also interested in Crypto and Security.',
+    'meta_description' => 'I\'m the CTO for SOZO Design in Cheltenham, UK. Furthermore, I also build Magento 2 sites and plugins while having a passion for DevOps, cloud technologies and security.',
     'copyright' => 'Copyright ©2013-'.Carbon::now()->year.' Clive Walkden',
     'start' => Carbon::parse('2001-01-01'),
     'social' => [
@@ -314,7 +314,7 @@ return [
                     'h1_title' => 'jQuery Posts',
                     'seo_link' => 'jquery',
                     'meta_title' => 'jQuery guides, findings and plugins',
-                    'meta_description' => 'jQuery Development advice, plugin and javascript usage for your Web Development projects',
+                    'meta_description' => 'jQuery Development advice, plugin and JavaScript usage for your Web Development projects',
                     'content' => 'I really started using jQuery to it\'s full potential in 2011 and have been impressed with it\'s maturity since then. I\'ve developed several jQuery plugins some of which are available from my <a href="/portfolio/">scripts section</a>. I love the interactivity you can add to a website with a relatively small amount of code.',
                 ],
                 [
@@ -437,15 +437,18 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
     'selected' => function ($page, $section) {
         return $page->getPath() == $section || Str::contains($page->getPath(), $section) ? 'inline-block py-2 px-4 text-white no-underline' : 'inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4';
     },
-    'sitemap_exclude' => [
-        '.htaccess',
-        'favicon.ico',
-        'apple-touch-icon.png',
-        'apple-touch-icon-precomposed.png',
-        'apple-touch-icon-72x72-precomposed.png',
-        'apple-touch-icon-114x114-precomposed.png',
-        'apple-touch-icon-57x57-precomposed.png',
-
+    'sitemap' => [
+        'url_trailing_slash' => true,
+        'exclude' => [
+            '.htaccess',
+            'favicon.ico',
+            'apple-touch-icon.png',
+            'apple-touch-icon-precomposed.png',
+            'apple-touch-icon-72x72-precomposed.png',
+            'apple-touch-icon-114x114-precomposed.png',
+            'apple-touch-icon-57x57-precomposed.png',
+            '404.html',
+        ],
     ],
     'sirv' => [
         'cdn_url' => 'https://clivewalkden.sirv.com',
