@@ -102,11 +102,11 @@ use Carbon\Carbon;
                     @if($page->github_user && $page->github_repo)
                     <div>
                         <h4 class="mb-2 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
-                            License</h4>
+                            Licence</h4>
                     </div>
                     <div>
                         <a href="{{ $page->url }}" target="_blank" rel="external">
-                            <img alt="License Type" src="https://img.shields.io/github/license/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
+                            <img alt="Licence Type" src="https://img.shields.io/github/license/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
                         </a>
                     </div>
                     @endif

@@ -6,7 +6,7 @@ use Carbon\CarbonInterval;
 
 @section('body')
 
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
         <!-- Breadcrumbs -->
         @include('_partials.breadcrumbs', ['links' => [1 => ['title' => 'Recipes', 'link' => '/recipes/']]])
 
@@ -53,7 +53,7 @@ use Carbon\CarbonInterval;
         </div>
 
         @if ($page->ingredients)
-            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-16">
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-8">
                 <h2 class="mb-4 font-sans md:text-3xl font-bold tracking-tight text-gray-900 text-4xl leading-none">
                     Ingredients</h2>
                 <dl class="mt-0 mb-4">
@@ -68,7 +68,7 @@ use Carbon\CarbonInterval;
         @endif
 
         @if ($page->method)
-            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-16">
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-8">
                 <h2 class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                     Method</h2>
                 <ol class="recipe-methods ml-4">
@@ -81,7 +81,10 @@ use Carbon\CarbonInterval;
                 </ol>
             </div>
         @endif
-        @yield("content")
+
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-8">
+            @yield("content")
+        </div>
 
         <!-- Rich Snippets -->
         @include('_partials.seo-recipe', ['page' => $page])

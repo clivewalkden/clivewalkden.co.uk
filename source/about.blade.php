@@ -9,9 +9,9 @@ meta_description: I'm a 41 year old Magento 2 developer and DevOps Engineer from
     @endphp
     <div class="px-4 py-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div class="max-w-screen-sm sm:text-center sm:mx-auto">
-            <h2 class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                Passionate about Cloud Technologies
-            </h2>
+            <h1 class="mb-4 font-sans text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none">
+                <i class="bx bx-small bx-cloud"></i> Passionate about Cloud Technologies
+            </h1>
             <p class="text-base text-gray-700 md:text-lg sm:px-4 lg:pb-12">
                 <a href="https://u.magento.com/certification/directory/dev/744392/" target="_blank" class="text-gray-300 block float-right ml-4">
                     {!! $page->image("/assets/images/middle_frontend_developer.png", 64, 114, ['title' => 'Magento Certified Frontend Developer', 'alt' => 'Magento Certified Frontend Developer', 'resize' => true]) !!}
@@ -29,10 +29,10 @@ meta_description: I'm a 41 year old Magento 2 developer and DevOps Engineer from
         </div>
     </div>
 
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
         <div class="grid gap-10 lg:grid-cols-2">
             <div class="lg:pr-10">
-                <h3 class="mb-4 text-4xl font-extrabold leading-none">
+                <h3 class="mb-4 text-3xl font-extrabold leading-none">
                     Other Interests
                 </h3>
                 <p class="mb-6 text-gray-900">

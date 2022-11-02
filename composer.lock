@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "708d11fa76c2bd0bd90827ef6ce4b53c",
+    "content-hash": "6daa2604e39afe7d7be50dfaee2960e0",
     "packages": [
         {
             "name": "clivewalkden/jigsaw-sitemap",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clivewalkden/jigsaw-sitemap.git",
-                "reference": "5fb5ce32e5eef955ac363d2e52f1e01cdd8f0b23"
+                "reference": "e49367ec7da13241c317db4e4627e4424af193fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clivewalkden/jigsaw-sitemap/zipball/5fb5ce32e5eef955ac363d2e52f1e01cdd8f0b23",
-                "reference": "5fb5ce32e5eef955ac363d2e52f1e01cdd8f0b23",
+                "url": "https://api.github.com/repos/clivewalkden/jigsaw-sitemap/zipball/e49367ec7da13241c317db4e4627e4424af193fa",
+                "reference": "e49367ec7da13241c317db4e4627e4424af193fa",
                 "shasum": ""
             },
             "require": {
@@ -54,9 +54,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/clivewalkden/jigsaw-sitemap/tree/v1.1.1"
+                "source": "https://github.com/clivewalkden/jigsaw-sitemap/tree/v1.2.0"
             },
-            "time": "2022-10-25T23:15:11+00:00"
+            "time": "2022-11-02T09:56:37+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -263,7 +263,7 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -316,7 +316,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -370,7 +370,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -421,7 +421,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -469,7 +469,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -524,7 +524,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -586,7 +586,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -632,7 +632,7 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -680,7 +680,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -748,7 +748,7 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v8.83.25",
+            "version": "v8.83.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -1229,16 +1229,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.4.14",
+            "version": "v5.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "984ea2c0f45f42dfed01d2f3987b187467c4b16d"
+                "reference": "ea59bb0edfaf9f28d18d8791410ee0355f317669"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/984ea2c0f45f42dfed01d2f3987b187467c4b16d",
-                "reference": "984ea2c0f45f42dfed01d2f3987b187467c4b16d",
+                "url": "https://api.github.com/repos/symfony/console/zipball/ea59bb0edfaf9f28d18d8791410ee0355f317669",
+                "reference": "ea59bb0edfaf9f28d18d8791410ee0355f317669",
                 "shasum": ""
             },
             "require": {
@@ -1308,7 +1308,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.4.14"
+                "source": "https://github.com/symfony/console/tree/v5.4.15"
             },
             "funding": [
                 {
@@ -1324,7 +1324,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-07T08:01:20+00:00"
+            "time": "2022-10-26T21:41:52+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -2095,16 +2095,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v5.4.14",
+            "version": "v5.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "089e7237497fae7a9c404d0c3aeb8db3254733e4"
+                "reference": "571334ce9f687e3e6af72db4d3b2a9431e4fd9ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/089e7237497fae7a9c404d0c3aeb8db3254733e4",
-                "reference": "089e7237497fae7a9c404d0c3aeb8db3254733e4",
+                "url": "https://api.github.com/repos/symfony/string/zipball/571334ce9f687e3e6af72db4d3b2a9431e4fd9ed",
+                "reference": "571334ce9f687e3e6af72db4d3b2a9431e4fd9ed",
                 "shasum": ""
             },
             "require": {
@@ -2161,7 +2161,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v5.4.14"
+                "source": "https://github.com/symfony/string/tree/v5.4.15"
             },
             "funding": [
                 {

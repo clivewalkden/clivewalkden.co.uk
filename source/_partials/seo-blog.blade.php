@@ -1,6 +1,6 @@
 @php
 $image = "https://www.clivewalkden.co.uk/assets/images/blog/articles/".(($page->hero) ?: $category->seo_link) . '.jpg';
-$date = date('F j, Y', $page->published);
+$date = Carbon\Carbon::parse($page->published)->toIso8601String();
 $content = strip_tags($page->getContent());
 $seoData = [
     '@context' => 'https://schema.org',

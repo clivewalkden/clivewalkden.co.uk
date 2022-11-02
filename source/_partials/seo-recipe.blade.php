@@ -1,4 +1,5 @@
 @php
+    $date = Carbon\Carbon::parse($page->published)->toIso8601String();
     $steps = [];
     $i = 0;
     foreach(explode('|',$page->method) as $method) {
@@ -24,7 +25,7 @@
         'name' => 'Clive Walkden',
         'url' => 'https://clivewalkden.co.uk/about/',
       ],
-      'datePublished' => "$page->published",
+      'datePublished' => "$date",
       'description' => "$page->intro",
       'prepTime' => "$page->prepTime",
       'cookTime' => "$page->cookTime",

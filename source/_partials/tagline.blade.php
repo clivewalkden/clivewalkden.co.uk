@@ -8,11 +8,10 @@
     </div>
     <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-            <h2 class="mb-5 font-sans text-3xl font-bold tracking-tight text-title sm:text-4xl sm:leading-none">
+            <h1 class="mb-5 font-sans text-3xl font-bold tracking-tight text-title sm:text-4xl sm:leading-none">
                 Dev Ops Engineer<br class="hidden md:block"/>
                 and Magento 2 Developer
-
-            </h2>
+            </h1>
             <p class="pr-5 mb-5 text-base text-title md:text-lg">
                 I'm the CTO for <a href="https://sozodesign.co.uk" title="SOZO Design Cheltenham" target="_blank" class="text-primary">SOZO Design</a> in Cheltenham, UK. I also build Magento 2 sites and other PHP projects. View my <a href="/portfolio/" class="text-primary">Magento 2 modules</a> and <a href="/portfolio/" class="text-primary">jQuery plugins</a>.
             </p>

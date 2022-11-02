@@ -14,10 +14,10 @@ author: Clive Walkden
 ---
 
 @section('content')
-    <p>I've been using <a href="https://plex.tv/" target="_blank">Plex Media Server</a> now for nearly a year and unfortunately if you run the system through Cent OS command line there is no automatic way of updating it. This little guide will go through the process of ssh&#39;ing&nbsp;into your media server, downloading the latest version and then manually installing it.</p>
+    <p>I've been using <a href="https://www.plex.tv/" target="_blank">Plex Media Server</a> now for nearly a year and unfortunately if you run the system through Cent OS command line there is no automatic way of updating it. This little guide will go through the process of ssh&#39;ing&nbsp;into your media server, downloading the latest version and then manually installing it.</p>
     <p>To see which version of Plex you are running simply log into your web interface for your media server and go to Settings &gt; Server &gt; General you will see something similar to the screenshot below.</p>
     {!! $page->image("/assets/images/blog/articles/plex-media-server-settings-general.png", null, null, ['title' => 'Plex Media Server Server Settings - General', 'alt' => 'Plex Media Server Server Settings - General']) !!}
-    <p>Now check the <a href="https://plex.tv/downloads" target="_blank">Plex website</a> to see if there is a newer version available for Cent OS. If there is then it&#39;s time to ssh into your media server.</p>
+    <p>Now check the <a href="https://www.plex.tv/downloads/" target="_blank">Plex website</a> to see if there is a newer version available for Cent OS. If there is then it&#39;s time to ssh into your media server.</p>
     <pre><code class="language-shell">ssh USER@SERVERADDRESS</code></pre>
     <p>Where USER is the user of your media server and SERVERADDRESS is the IP or domain name of your media server. Now we need to navigate to a directory that the update can be downloaded into. I download mine into /home/install using this example the code would be.</p>
     <pre><code class="language-shell">cd /home/install/</code></pre>
