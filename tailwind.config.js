@@ -10,6 +10,10 @@ module.exports = {
     safelist: [
       'text-gray-400',
       'hover:text-gray-200',
+      'bg-blue-500',
+      'bg-red-500',
+      'bg-yellow-500',
+      'bg-green-500'
     ],
     options: {
       keyframes: true

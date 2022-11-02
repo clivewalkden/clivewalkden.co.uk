@@ -37,6 +37,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 - Spelling fixes and updates
 - Date format in rich snippets
 - Page H1 now not my name for everything
+- Added missing styles to the tailwind safelist
 
 
 ## [v1.2.2] - 2022-10-31
