@@ -22,6 +22,13 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+### Fixed
+- Stopped build_staging directory being included in the repo
+- `.styleci.yml` configuration manually set
+- Updated tech stack in humans.txt
+- Small SEO fixes
+
+
 ## [v1.2.3] - 2022-11-02
 ### Changed
 - Updated sitemap module from v1.1.1 to v1.2.0

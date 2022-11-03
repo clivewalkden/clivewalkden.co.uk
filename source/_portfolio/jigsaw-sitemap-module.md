@@ -12,7 +12,7 @@ github_repo: jigsaw-sitemap
 packagist_user: clivewalkden
 packagist_repo: jigsaw-sitemap
 launched: 2021-10-24
-lastupdate: 2022-10-26
+lastupdate: 2022-11-02
 finished: false
 featured: false
 image_main: jigsaw.png
