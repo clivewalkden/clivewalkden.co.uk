@@ -30,6 +30,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 - `.styleci.yml` configuration manually set
 - Updated tech stack in humans.txt
 - Small SEO fixes to various parts
+- Added missing robots.txt
 
 
 ## [v1.2.3] - 2022-11-02
