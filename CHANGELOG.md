@@ -21,6 +21,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+### Changed
+- Added StyleCi build result to the README.md
+
 
 ## [v1.2.4] - 2022-11-04
 ### Changed
