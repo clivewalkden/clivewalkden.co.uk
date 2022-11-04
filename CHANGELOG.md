@@ -21,6 +21,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.2.4] - 2022-11-04
 ### Changed
 - Updated GoogleFonts installation code to the latest version
 - Updated Sitemap generator to the latest verion v1.3.0
