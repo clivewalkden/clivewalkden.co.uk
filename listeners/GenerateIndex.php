@@ -13,10 +13,10 @@ class GenerateIndex
                 'title' => $page->title,
                 'intro' => $page->short_intro,
                 'content' => $page->getContent(),
-                'link' => rightTrimPath($jigsaw->getConfig('baseUrl')) . $page->getPath(),
+                'link' => rightTrimPath($jigsaw->getConfig('baseUrl')).$page->getPath(),
             ];
         })->values());
 
-        file_put_contents($jigsaw->getDestinationPath() . '/index.json', json_encode($data));
+        file_put_contents($jigsaw->getDestinationPath().'/index.json', json_encode($data));
     }
 }
