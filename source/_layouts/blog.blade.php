@@ -65,7 +65,7 @@
             </div>
             <div class="lg:col-span-1">
                 <div>
-                    <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Blog Categories</h3>
+                    <h2 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Blog Categories</h2>
                     <div class="max-w-lg space-y-3 sm:mx-auto lg:max-w-xl">
                         @foreach ($categories as $category)
                             @php

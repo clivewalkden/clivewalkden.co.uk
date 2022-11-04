@@ -1,8 +1,8 @@
 <?php
 
 use Carbon\Carbon;
-use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 
 return [
     'production' => false,
@@ -10,7 +10,7 @@ return [
     'meta_title' => 'DevOps Engineer and Magento 2 Developer in Gloucestershire',
     'meta_description' => 'I\'m the CTO for SOZO Design in Cheltenham, UK. Furthermore, I also build Magento 2 sites and plugins while having a passion for DevOps, cloud technologies and security.',
     'copyright' => 'Copyright ©2013-'.Carbon::now()->year.' Clive Walkden',
-    'start' => Carbon::parse('2001-01-01'),
+    'start' => Carbon::parse('2001-06-01'),
     'social' => [
         'email' => [
             'title' => 'Email',
@@ -26,8 +26,8 @@ return [
         'github' => [
             'title' => 'Github',
             'icon' => 'bxl-github',
-            'href' => 'https://github.com/clivewalkden'
-        ]
+            'href' => 'https://github.com/clivewalkden',
+        ],
     ],
     'collections' => [
         'experience' => [
@@ -242,43 +242,45 @@ return [
                     'end' => Carbon::now(),
                     'length' => Carbon::parse('2013-05-06')->diffInYears(Carbon::now()),
                     'in_use' => true,
-                ]
-            ]
+                ],
+            ],
         ],
         'portfolio' => [
-            'sort' => ['-launched','-lastupdate'],
+            'sort' => ['-launched', '-lastupdate'],
         ],
         'posts' => [
             'path' => 'blog/{category}/{filename}',
             'sort' => ['-updated_at', '-published'],
             'filter' => function ($item) {
-                return !$item->hide;
-            }
+                return ! $item->hide;
+            },
         ],
         'recipes' => [
             'sort' => '-id',
-            'ingredient_output' => function( $page ) {
+            'ingredient_output' => function ($page) {
                 $result = [];
                 $i = 1;
                 foreach (explode('|', $page->ingredients) as $ingredients) {
-                    list($amount, $ingredient) = explode(':', $ingredients);
+                    [$amount, $ingredient] = explode(':', $ingredients);
                     $result[$i] = [
                         'amount' => $amount,
                         'ingredient' => $ingredient,
                     ];
                     $i++;
                 }
+
                 return $result;
             },
-            'methods_output' => function( $page ) {
+            'methods_output' => function ($page) {
                 $result = [];
                 $i = 1;
                 foreach (explode('|', $page->method) as $methods) {
                     $result[$i] = $methods;
                     $i++;
                 }
+
                 return $result;
-            }
+            },
         ],
         'categories' => [
             'path' => 'blog/{seo_link}',
@@ -430,9 +432,9 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'meta_title' => 'Sony PSP games, themes and applications',
                     'meta_description' => 'My Sony PSP articles about games, themes and applications.',
                     'content' => 'My Sony PSP articles about games, themes and applications.',
-                ]
-            ]
-        ]
+                ],
+            ],
+        ],
     ],
     'selected' => function ($page, $section) {
         return $page->getPath() == $section || Str::contains($page->getPath(), $section) ? 'inline-block py-2 px-4 text-white no-underline' : 'inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4';
@@ -447,44 +449,54 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
             'apple-touch-icon-72x72-precomposed.png',
             'apple-touch-icon-114x114-precomposed.png',
             'apple-touch-icon-57x57-precomposed.png',
-            '404.html',
+        ],
+        'image_sitemap' => [
+            'generate' => true,
+            'filename' => 'sitemap_images.xml',
+            'extensions' => [
+                'gif',
+                'jpg',
+                'jpeg',
+                'png',
+                'webp',
+            ],
         ],
     ],
     'sirv' => [
         'cdn_url' => 'https://clivewalkden.sirv.com',
-        'profile' => 'personal'
+        'profile' => 'personal',
     ],
     'image' => function ($page, $src, $width = null, $height = null, $settings = []) {
         $tags = '';
         $url_arguments = [];
 
-        if ($page->sirv):
+        if ($page->sirv) {
             $url_arguments['profile'] = $page->sirv['profile'];
-            if (Arr::has($settings, 'resize')):
+            if (Arr::has($settings, 'resize')) {
                 Arr::forget($settings, 'resize');
-                if ($width):
+                if ($width) {
                     $url_arguments['w'] = $width;
-                endif;
-                if ($height):
+                }
+                if ($height) {
                     $url_arguments['h'] = $height;
-                endif;
-            endif;
-        endif;
+                }
+            }
+        }
 
         // Check if data-options is set in setting
         // remove src setting and replace with data-src
         // $settings = Arr::add($settings,'data-options','fit:cover');
-        if (Arr::has($settings, 'data-options')):
+        if (Arr::has($settings, 'data-options')) {
             Arr::add($settings, 'data-src', $src);
             Arr::forget($settings, 'src');
-        endif;
+        }
 
         if ($src) {
-            if ($page->sirv):
+            if ($page->sirv) {
                 $sorted_url_arguments = Arr::sort($url_arguments);
-                $src = $page->sirv['cdn_url'] . $src . '?' . http_build_query($sorted_url_arguments);
-            endif;
-            $settings = Arr::add($settings,'src', $src);
+                $src = $page->sirv['cdn_url'].$src.'?'.http_build_query($sorted_url_arguments);
+            }
+            $settings = Arr::add($settings, 'src', $src);
         }
 
         if ($width) {
@@ -495,15 +507,15 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
             $settings = Arr::add($settings, 'height', $height);
         }
 
-        if ($settings):
+        if ($settings) {
             $sorted = Arr::sort($settings);
             $tags = implode(' ', array_map(
                 function ($k, $v) {
-                    return $k . '="' . htmlspecialchars($v) . '"';
+                    return $k.'="'.htmlspecialchars($v).'"';
                 },
                 array_keys($sorted), $sorted
             ));
-        endif;
+        }
 
         return "<img {$tags}/>";
     },

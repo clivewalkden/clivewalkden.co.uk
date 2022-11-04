@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 46
-title: PHP Content Management System Build
+title: PHP Content Management System Build for Agylia
 client: Agylia
 status: Live
 url: https://www.agylia.com

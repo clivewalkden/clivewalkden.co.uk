@@ -22,6 +22,19 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.2.4] - 2022-11-04
+### Changed
+- Updated GoogleFonts installation code to the latest version
+- Updated Sitemap generator to the latest verion v1.3.0
+
+### Fixed
+- Stopped build_staging directory being included in the repo
+- `.styleci.yml` configuration manually set
+- Updated tech stack in humans.txt
+- Small SEO fixes to various parts
+- Added missing robots.txt
+
+
 ## [v1.2.3] - 2022-11-02
 ### Changed
 - Updated sitemap module from v1.1.1 to v1.2.0

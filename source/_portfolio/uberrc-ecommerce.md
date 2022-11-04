@@ -1,8 +1,8 @@
 ---
 extends: _layouts.portfolio
 id: 5
-title: PHP Ecommerce and Content Management System Build
-client: Uber RC
+title: PHP Ecommerce and Content Management System Build for UberRC
+client: UberRC
 status: Live
 url: http://www.uberrc.com
 launched: 2007-07-01 00:00:00

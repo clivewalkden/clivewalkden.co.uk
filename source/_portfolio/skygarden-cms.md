@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 11
-title: Bespoke CMS and Ecommerce build
+title: Bespoke CMS and Ecommerce build for Sky Garden
 client: Sky Garden
 status: Live
 url: https://www.sky-garden.co.uk

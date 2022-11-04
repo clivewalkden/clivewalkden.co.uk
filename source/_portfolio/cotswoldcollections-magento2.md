@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 60
-title: Magento 2 Site build
+title: Magento 2 Site build for Cotswold Collections
 client: Cotswold Collections
 status: Live
 url: https://www.cotswoldcollections.com/

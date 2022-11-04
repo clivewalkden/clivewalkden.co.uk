@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 56
-title: Magento 2 Site build
+title: Magento 2 Site build for NutritionX
 client: NutritionX
 status: Live
 url: https://www.nutritionx.co.uk/

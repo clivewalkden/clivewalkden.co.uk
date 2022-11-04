@@ -6,7 +6,7 @@
                 <a href="/sitemap.xml">
                     <span>Sitemap</span>
                 </a>
-                <a href="/recipes">
+                <a href="/recipes/">
                     <span>Recipes</span>
                 </a>
             </div>

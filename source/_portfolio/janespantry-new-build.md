@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 2
-title: Bespoke Ecommerce build
+title: Bespoke Ecommerce build for Janes Pantry
 client: Janes Pantry
 status: Live
 url: https://www.janespantry.co.uk

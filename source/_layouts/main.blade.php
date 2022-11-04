@@ -5,7 +5,7 @@
         @include('_partials.sirv')
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        @if($page->getUrl() != $page->baseUrl)
+        @if($page->getUrl() != $page->baseUrl && $page->getFilename() != '404')
         <link rel="canonical" href="{{ $page->getUrl() }}/">
         @endif
         <meta name="description" content="{{ $page->meta_description }}">
@@ -14,7 +14,7 @@
         <title>{{ $page->meta_title }}</title>
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
-        <link href="//fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+        @include('_partials.fonts')
     </head>
     <body class="text-gray-900 font-default antialiased leading-normal tracking-normal">
     @include('_partials/dropdown')

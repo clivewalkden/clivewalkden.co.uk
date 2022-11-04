@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 11
-title: Bespoke CMS and members area build
+title: Bespoke CMS and members area build for Frasers Budgens
 client: Frasers Budgens
 status: Live
 url: https://frasersbudgens.co.uk

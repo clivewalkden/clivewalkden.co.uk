@@ -21,5 +21,5 @@ $events->afterBuild([
     SitemapListener::class,
 ]);
 $events->afterBuild([
-    GenerateIndex::class
+    GenerateIndex::class,
 ]);
