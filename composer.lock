@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "clivewalkden/jigsaw-sitemap",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clivewalkden/jigsaw-sitemap.git",
-                "reference": "e49367ec7da13241c317db4e4627e4424af193fa"
+                "reference": "1edfee7515e298c18ce927ec43beb7b07ff57e89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clivewalkden/jigsaw-sitemap/zipball/e49367ec7da13241c317db4e4627e4424af193fa",
-                "reference": "e49367ec7da13241c317db4e4627e4424af193fa",
+                "url": "https://api.github.com/repos/clivewalkden/jigsaw-sitemap/zipball/1edfee7515e298c18ce927ec43beb7b07ff57e89",
+                "reference": "1edfee7515e298c18ce927ec43beb7b07ff57e89",
                 "shasum": ""
             },
             "require": {
@@ -54,9 +54,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/clivewalkden/jigsaw-sitemap/tree/v1.2.0"
+                "source": "https://github.com/clivewalkden/jigsaw-sitemap/tree/v1.3.0"
             },
-            "time": "2022-11-02T09:56:37+00:00"
+            "time": "2022-11-04T08:13:45+00:00"
         },
         {
             "name": "doctrine/inflector",

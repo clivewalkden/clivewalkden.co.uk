@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 25
-title: Bespoke CMS and Ecommerce build
+title: Bespoke CMS and Ecommerce build for Mosaic Search
 client: Mosaic Search
 status: Live
 url: https://www.mosaic-search.co.uk

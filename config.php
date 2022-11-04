@@ -10,7 +10,7 @@ return [
     'meta_title' => 'DevOps Engineer and Magento 2 Developer in Gloucestershire',
     'meta_description' => 'I\'m the CTO for SOZO Design in Cheltenham, UK. Furthermore, I also build Magento 2 sites and plugins while having a passion for DevOps, cloud technologies and security.',
     'copyright' => 'Copyright ©2013-'.Carbon::now()->year.' Clive Walkden',
-    'start' => Carbon::parse('2001-01-01'),
+    'start' => Carbon::parse('2001-06-01'),
     'social' => [
         'email' => [
             'title' => 'Email',
@@ -447,7 +447,17 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
             'apple-touch-icon-72x72-precomposed.png',
             'apple-touch-icon-114x114-precomposed.png',
             'apple-touch-icon-57x57-precomposed.png',
-            '404.html',
+        ],
+        'image_sitemap' => [
+            'generate' => true,
+            'filename' => 'sitemap_images.xml',
+            'extensions' => [
+                'gif',
+                'jpg',
+                'jpeg',
+                'png',
+                'webp'
+            ]
         ],
     ],
     'sirv' => [

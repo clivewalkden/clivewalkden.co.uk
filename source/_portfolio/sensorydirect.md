@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 55
-title: Magento 2 Site build
+title: Magento 2 Site build for Sensory Direct
 client: Sensory Direct
 status: Live
 url: https://www.sensorydirect.com

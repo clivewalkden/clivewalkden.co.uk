@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 29
-title: Bespoke CMS and Ecommerce build
+title: Bespoke CMS build for McCarthy Marland
 client: McCarthy Marland
 status: Live
 url: https://www.mccarthywaste.co.uk

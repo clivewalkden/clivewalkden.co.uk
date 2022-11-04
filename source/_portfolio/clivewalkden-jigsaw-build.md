@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 1
-title: Jigsaw Static Website Build
+title: Jigsaw Static Website Build for Myself
 client: Clive Walkden
 status: Updated and Live
 url: https://clivewalkden.co.uk

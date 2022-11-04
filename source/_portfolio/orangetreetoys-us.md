@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 41
-title: Magento 1 United States Store Addition
+title: Magento 1 United States Store Addition for Orangetree Toys
 client: Orangetree Toys
 status: Live
 url: https://www.orangetreetoys.com

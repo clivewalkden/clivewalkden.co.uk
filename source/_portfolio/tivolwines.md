@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 54
-title: Magento 2 Site Build
+title: Magento 2 Site Build for Tivoli Wines
 client: Tivoli Wines
 status: Live
 url: https://www.tivoliwines.co.uk

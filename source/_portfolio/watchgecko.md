@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 1
-title: Magento 2 Site build
+title: Magento 2 Site build for WatchGecko
 client: WatchGecko
 status: Live
 url: https://www.watchgecko.com

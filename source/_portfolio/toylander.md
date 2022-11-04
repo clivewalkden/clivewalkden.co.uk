@@ -1,7 +1,7 @@
 ---
 extends: _layouts.portfolio
 id: 53
-title: Magento 2 Website Build
+title: Magento 2 Website Build for Toylander
 client: Toylander
 status: Live
 url: https://www.toylander.com
