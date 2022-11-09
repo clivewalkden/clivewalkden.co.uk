@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "clivewalkden/jigsaw-sitemap",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clivewalkden/jigsaw-sitemap.git",
-                "reference": "1edfee7515e298c18ce927ec43beb7b07ff57e89"
+                "reference": "a3fd88528e8c6edb2a4ebaca14cc0b80bba3b82c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clivewalkden/jigsaw-sitemap/zipball/1edfee7515e298c18ce927ec43beb7b07ff57e89",
-                "reference": "1edfee7515e298c18ce927ec43beb7b07ff57e89",
+                "url": "https://api.github.com/repos/clivewalkden/jigsaw-sitemap/zipball/a3fd88528e8c6edb2a4ebaca14cc0b80bba3b82c",
+                "reference": "a3fd88528e8c6edb2a4ebaca14cc0b80bba3b82c",
                 "shasum": ""
             },
             "require": {
@@ -54,9 +54,20 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/clivewalkden/jigsaw-sitemap/tree/v1.3.0"
+                "issues": "https://github.com/clivewalkden/jigsaw-sitemap/issues",
+                "source": "https://github.com/clivewalkden/jigsaw-sitemap/tree/v1.3.1"
             },
-            "time": "2022-11-04T08:13:45+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/clivewalkden",
+                    "type": "github"
+                },
+                {
+                    "url": "https://ko-fi.com/clivewalkden",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2022-11-09T14:11:42+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -894,16 +905,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.62.1",
+            "version": "2.63.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "01bc4cdefe98ef58d1f9cb31bdbbddddf2a88f7a"
+                "reference": "ad35dd71a6a212b98e4b87e97389b6fa85f0e347"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/01bc4cdefe98ef58d1f9cb31bdbbddddf2a88f7a",
-                "reference": "01bc4cdefe98ef58d1f9cb31bdbbddddf2a88f7a",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ad35dd71a6a212b98e4b87e97389b6fa85f0e347",
+                "reference": "ad35dd71a6a212b98e4b87e97389b6fa85f0e347",
                 "shasum": ""
             },
             "require": {
@@ -992,7 +1003,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-02T07:48:13+00:00"
+            "time": "2022-10-30T18:34:28+00:00"
         },
         {
             "name": "phpoption/phpoption",

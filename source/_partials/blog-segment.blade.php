@@ -30,7 +30,7 @@
                 <p class="mb-5 text-gray-700">
                     {{ $post->short_intro }}
                 </p>
-                @include('_partials.author', ['author_name' => 'Clive Walkden', 'author_url' => '/about/', 'author_image' => 'clive-walkden.jpg'])
+                @include('_partials.author', ['author_name' => 'Clive Walkden', 'author_url' => '/about/', 'author_image' => 'clive-walkden.png'])
             </div>
         </div>
         @endforeach
