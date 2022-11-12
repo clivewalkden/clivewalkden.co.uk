@@ -1,5 +1,7 @@
 # CliveWalkden Jigsaw site
 
+[![StyleCI](https://github.styleci.io/repos/145961530/shield?branch=master)](https://github.styleci.io/repos/145961530?branch=master)
+
 A static version of my site for simpler hosting. 
 
 ## Local Building

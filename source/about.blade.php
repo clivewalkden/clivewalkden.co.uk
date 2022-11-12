@@ -61,7 +61,7 @@ meta_description: I'm a 41 year old Magento 2 developer and DevOps Engineer from
                 </div>
             </div>
             <div class="flex justify-center">
-                {!! $page->image("/assets/images/clive-walkden.jpg", 588, 384, ['class' => 'rounded-full flex items-center justify-center object-cover w-80 h-80 rounded shadow-lg sm:w-96 sm:h-96 Sirv', 'title' => 'Clive Walkden', 'alt' => 'Clive Walkden', 'resize' => true, 'data-options' => 'fit:contain']) !!}
+                {!! $page->image("/assets/images/clive-walkden-about.png", 588, 384, ['class' => 'rounded-full flex items-center justify-center object-cover w-80 h-80 rounded shadow-lg sm:w-96 sm:h-96 Sirv', 'title' => 'Clive Walkden', 'alt' => 'Clive Walkden', 'resize' => true, 'data-options' => 'fit:contain;flop:yes']) !!}
             </div>
         </div>
     </div>

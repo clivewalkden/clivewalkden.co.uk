@@ -22,6 +22,15 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.2.5] - 2022-11-12
+### Changed
+- Added StyleCi build result to the README.md
+- Updated postcss-import from 14.1.0 to 15.0.0
+- Updated Axios from 0.21.4 to 0.27.2
+- Updated Jigsaw Sitemap from 1.3.0 to 1.3.1
+- dependabot.yml configured to change target branch
+
+
 ## [v1.2.4] - 2022-11-04
 ### Changed
 - Updated GoogleFonts installation code to the latest version
