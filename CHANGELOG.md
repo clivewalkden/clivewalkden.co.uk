@@ -26,6 +26,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 - Updated postcss-import from 14.1.0 to 15.0.0
 - Updated Axios from 0.21.4 to 0.27.2
 - Updated Jigsaw Sitemap from 1.3.0 to 1.3.1
+- dependabot.yml configured to change target branch
 
 
 ## [v1.2.4] - 2022-11-04
