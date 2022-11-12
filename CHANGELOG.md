@@ -21,6 +21,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.2.5] - 2022-11-12
 ### Changed
 - Added StyleCi build result to the README.md
 - Updated postcss-import from 14.1.0 to 15.0.0
