@@ -1,6 +1,6 @@
 {
   "require": {
-    "tightenco/jigsaw": "~1.3.45",
+    "tightenco/jigsaw": "~1.6.0",
     "nesbot/carbon": "^2.53",
     "clivewalkden/jigsaw-sitemap": "^1.2",
     "ext-json": "*"
