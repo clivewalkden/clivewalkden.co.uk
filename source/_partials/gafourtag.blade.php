@@ -1,12 +1,12 @@
-@if($page->analytics)
+@if($page->gafourtag)
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ $page->analytics }}"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ $page->gafourtag }}"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', '{{ $page->analytics }}');
+            gtag('config', '{{ $page->gafourtag }}');
         </script>
-        <!-- EO Global analytics tag -->
+        <!-- EO Global ga4 tag -->
 @endif
