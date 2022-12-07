@@ -21,6 +21,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.3.0] - 2022-12-07
 ### Added
 - GA4 analytics tracking code
 
