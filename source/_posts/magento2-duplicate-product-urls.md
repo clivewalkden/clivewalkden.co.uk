@@ -4,7 +4,7 @@ id: 20220728
 meta_title: Magento 2 How to identify duplicate product URLs
 meta_description: Magento 2 How to identify duplicate product URLs in the database.
 title: How to identify duplicate product URLs
-short_intro: How to log to information to a file in different Magento 2.4.x versions
+short_intro: Magento 2 How to identify duplicate product URLs in the database.
 intro: Magento 2 How to identify duplicate product URLs in the database.
 published: 2022-07-28 14:50:00
 hide: false

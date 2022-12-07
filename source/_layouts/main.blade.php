@@ -2,6 +2,7 @@
 <html lang="{{ $page->language ?? 'en' }}">
     <head>
         @include('_partials.analytics')
+        @include('_partials.gafourtag')
         @include('_partials.sirv')
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
