@@ -21,6 +21,15 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+### Added
+- GA4 analytics tracking code
+
+### Changed
+- CSS Styling updated to tweak code text size and highlight color
+- Added styling for blockquote
+- Carbon updated from 2.63.0 to 2.64.0
+- Symfony components update
+
 
 ## [v1.2.5] - 2022-11-12
 ### Changed

@@ -32,6 +32,18 @@ body > header {
     @apply mb-5 bg-gray-800 text-white p-4;
 }
 
+.content > pre > code {
+    @apply text-base;
+}
+
+.content > pre > code::selection {
+    @apply bg-primary;
+}
+
+.content > pre > code::-moz-selection {
+    @apply bg-primary;
+}
+
 .content > p {
     @apply text-base text-gray-700 mb-5;
 }
@@ -46,6 +58,10 @@ body > header {
 
 .content > ul {
     @apply list-disc list-inside;
+}
+
+.content > blockquote {
+    @apply px-2 py-1 mb-5 border-l-4 border-primary text-gray-600 text-sm;
 }
 
 ol.recipe-methods {
