@@ -21,6 +21,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.3.1] - 2023-01-25
 ### Changed
 - PostCSS updated from 8.4.19 to 8.4.21
 - Carbon updated from 2.64.0 to 2.65.0
