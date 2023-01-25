@@ -12,7 +12,7 @@ github_repo: Magento2_Usersnap
 packagist_user: clivewalkden
 packagist_repo: magento2-usersnap
 launched: 2016-05-11
-lastupdate: 2022-10-31
+lastupdate: 2022-12-23
 finished: false
 featured: false
 image_main: github-repo.png

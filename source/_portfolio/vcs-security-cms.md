@@ -6,7 +6,7 @@ client: VSC Security
 status: Live
 url: https://www.vscsecurity.com/
 launched: 2014-10-22 00:00:00
-finished: false
+finished: 2022-11-29 00:00:00
 featured: false
 section: content
 technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive,SagePay]
