@@ -14,7 +14,7 @@ infrastructure: [Linux,Cluster,High Availability,WAF,Percona,Nginx,Zabbix,Redis,
 image_main: sensorydirect-home.png
 intro: A Magento 2 build for sensory toys and equipment seller.
 summary: [Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Module suggestion to improve sales and user experience,Security service setup and configuration,Server migration planning and execution]
-seo: false
+seo: true
 meta_title: Magento 2 Site Build for Sensory Direct
 meta_description: A Magento 2 build for sensory toys and equipment seller.
 ---

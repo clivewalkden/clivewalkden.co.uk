@@ -3,7 +3,7 @@ extends: _layouts.portfolio
 id: 46
 title: PHP Content Management System Build for Agylia
 client: Agylia
-status: Live
+status: No Longer Available
 url: https://www.agylia.com
 launched: 2016-01-28 00:00:00
 finished: 2022-01-12 00:00:00

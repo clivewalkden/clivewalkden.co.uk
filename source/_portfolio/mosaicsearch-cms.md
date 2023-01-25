@@ -3,7 +3,7 @@ extends: _layouts.portfolio
 id: 25
 title: Bespoke CMS and Ecommerce build for Mosaic Search
 client: Mosaic Search
-status: Live
+status: Rebuilt
 url: https://www.mosaic-search.co.uk
 launched: 2013-09-09 00:00:00
 finished: 2022-02-10 00:00:00

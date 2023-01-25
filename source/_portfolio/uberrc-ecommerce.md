@@ -3,8 +3,8 @@ extends: _layouts.portfolio
 id: 5
 title: PHP Ecommerce and Content Management System Build for UberRC
 client: UberRC
-status: Live
-url: http://www.uberrc.com
+status: Rebuilt and Moved Away
+url: https://www.uberrc.com
 launched: 2007-07-01 00:00:00
 finished: 2011-05-01
 featured: false
