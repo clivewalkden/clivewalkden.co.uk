@@ -3,7 +3,7 @@ extends: _layouts.portfolio
 id: 41
 title: Magento 1 United States Store Addition for Orangetree Toys
 client: Orangetree Toys
-status: Live
+status: Rebuilt and Moved Away
 url: https://www.orangetreetoys.com
 launched: 2019-05-31 00:00:00
 finished: 2022-10-01 00:00:00
@@ -14,7 +14,7 @@ infrastructure: [Linux,Cloud,WAF,Percona,Nginx,Zabbix,Redis]
 image_main: orangetreetoys-home.png
 intro: An update to include an additional territory of sales to the existing Magento 1 site.
 summary: [Client project scoping to determine the best solution,Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Custom module creation for client specific functionality,Module suggestion to improve sales and user experience,Security service setup and configuration,Server migration planning and execution]
-seo: true
+seo: false
 meta_title: Magento 1 United States Store Addition for Orangetree Toys
 meta_description: An update to include an additional territory of sales to the existing Magento 1 site.
 ---

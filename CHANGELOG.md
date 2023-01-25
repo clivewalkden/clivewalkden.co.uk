@@ -22,6 +22,20 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.3.1] - 2023-01-25
+### Changed
+- PostCSS updated from 8.4.19 to 8.4.21
+- Carbon updated from 2.64.0 to 2.65.0
+- Laravel Mix Jigsaw from 2.0.0 to 2.1.1
+- Browser Sync from 2.27.10 to 2.27.11
+- PostCSS Import from 15.0.1 to 15.1.0
+- Symfony Components
+- Portfolio tweaks to keep updated
+
+### Fixed
+- Missing redirects for old posts, portfolio links and contact page
+
+
 ## [v1.3.0] - 2022-12-07
 ### Added
 - GA4 analytics tracking code
