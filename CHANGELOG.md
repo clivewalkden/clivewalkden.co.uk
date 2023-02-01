@@ -21,6 +21,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+### Changed
+- Carbon updated from 2.65.0 to 2.66.0
+
 
 ## [v1.3.1] - 2023-01-25
 ### Changed
