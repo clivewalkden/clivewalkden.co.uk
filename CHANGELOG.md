@@ -22,6 +22,14 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.3.3] - 2023-04-28
+### Changed
+- Symfony components
+
+### Fixed
+- Missing redirects for old posts, portfolio links and contact page
+
+
 ## [v1.3.2] - 2023-02-02
 ### Changed
 - Carbon updated from 2.65.0 to 2.66.0

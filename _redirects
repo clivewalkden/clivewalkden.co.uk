@@ -2,6 +2,9 @@
 /code /portfolio/ 301
 /code/ /portfolio/ 301
 /contact.php /about/ 301
+/cwpot.php / 301
+/sitemap.php /sitemap.xml 301
+/assets/images/blog/articles/
 /portfolio/agylia.php /portfolio/agylia-cms/ 301
 /portfolio/avondata.php /portfolio/ 301
 /portfolio/barnbury.php /portfolio/ 301
@@ -10,10 +13,14 @@
 /portfolio/janes-pantry.php /portfolio/janespantry-build/ 301
 /portfolio/magento2-dbsync /portfolio/magento2-bash-dbsync/ 301
 /portfolio/mccarthy-marland.php /portfolio/mccarthymarland-cms/ 301
+/portfolio/sky-garden.php /portfolio/skygarden-cms/ 301
+/portfolio/watchgecko.php /portfolio/watchgecko/ 301
 /portfolio/migration-essentials.php /portfolio/ 301
 /portfolio/mmr-flux.php /portfolio/ 301
 /portfolio/pathfinders.php /portfolio/ 301
 /portfolio/play-audio.php /portfolio/ 301
+/portfolio/win-my-holiday-home.php /portfolio/ 301
+/portfolio/frasers-budgens.php /portfolio/ 301
 /portfolio/toylander.php /portfolio/toylander/ 301
 /portfolio/video-my-business.php /portfolio/ 301
 /portfolio/vsc-security.php /portfolio/vcs-security-cms/ 301
@@ -23,7 +30,10 @@
 /blog/jquery/jquery-basics.php /blog/jquery/jquery-basics/ 301
 /blog/jquery/php-time-equivalent-for-javascript.php /blog/jquery/php-time-equivalent-for-javascript/ 301
 /blog/linux/plex-media-server-update-in-centos.php /blog/linux/plex-media-server-update-in-centos/ 301
+/blog/linux/running-linux-commands-in-the-background.php /blog/linux/running-linux-commands-in-the-background/ 301
 /blog/linux/turning-off-your-centos-firewall.php /blog/linux/turning-off-your-centos-firewall/ 301
 /blog/php/php-function-to-generate-a-random-password.php /blog/php/php-function-to-generate-a-random-password/ 301
 /blog/php/php-snippet-to-convert-uk-date-to-mysql-date.php /blog/php/php-snippet-to-convert-uk-date-to-mysql-date/ 301
 /blog/php/useful-php-date-function.php /blog/php/useful-php-date-function/ 301
+/blog/bitcoin/bitcoin-investment-websites.php /blog/bitcoin/bitcoin-investment-websites/ 301
+/blog/css/css-center-within-div.php /blog/css/css-center-within-div/ 301
