@@ -21,6 +21,12 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+### Changed
+- Symfony components
+
+### Fixed
+- Missing redirects for old posts, portfolio links and contact page
+
 
 ## [v1.3.2] - 2023-02-02
 ### Changed
