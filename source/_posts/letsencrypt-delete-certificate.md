@@ -8,7 +8,7 @@ short_intro: A quick example of how to delete a LetsEncrypt Certbot generated ce
 intro: How to correctly delete a LetsEncrypt Certbot generated certificate from the Linux command line.
 published: 2022-01-15 10:30:00
 hide: false
-category: linux
+category: devops
 hero:
 author: Clive Walkden
 section: content

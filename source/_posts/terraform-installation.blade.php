@@ -8,7 +8,7 @@ short_intro: A quick installation guide for Terraform on Ubuntu 18.04
 intro: A quick installation guide for Terraform on Ubuntu 18.04
 published: 2022-03-31 12:00:00
 hide: false
-category: linux
+category: devops
 hero:
 author: Clive Walkden
 ---

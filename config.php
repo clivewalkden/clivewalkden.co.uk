@@ -362,6 +362,14 @@ Here are a few blog posts with my personal trials and triumphs using Magento 2.'
                     'content' => 'Some of my experiences using different Linux distro&#39;s for Web Development and PHP, MySQL Website Development.',
                 ],
                 [
+                    'title' => 'DevOps',
+                    'h1_title' => 'DevOps',
+                    'seo_link' => 'devops',
+                    'meta_title' => 'DevOps principles and tool usage',
+                    'meta_description' => 'DevOps principles and usage examples as collected in my time running DevOps for PHP and Magento 2 sites.',
+                    'content' => 'DevOps principles and usage examples as collected in my time running DevOps for PHP and Magento 2 sites.',
+                ],
+                [
                     'title' => 'HTML5',
                     'h1_title' => 'HTML5',
                     'seo_link' => 'html5',

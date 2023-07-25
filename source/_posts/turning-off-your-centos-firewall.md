@@ -8,7 +8,7 @@ meta_title: How to turn off the Firewall on CentOS
 meta_description: If you need to relax your server firewall policy in CentOS then this short guide shows you how.
 published: 2013-10-13 08:21:00
 hide: false
-category: linux
+category: devops
 hero:
 author: Clive Walkden
 section: content
