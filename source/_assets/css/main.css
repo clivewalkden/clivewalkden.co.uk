@@ -48,6 +48,18 @@ body > header {
     @apply text-base text-gray-700 mb-5;
 }
 
+.content > p > code {
+    @apply bg-gray-800 text-white p-1 text-sm;
+}
+
+.content > p > code::selection {
+    @apply bg-primary;
+}
+
+.content > p > code::-moz-selection {
+    @apply bg-primary;
+}
+
 .content > img {
     @apply mb-5;
 }

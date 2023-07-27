@@ -26174,6 +26174,31 @@ body > header {
   color: rgba(68, 64, 60, var(--tw-text-opacity));
 }
 
+.content > p > code {
+  --tw-bg-opacity: 1;
+  background-color: rgba(41, 37, 36, var(--tw-bg-opacity));
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.content > p > code::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 174, 0, var(--tw-bg-opacity));
+}
+
+.content > p > code::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 174, 0, var(--tw-bg-opacity));
+}
+
+.content > p > code::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 174, 0, var(--tw-bg-opacity));
+}
+
 .content > img {
   margin-bottom: 1.25rem;
 }

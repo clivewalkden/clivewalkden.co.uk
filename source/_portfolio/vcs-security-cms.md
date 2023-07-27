@@ -3,7 +3,7 @@ extends: _layouts.portfolio
 id: 33
 title: Bespoke CMS Build for VCS Security
 client: VSC Security
-status: Live
+status: Rebuilt
 url: https://www.vscsecurity.com/
 launched: 2014-10-22 00:00:00
 finished: 2022-11-29 00:00:00

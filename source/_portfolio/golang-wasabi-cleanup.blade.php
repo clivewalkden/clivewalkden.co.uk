@@ -12,7 +12,7 @@ github_repo: go-wasabi-cleanup
 packagist_user:
 packagist_repo:
 launched: 2023-03-01
-lastupdate: 2023-03-01
+lastupdate: 2023-04-21
 finished: false
 featured: false
 image_main: cli-application-image.png

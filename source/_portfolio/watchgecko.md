@@ -3,7 +3,7 @@ extends: _layouts.portfolio
 id: 1
 title: Magento 2 Site build for WatchGecko
 client: WatchGecko
-status: Live
+status: Rebuilt
 url: https://www.watchgecko.com
 launched: 2014-12-16 00:00:00
 finished: 2020-01-22 00:00:00

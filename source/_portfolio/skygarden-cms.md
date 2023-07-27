@@ -3,10 +3,10 @@ extends: _layouts.portfolio
 id: 11
 title: Bespoke CMS and Ecommerce build for Sky Garden
 client: Sky Garden
-status: Live
+status: Rebuilt
 url: https://www.sky-garden.co.uk
 launched: 2013-09-04 00:00:00
-finished: false
+finished: 2023-05-05 09:33:00
 featured: false
 section: content
 technologies: [PHP,SASS,HTML5,CSS3,jQuery,Bespoke CMS,Responsive,SagePay]
@@ -14,7 +14,7 @@ infrastructure: [Linux,Cluster,High Availability,MariaDB,Apache,Zabbix]
 image_main: skygarden-home.png
 intro: Bespoke CMS build with ecommerce added post launch
 summary: [Client project scoping to determine the best solution,Custom CMS build,Bespoke ecommerce build,SagePay integration,Google Advertising,Testing]
-seo: true
+seo: false
 meta_title: Bespoke CMS and Ecommerce build for Sky Garden
 meta_description: Bespoke CMS build with ecommerce added post launch
 ---
