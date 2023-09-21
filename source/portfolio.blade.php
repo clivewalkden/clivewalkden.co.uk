@@ -15,20 +15,20 @@ meta_description: Here is an example of works I've completed either individually
             </p>
             @include('_partials.hr')
         </div>
-        <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2">
+        <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
             @foreach ($portfolio as $site)
                 <a href="{{ $site->getPath() }}/" aria-label="View Item">
                     <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                         @if ($site->github_user)
                             @php
-                                $class="object-contain w-full h-56 md:h-64 xl:h-80"
+                                $class="object-contain w-full h-56 md:h-44 xl:h-56"
                             @endphp
                         @else
                             @php
-                                $class="object-cover w-full h-56 md:h-64 xl:h-80"
+                                $class="object-cover w-full h-56 md:h-44 xl:h-56"
                             @endphp
                         @endif
-                        {!! $page->image("/assets/images/portfolio/" . $site->image_main, 390, 320  , ['title' => $site->title, 'alt' => $site->title, 'class' => $class, 'resize' => true]) !!}
+                        {!! $page->image("/assets/images/portfolio/" . $site->image_main, 390, 220  , ['title' => $site->title, 'alt' => $site->title, 'class' => $class, 'resize' => true]) !!}
                         <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                             <p class="mb-4 text-lg font-bold text-gray-100">{{ $site->title }}</p>
                             <p class="text-sm tracking-wide text-gray-300">
