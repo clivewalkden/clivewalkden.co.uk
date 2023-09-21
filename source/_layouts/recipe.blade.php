@@ -20,7 +20,7 @@ use Carbon\CarbonInterval;
         <div class="grid gap-10 lg:grid-cols-3 mx-auto px-4 py-16 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-16">
             <div class="items-center lg:col-span-2">
                 <figure>
-                    {!! $page->image("/assets/images/recipes/" . $page->image_main, 760, 300, ['alt' => $page->meta_title, 'class' => 'object-cover w-full h-60 md:h-80 xl:h-96', 'resize' => true]) !!}
+                    {!! $page->image("/assets/images/recipes/" . $page->image_main, 760, 300, ['alt' => $page->meta_title, 'class' => 'object-cover w-full h-60 md:h-80 xl:h-96', 'resize' => true, 'fetchpriority' => 'high']) !!}
                 </figure>
             </div>
             <div class="mt-2">

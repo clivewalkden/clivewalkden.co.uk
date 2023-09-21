@@ -13,7 +13,7 @@
             </a>
             <div class="p-5">
                 <a href="{{ $site->getPath() }}/" aria-label="Article" title="{{ $site->meta_title }}" class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400">
-                    {{ $site->client ?? $site->title }}
+                    {{ $site->title ?? $site->client }}
                 </a>
                 <p class="mb-5 text-gray-700">
                     {{ $site->intro }}

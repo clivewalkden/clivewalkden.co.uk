@@ -4,7 +4,7 @@
              fill="currentColor" preserveAspectRatio="none slice">
             <path d="M50 0H100L50 100H0L50 0Z"></path>
         </svg>
-        {!! $page->image("/assets/images/website-code.jpg", 1280, 688, ['title' => 'Clive Walkden Magento 2 Developer', 'alt' => 'Clive Walkden SysOps Developer', 'class' => 'object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full']) !!}
+        {!! $page->image("/assets/images/website-code.jpg", 1280, 688, ['title' => 'Clive Walkden Magento 2 Developer', 'alt' => 'Clive Walkden SysOps Developer', 'class' => 'object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full', 'fetchpriority' => 'high']) !!}
     </div>
     <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
