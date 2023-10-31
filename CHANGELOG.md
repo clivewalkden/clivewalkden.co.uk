@@ -21,6 +21,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 
 ## [Unreleased]
+
+## [v1.3.4] - 2023-10-31
 ### Changed
 - Symfony components updated
 - Node updated from v18.18.0 to v20.9.0
