@@ -22,6 +22,17 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.3.4] - 2023-10-31
+### Changed
+- Symfony components updated
+- Node updated from v18.18.0 to v20.9.0
+- Carbon updated from 2.70.0 to 2.71.0
+- Fuse.js updated from v6.6.2 to v7.0.0
+- Vue updated from v2.7.13 to v2.7.15
+- Vue loader updated from v15.10.0 to v15.11.1
+- Vue template compiler updated from v2.7.13 to v2.7.15
+
+
 ## [v1.3.3] - 2023-04-28
 ### Changed
 - Symfony components
