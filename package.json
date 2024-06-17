@@ -16,7 +16,7 @@
         "postcss": "^8.4.38",
         "postcss-import": "^16.0.1",
         "tailwindcss": "^2.2.19",
-        "vue": "^2.7.15",
+        "vue": "^3.4.29",
         "vue-loader": "^15.11.1",
         "vue-template-compiler": "^2.7.16"
     }
