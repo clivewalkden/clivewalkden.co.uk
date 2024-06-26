@@ -10,7 +10,7 @@ finished: false
 featured: true
 section: content
 technologies: [Magento 2,Hyvä Themes,Composer,PHP 8.2,AlpineJS,TailwindCSS]
-infrastructure: [Linux,WAF,MySQL,Nginx,Varnish,Zabbix,Redis,Elasticsearch,RabbitMQ]
+infrastructure: [Linux,WAF,MySQL,Nginx,Varnish,Zabbix,Redis,Elasticsearch,RabbitMQ,GCP]
 image_main: austinpedalcars-classic-cars.png
 intro: Magento 2 Hyvä Themes build for Austin Pedal Cars.
 summary: [Magento 2 Custom module creation,Infrastructure setup and configuration,Ongoing monitoring of the solution,Support and update planning,Module suggestion to improve sales and user experience,Security service setup and configuration and monitoring]
