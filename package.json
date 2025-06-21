@@ -7,7 +7,7 @@
         "prod": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.28.0",
+        "axios": "^0.30.0",
         "browser-sync": "^2.29.3",
         "browser-sync-webpack-plugin": "^2.3.0",
         "fuse.js": "^7.0.0",
