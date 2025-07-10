@@ -3,10 +3,10 @@ extends: _layouts.portfolio
 id: 53
 title: Magento 2 Website Build for Toylander
 client: Toylander
-status: Live
+status: Rebuilt on Shopify
 url: https://www.toylander.com
 launched: 2017-03-24
-finished: false
+finished: 2025-07-04
 featured: false
 section: content
 technologies: [Magento 2,Less,HTML5,CSS3,Composer,PHP,Knockout JS]

@@ -3,6 +3,7 @@ extends: _layouts.plugins
 id: 20220227
 title: Magento 2 Outdated Browser Warning Module
 status: Live
+type: module
 url: https://github.com/sozo-design/magento2-module-sozo-outdatedbrowserwarning
 issues: https://github.com/sozo-design/magento2-module-sozo-outdatedbrowserwarning/issues
 docs: https://github.com/sozo-design/magento2-module-sozo-outdatedbrowserwarning/blob/2.4/README.md

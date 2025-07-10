@@ -3,6 +3,7 @@ extends: _layouts.plugins
 id: 4
 title: Wasabi Cleanup Application
 status: Live
+type: cli
 url: https://github.com/clivewalkden/go-wasabi-cleanup
 issues: https://github.com/clivewalkden/go-wasabi-cleanup/issues
 docs: https://github.com/clivewalkden/go-wasabi-cleanup/blob/master/README.md

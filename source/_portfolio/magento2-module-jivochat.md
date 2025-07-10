@@ -3,6 +3,7 @@ extends: _layouts.plugins
 id: 1
 title: Magento 2 JivoChat Module
 status: Live
+type: module
 url: https://github.com/sozo-design/Magento2_JivoChat
 issues: https://github.com/sozo-design/Magento2_JivoChat/issues
 docs: https://github.com/sozo-design/Magento2_JivoChat/blob/master/README.md
