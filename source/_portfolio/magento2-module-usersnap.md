@@ -3,6 +3,7 @@ extends: _layouts.plugins
 id: 4
 title: Magento 2 Usersnap Module
 status: Live
+type: module
 url: https://github.com/clivewalkden/Magento2_Usersnap
 issues: https://github.com/clivewalkden/Magento2_Usersnap/issues
 docs: https://github.com/clivewalkden/Magento2_Usersnap/blob/master/README.md

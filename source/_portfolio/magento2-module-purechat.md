@@ -3,6 +3,7 @@ extends: _layouts.plugins
 id: 1
 title: Magento 2 PureChat Module
 status: Live
+type: module
 url: https://github.com/sozo-design/Magento2_PureChat
 issues: https://github.com/sozo-design/Magento2_PureChat/issues
 docs: https://github.com/sozo-design/Magento2_PureChat/blob/master/README.md

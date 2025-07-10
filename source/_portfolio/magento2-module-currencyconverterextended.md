@@ -3,6 +3,7 @@ extends: _layouts.plugins
 id: 3
 title: Magento 2 Currency Conversion Extended Module
 status: Live
+type: module
 url: https://github.com/sozo-design/Magento2_CurrencyConversionExtended
 issues: https://github.com/sozo-design/Magento2_CurrencyConversionExtended/issues
 docs: https://github.com/sozo-design/Magento2_CurrencyConversionExtended/blob/master/README.md

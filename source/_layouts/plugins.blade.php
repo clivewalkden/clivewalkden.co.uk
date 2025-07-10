@@ -9,6 +9,7 @@ use Carbon\Carbon;
         $start = Carbon::parse($page->launched)->format($date_format);
         $last_update = Carbon::parse($page->lastupdate)->format($date_format);
         $end = ($page->finished) ? Carbon::parse($page->finished)->format($date_format) : 'present';
+        $view_type = ($page->type == 'cli') ? 'application' : 'module';
     @endphp
     <div>
         <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8">
@@ -45,7 +46,7 @@ use Carbon\Carbon;
                     @if($page->url)
                         <a class="px-4 py-2 my-5 inline-block rounded bg-secondary text-white italic hover:bg-gray-500"
                            href="{{ $page->url }}" target="_blank" rel="external" title="{{ $page->title }} code / repository">
-                            View module
+                            View {{ $view_type }}
                         </a>
                     @endif
                     @if($page->docs)
@@ -129,6 +130,17 @@ use Carbon\Carbon;
                             <img alt="Date Last Updated Badge" src="https://img.shields.io/github/last-commit/{{ $page->github_user }}/{{ $page->github_repo }}?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
                         </a>
                     </div>
+                    @endif
+                    @if($page->github_user && $page->github_repo)
+                        <div>
+                            <h4 class="mb-2 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
+                                Total Downloads</h4>
+                        </div>
+                        <div>
+                            <a href="{{ $page->url }}" target="_blank" rel="external">
+                                <img alt="Total Downloads" src="https://img.shields.io/github/downloads/{{ $page->github_user }}/{{ $page->github_repo }}/total?style={{ $page->badge_style }}&color=blue&logo=github&logoColor=white"/>
+                            </a>
+                        </div>
                     @endif
                     <div>
                         <h4 class="mb-2 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm-leading-none">

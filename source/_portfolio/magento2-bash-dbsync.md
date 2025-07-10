@@ -3,6 +3,7 @@ extends: _layouts.plugins
 id: 5
 title: Magento 2 DB Sync Bash Script
 status: Live
+type: cli
 url: https://github.com/clivewalkden/bash-magento2-db-sync
 issues: https://github.com/clivewalkden/bash-magento2-db-sync/issues
 docs: https://github.com/clivewalkden/bash-magento2-db-sync/blob/master/README.md

@@ -3,6 +3,7 @@ extends: _layouts.plugins
 id: 20220122
 title: Magento 2 WYSIWYG Error Remover Module
 status: Live
+type: module
 url: https://github.com/sozo-design/magento2-module-sozo-wysiwygerrorremover
 issues: https://github.com/sozo-design/magento2-module-sozo-wysiwygerrorremover/issues
 docs: https://github.com/sozo-design/magento2-module-sozo-wysiwygerrorremover/blob/master/README.md
