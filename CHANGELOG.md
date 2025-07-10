@@ -22,6 +22,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+## [v1.4.0] - 2025-07-10
+
 ### Added
 - Added new CLI applications (Anvil & Flux)
 
