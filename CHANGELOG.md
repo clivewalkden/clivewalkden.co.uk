@@ -22,6 +22,19 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 ## [Unreleased]
 
+### Added
+- Added new CLI applications (Anvil & Flux)
+
+### Changed
+- Node updated from v20.9.0 to v22.12.0
+- Carbon updated from 2.71.0 to 2.72.6
+- Fuse.js updated from v7.0.0 to v7.1.0
+- Updated plugins template to change button text to appropriate text
+- Updated plugins template to show the total downloads for the plugin/application
+- Included new variable for the button text in plugins & cli applications
+- Project file updates
+
+
 ## [v1.3.4] - 2023-10-31
 ### Changed
 - Symfony components updated
