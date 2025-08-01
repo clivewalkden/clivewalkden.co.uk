@@ -69,7 +69,12 @@ body > header {
 }
 
 .content > ul {
-    @apply list-disc list-inside;
+    @apply list-disc list-inside mb-5;
+}
+
+.content > ul li {
+    @apply pl-4;
+    text-indent: -16px;
 }
 
 .content > blockquote {
