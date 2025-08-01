@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 id: 20250801
-meta_title: Magento 2 Releases Evolution: Features, Popularity & Issues
+meta_title: Magento 2 Releases Evolution - Features, Popularity & Issues
 meta_description: Explore the evolution of Magento 2 through its major releases, detailing features added, popularity metrics, and issues encountered.
 title: A Comprehensive Guide to Major Releases of Magento 2
 short_intro: Explore the evolution of Magento 2 through its major releases, detailing features added, popularity metrics, and issues encountered.
@@ -29,7 +29,7 @@ author: Clive Walkden
 <h3 id="magento21enhancementsjune2016">Magento 2.1: Enhancements (June 2016)</h3>
 <p>Magento 2.1 introduced several enhancements:</p>
 <ul>
-<li><strong>B2B Features</strong>: Tools for businesses, such as shared catalogs and improved customer segmentation.</li>
+<li><strong>B2B Features</strong>: Tools for businesses, such as shared catalogues and improved customer segmentation.</li>
 <li><strong>Improved Checkout</strong>: Streamlined one-page checkout.</li>
 <li><strong>Multi-Source Inventory (MSI)</strong>: This laid the foundation for better inventory management.</li>
 </ul>
@@ -61,7 +61,7 @@ author: Clive Walkden
 <h3 id="mostpopularreleases">Most Popular Releases</h3>
 <ul>
 <li><strong>Magento 2.3</strong>: Received widespread acclaim due to its impactful features like GraphQL and Page Builder, making it a go-to choice for developers looking to enhance performance and user experience.</li>
-<li><strong>Magento 2.4</strong>: The enhanced security and performance features made this a favorite among eCommerce businesses pushing for faster implementations and stronger security protocol.</li>
+<li><strong>Magento 2.4</strong>: The enhanced security and performance features made this a favourite among eCommerce businesses pushing for faster implementations and stronger security protocol.</li>
 </ul>
 <h3 id="releaseswithnotableproblems">Releases with Notable Problems</h3>
 <ul>
@@ -69,5 +69,5 @@ author: Clive Walkden
 <li><strong>Magento 2.2</strong>: Encountered difficulties due to the implementation of PWA and GraphQL, which led to compatibility issues for some extensions and themes during its early adoption phase.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
-<p>Magento 2's evolution has been characterized by incremental improvements, each version building upon the foundation of its predecessors. Developers and store owners benefit from understanding the capabilities and challenges that come with each major release. By keeping abreast of features introduced in each version, users can optimize their Magento setup for enhanced performance and security while minimizing potential issues during upgrades.</p>
+<p>Magento 2's evolution has been characterised by incremental improvements, each version building upon the foundation of its predecessors. Developers and store owners benefit from understanding the capabilities and challenges that come with each major release. By keeping abreast of features introduced in each version, users can optimise their Magento setup for enhanced performance and security while minimising potential issues during upgrades.</p>
 @endsection
