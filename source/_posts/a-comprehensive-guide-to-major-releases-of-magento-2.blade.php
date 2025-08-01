@@ -14,7 +14,6 @@ author: Clive Walkden
 ---
 
 @section ('content')
-<h1 id="acomprehensiveguidetomajorreleasesofmagento2">A Comprehensive Guide to Major Releases of Magento 2</h1>
 <p>Magento 2 has undergone significant changes and improvements since its initial release. This guide details the evolution of Magento 2 through its major releases, highlighting new features, the most popular versions, and the issues that arose with specific updates.</p>
 <h2 id="overviewofmagento2majorreleases">Overview of Magento 2 Major Releases</h2>
 <p>Magento 2 has seen several major versions since its introduction. Below is a summary of key releases and their notable features.</p>
