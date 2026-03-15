@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-import pagefind from 'astro-pagefind';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
@@ -13,7 +12,6 @@ export default defineConfig({
     sitemap({
       filter: (page) => !page.includes('/404'),
     }),
-    pagefind(),
   ],
   vite: {
     plugins: [tailwindcss()],
