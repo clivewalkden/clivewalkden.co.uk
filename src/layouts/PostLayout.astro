@@ -41,14 +41,14 @@ function isoDate(d: Date): string {
     <div class="text-center px-4 py-8">
       <div class="flex">
         {prev && (
-          <a href={`/blog/${prev.data.category}/${prev.slug}/`} title={prev.data.title}
+          <a href={`/blog/${prev.data.category}/${prev.id}/`} title={prev.data.title}
              class="flex items-center text-sm self-center">
             <i class="bx bx-small bx-chevron-left"></i> Previous Article
           </a>
         )}
         <h1 class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none flex-grow text-center">{data.title}</h1>
         {next && (
-          <a href={`/blog/${next.data.category}/${next.slug}/`} title={next.data.title}
+          <a href={`/blog/${next.data.category}/${next.id}/`} title={next.data.title}
              class="flex items-center text-sm self-center">
             Next Article <i class="bx bx-small bx-chevron-right"></i>
           </a>

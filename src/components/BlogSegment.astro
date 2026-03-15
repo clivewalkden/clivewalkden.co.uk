@@ -63,7 +63,7 @@ const articles = sorted.filter((p) => p.data.id !== excludeId).slice(0, 3);
               </span>
             </p>
             <a
-              href={`/blog/${post.data.category}/${post.slug}/`}
+              href={`/blog/${post.data.category}/${post.id}/`}
               aria-label="Article"
               title={post.data.meta_title}
               class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400"

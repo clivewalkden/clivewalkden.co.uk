@@ -1,149 +1,93 @@
 {
-  "$ref": "#/definitions/posts",
-  "definitions": {
-    "posts": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": [
-            "number",
-            "string"
-          ]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "anyOf": [
+        {
+          "type": "number"
         },
-        "title": {
-          "type": "string"
-        },
-        "short_intro": {
-          "type": "string"
-        },
-        "intro": {
-          "type": "string"
-        },
-        "meta_title": {
-          "type": "string"
-        },
-        "meta_description": {
-          "type": "string"
-        },
-        "published": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
-        "first_published": {
-          "anyOf": [
-            {
-              "anyOf": [
-                {
-                  "not": {}
-                },
-                {
-                  "anyOf": [
-                    {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    {
-                      "type": "string",
-                      "format": "date"
-                    },
-                    {
-                      "type": "integer",
-                      "format": "unix-time"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "updated_at": {
-          "anyOf": [
-            {
-              "anyOf": [
-                {
-                  "not": {}
-                },
-                {
-                  "anyOf": [
-                    {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    {
-                      "type": "string",
-                      "format": "date"
-                    },
-                    {
-                      "type": "integer",
-                      "format": "unix-time"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "hide": {
-          "type": "boolean",
-          "default": false
-        },
-        "category": {
-          "type": "string"
-        },
-        "hero": {
-          "anyOf": [
-            {
-              "anyOf": [
-                {
-                  "not": {}
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "author": {
-          "type": "string",
-          "default": "Clive Walkden"
-        },
-        "$schema": {
+        {
           "type": "string"
         }
-      },
-      "required": [
-        "id",
-        "title",
-        "short_intro",
-        "meta_title",
-        "meta_description",
-        "published",
-        "category"
-      ],
-      "additionalProperties": false
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "short_intro": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "string"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "string"
+    },
+    "published": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_published": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "updated_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "hide": {
+      "default": false,
+      "type": "boolean"
+    },
+    "category": {
+      "type": "string"
+    },
+    "hero": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "author": {
+      "default": "Clive Walkden",
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
     }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "id",
+    "title",
+    "short_intro",
+    "meta_title",
+    "meta_description",
+    "published",
+    "hide",
+    "category",
+    "author"
+  ],
+  "additionalProperties": false
 }

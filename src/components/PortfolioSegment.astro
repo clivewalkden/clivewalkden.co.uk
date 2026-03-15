@@ -32,12 +32,12 @@ const sites = sorted.filter((p) => p.data.id !== excludeId).slice(0, 3);
       );
       return (
         <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border border-stone-200">
-          <a href={`/portfolio/${site.slug}/`} aria-label="Article" title={site.data.meta_title} class="inline-block transition-colors duration-200 hover:text-yellow-400 w-full">
+          <a href={`/portfolio/${site.id}/`} aria-label="Article" title={site.data.meta_title} class="inline-block transition-colors duration-200 hover:text-yellow-400 w-full">
             <Fragment set:html={imgHtml} />
           </a>
           <div class="p-5">
             <a
-              href={`/portfolio/${site.slug}/`}
+              href={`/portfolio/${site.id}/`}
               aria-label="Article"
               title={site.data.meta_title}
               class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400"
