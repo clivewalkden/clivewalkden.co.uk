@@ -1,14 +1,6 @@
-/build_*
-/public_html/
-/cache/
 /node_modules/
-/vendor/
+/dist/
 /.idea/
 /.vscode/
 npm-debug.log
 gcp-storage-key.json
-
-# Optional ignores
-# /build_staging/
-# /build_production/
-# /source/assets/build/

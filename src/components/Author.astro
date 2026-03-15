@@ -1,0 +1,31 @@
+---
+import { sirvImage } from '../utils/image.ts';
+
+interface Props {
+  author_name?: string;
+  author_url?: string;
+  author_image?: string;
+}
+
+const {
+  author_name = 'Clive Walkden',
+  author_url = '/about/',
+  author_image = 'clive-walkden.png',
+} = Astro.props;
+
+const avatarHtml = sirvImage(`/assets/images/${author_image}`, 40, 40, {
+  title: '',
+  alt: 'avatar',
+  class: 'object-cover w-10 h-10 rounded-full shadow-sm',
+  resize: true,
+});
+---
+<div class="flex items-center">
+  <a href={author_url} aria-label="Author" title="Author" class="mr-3">
+    <Fragment set:html={avatarHtml} />
+  </a>
+  <div>
+    <a href={author_url} aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">{author_name}</a>
+    <p class="text-sm font-medium leading-4 text-gray-600">Author</p>
+  </div>
+</div>

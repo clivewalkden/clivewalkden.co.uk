@@ -1,0 +1,141 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Up from '../components/Up.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SeoRecipe from '../components/SeoRecipe.astro';
+import { sirvImage } from '../utils/image.ts';
+
+interface Props {
+  recipe: CollectionEntry<'recipes'>;
+}
+
+const { recipe } = Astro.props;
+const { data } = recipe;
+
+const heroHtml = sirvImage(`/assets/images/recipes/${data.image_main}`, 760, 300, {
+  alt: data.meta_title,
+  class: 'object-cover w-full h-60 md:h-80 xl:h-96',
+  resize: true,
+  fetchpriority: 'high',
+});
+
+function formatDuration(iso: string): string {
+  const match = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
+  if (!match) return iso;
+  const hours = parseInt(match[1] ?? '0');
+  const mins = parseInt(match[2] ?? '0');
+  const parts = [];
+  if (hours) parts.push(`${hours} hour${hours !== 1 ? 's' : ''}`);
+  if (mins) parts.push(`${mins} minute${mins !== 1 ? 's' : ''}`);
+  return parts.join(' ');
+}
+---
+<BaseLayout meta_title={data.meta_title} meta_description={data.meta_description}>
+  <Header slot="header" currentPath={Astro.url.pathname} />
+  <div slot="dropdown"></div>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8" data-pagefind-body>
+    <Breadcrumbs links={[{ title: 'Recipes', link: '/recipes/' }]} current={data.title} />
+
+    <div class="text-center">
+      <div class="flex">
+        <h1 class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none flex-grow text-center">{data.title}</h1>
+      </div>
+    </div>
+
+    <div class="grid gap-10 lg:grid-cols-3 mx-auto px-4 py-16 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-16">
+      <div class="items-center lg:col-span-2">
+        <figure>
+          <Fragment set:html={heroHtml} />
+        </figure>
+      </div>
+      <div class="mt-2">
+        {data.totalTime && (
+          <div class="grid grid-cols-2 shadow-md mb-4 py-3 px-4">
+            <div class="flex">
+              <i class="bx bx-sm bx-time mr-4"></i>
+              <span>Time</span>
+            </div>
+            <div>{formatDuration(data.totalTime)}</div>
+          </div>
+        )}
+        <div class="grid grid-cols-2 shadow-md mb-4 py-3 px-4">
+          <div class="flex">
+            <i class="bx bx-sm bx-line-chart mr-4"></i>
+            <span>Difficulty</span>
+          </div>
+          <div class="flex">
+            {Array.from({ length: data.difficulty }).map(() => (
+              <i class="bx bx-sm bxs-star text-primary"></i>
+            ))}
+          </div>
+        </div>
+        <div class="grid grid-cols-2 shadow-md mb-4 py-3 px-4">
+          <div class="flex">
+            <i class="bx bx-sm bx-group mr-4"></i>
+            <span>Servings</span>
+          </div>
+          <div>{data.servings}</div>
+        </div>
+      </div>
+    </div>
+
+    {data.ingredients.length > 0 && (
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-8">
+        <h2 class="mb-4 font-sans md:text-3xl font-bold tracking-tight text-gray-900 text-4xl leading-none">Ingredients</h2>
+        <dl class="mt-0 mb-4">
+          {data.ingredients.map((ingredient) => (
+            <div class="grid grid-cols-9 mb-4">
+              <dt class="lg:col-span-1 md:col-span-2 col-span-3 text-sm font-medium bg-primary py-3 md:px-2 text-center shadow-md px-4">
+                {ingredient.amount}
+              </dt>
+              <dd class="text-sm text-gray-900 lg:col-span-8 md:col-span-7 col-span-6 mt-0 py-3 md:px-2 shadow-md px-4">
+                {ingredient.ingredient}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    )}
+
+    {data.method.length > 0 && (
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-8">
+        <h2 class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">Method</h2>
+        <ol class="recipe-methods ml-4">
+          {data.method.map((step, i) => (
+            <li class="block ml-6 my-2 py-1 pl-4 leading-8 shadow-md relative">
+              <a id={`step${i + 1}`}></a>{step}
+            </li>
+          ))}
+        </ol>
+      </div>
+    )}
+
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-18 lg:px-8 lg:py-8">
+      <slot />
+    </div>
+
+    <SeoRecipe
+      title={data.title}
+      published={data.published}
+      image_main={data.image_main}
+      intro={data.intro}
+      prepTime={data.prepTime}
+      cookTime={data.cookTime}
+      totalTime={data.totalTime}
+      meta_keywords={data.meta_keywords}
+      servings={data.servings}
+      category={data.category}
+      cuisine={data.cuisine}
+      ingredients={data.ingredients}
+      method={data.method}
+      url={Astro.url.href}
+    />
+  </div>
+
+  <Up slot="up" />
+  <Footer slot="footer" />
+</BaseLayout>

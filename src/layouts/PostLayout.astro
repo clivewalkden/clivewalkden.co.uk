@@ -1,0 +1,110 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Up from '../components/Up.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SeoBlog from '../components/SeoBlog.astro';
+import BlogSegment from '../components/BlogSegment.astro';
+import { getCategoryBySeoLink } from '../data/categories.ts';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  prev?: CollectionEntry<'posts'>;
+  next?: CollectionEntry<'posts'>;
+}
+
+const { post, prev, next } = Astro.props;
+const { data } = post;
+
+const category = getCategoryBySeoLink(data.category);
+const updated = !!data.first_published;
+
+function formatDate(d: Date): string {
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+function isoDate(d: Date): string {
+  return d.toISOString();
+}
+---
+<BaseLayout meta_title={data.meta_title} meta_description={data.meta_description}>
+  <Header slot="header" currentPath={Astro.url.pathname} />
+  <div slot="dropdown"></div>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8" data-pagefind-body>
+    <Breadcrumbs
+      links={[{ title: 'Blog', link: '/blog/' }, { title: category?.title ?? data.category, link: `/blog/${data.category}/` }]}
+      current={data.title}
+    />
+
+    <div class="text-center px-4 py-8">
+      <div class="flex">
+        {prev && (
+          <a href={`/blog/${prev.data.category}/${prev.slug}/`} title={prev.data.title}
+             class="flex items-center text-sm self-center">
+            <i class="bx bx-small bx-chevron-left"></i> Previous Article
+          </a>
+        )}
+        <h1 class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none flex-grow text-center">{data.title}</h1>
+        {next && (
+          <a href={`/blog/${next.data.category}/${next.slug}/`} title={next.data.title}
+             class="flex items-center text-sm self-center">
+            Next Article <i class="bx bx-small bx-chevron-right"></i>
+          </a>
+        )}
+      </div>
+    </div>
+
+    {data.hero ? (
+      <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-12 rounded bg-center"
+           style={`background-image:url('/assets/images/blog/articles/${data.hero}'); height: 75vh;`}></div>
+    ) : (
+      <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-12 rounded bg-center"
+           style={`background-image:url('/assets/images/blog/categories/${data.category}.jpg'); height: 75vh;`}></div>
+    )}
+
+    <div class="container max-w-5xl mx-auto -mt-32">
+      <div class="mx-0 sm:mx-6">
+        <div class="bg-white w-full p-8 md:p-24 text-lg text-gray-700 content">
+          <slot />
+        </div>
+
+        <div class="flex w-full items-center font-sans p-8 md:p-8">
+          <img class="w-10 h-10 rounded-full mr-4" src="/assets/images/clive-walkden.jpg" alt="Avatar of Clive Walkden">
+          <div class="flex-1">
+            <p class="text-base font-bold text-base md:text-xl leading-none">Clive Walkden</p>
+            <p class="text-sm md:text-base">
+              {updated ? (
+                <>
+                  Originally Posted: <time datetime={isoDate(data.first_published!)}>{formatDate(data.first_published!)}</time>
+                  <span class="text-gray-900"> / </span>
+                  Last Updated: <time datetime={isoDate(data.published)}>{formatDate(data.published)}</time>
+                </>
+              ) : (
+                <>
+                  Posted: <time datetime={isoDate(data.published)}>{formatDate(data.published)}</time>
+                </>
+              )}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <SeoBlog
+      title={data.title}
+      short_intro={data.short_intro}
+      published={data.published}
+      author={data.author}
+      hero={data.hero}
+      category={data.category}
+      url={Astro.url.href}
+    />
+
+    <BlogSegment block_title="Latest Articles" excludeId={data.id} />
+  </div>
+
+  <Up slot="up" />
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import { sirvImage } from '../../utils/image.ts';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Up from '../../components/Up.astro';
+
+const allPortfolio = await getCollection('portfolio');
+const portfolio = allPortfolio.sort((a, b) => b.data.launched.getTime() - a.data.launched.getTime());
+---
+<BaseLayout
+  meta_title="Portfolio of websites and plugins / modules"
+  meta_description="Here is an example of works I've completed either individually or as part of a team."
+>
+  <Header slot="header" currentPath="/portfolio/" />
+  <div slot="dropdown"></div>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="max-w-screen-sm sm:text-center sm:mx-auto">
+      <h1 class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+        Website Site and Project Portfolio
+      </h1>
+      <p class="text-base text-gray-700 md:text-lg sm:px-4">
+        Sites I've either built or been responsible for the updates or maintenance of.
+      </p>
+      <hr class="w-full my-8 border-gray-300" />
+    </div>
+    <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
+      {portfolio.map((site) => {
+        // GitHub/CLI items use object-contain; traditional sites use object-cover
+        const hasGithub = !!(site as any).data?.github_user;
+        const imgClass = `object-cover w-full h-56 md:h-44 xl:h-56`;
+        const imgHtml = sirvImage(`/assets/images/portfolio/${site.data.image_main}`, 390, 220, {
+          title: site.data.title,
+          alt: site.data.title,
+          class: imgClass,
+          resize: true,
+        });
+        return (
+          <a href={`/portfolio/${site.slug}/`} aria-label="View Item">
+            <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+              <Fragment set:html={imgHtml} />
+              <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                <p class="mb-4 text-lg font-bold text-gray-100">{site.data.title}</p>
+                <p class="text-sm tracking-wide text-gray-300">
+                  {site.data.intro}
+                </p>
+                {site.data.technologies?.length ? (
+                  <div class="flex flex-wrap justify-starts items-center mt-4">
+                    {site.data.technologies.map((tech) => (
+                      <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-yellow-400 rounded-2xl mb-1.5">
+                        #{tech}
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <Up slot="up" />
+  <Footer slot="footer" />
+</BaseLayout>

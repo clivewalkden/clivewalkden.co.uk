@@ -1,0 +1,113 @@
+{
+  "$ref": "#/definitions/recipes",
+  "definitions": {
+    "recipes": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "meta_title": {
+          "type": "string"
+        },
+        "meta_description": {
+          "type": "string"
+        },
+        "meta_keywords": {
+          "type": "string"
+        },
+        "published": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "image_main": {
+          "type": "string"
+        },
+        "prepTime": {
+          "type": "string"
+        },
+        "cookTime": {
+          "type": "string"
+        },
+        "totalTime": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "cuisine": {
+          "type": "string"
+        },
+        "difficulty": {
+          "type": "number"
+        },
+        "servings": {
+          "type": "number"
+        },
+        "ingredients": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "string"
+              },
+              "ingredient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "ingredient"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "method": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intro": {
+          "type": "string"
+        },
+        "short_intro": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "meta_title",
+        "meta_description",
+        "published",
+        "image_main",
+        "difficulty",
+        "servings",
+        "ingredients",
+        "method"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

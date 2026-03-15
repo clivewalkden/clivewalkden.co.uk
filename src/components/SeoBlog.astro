@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+  short_intro: string;
+  published: Date;
+  author: string;
+  hero?: string | null;
+  category: string;
+  url: string;
+}
+
+const { title, short_intro, published, author, hero, category, url } = Astro.props;
+
+const imageFile = hero ? `${hero}` : `${category}.jpg`;
+const imageUrl = `https://www.clivewalkden.co.uk/assets/images/blog/articles/${imageFile}`;
+
+const seoData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: short_intro,
+  datePublished: published.toISOString(),
+  mainEntityOfPage: 'True',
+  image: {
+    '@type': 'imageObject',
+    url: imageUrl,
+    height: '600',
+    width: '800',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Clive Walkden',
+    logo: {
+      '@type': 'imageObject',
+      url: 'https://www.clivewalkden.co.uk/assets/images/blog/categories/general.jpg',
+    },
+  },
+  author: {
+    '@type': 'Person',
+    name: author,
+    url: 'https://clivewalkden.co.uk/about/',
+  },
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(seoData, null, 2)} />

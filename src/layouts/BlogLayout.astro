@@ -1,0 +1,116 @@
+---
+import { getCollection } from 'astro:content';
+import type { Category } from '../data/categories.ts';
+import { categories } from '../data/categories.ts';
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Up from '../components/Up.astro';
+import BlogSegment from '../components/BlogSegment.astro';
+import Author from '../components/Author.astro';
+
+interface Props {
+  meta_title: string;
+  meta_description: string;
+  category?: Category;
+}
+
+const { meta_title, meta_description, category } = Astro.props;
+
+const allPosts = await getCollection('posts', (p) => !p.data.hide);
+const sorted = allPosts.sort((a, b) => {
+  const dateA = a.data.updated_at ?? a.data.published;
+  const dateB = b.data.updated_at ?? b.data.published;
+  return dateB.getTime() - dateA.getTime();
+});
+
+const results = category
+  ? sorted.filter((p) => p.data.category === category.seo_link)
+  : sorted;
+
+function formatDate(d: Date): string {
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+<BaseLayout meta_title={meta_title} meta_description={meta_description}>
+  <Header slot="header" currentPath={Astro.url.pathname} />
+  <div slot="dropdown"></div>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="flex flex-col lg:flex-row">
+      <div class="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
+        <h1 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          My Blog Articles<br class="hidden md:block" />
+          Things you may find useful
+          <span class="inline-block text-yellow-400">or not</span>
+        </h1>
+      </div>
+      <div class="lg:w-1/2">
+        <p class="text-base text-gray-700">
+          {category ? (
+            <Fragment set:html={category.content} />
+          ) : (
+            "These articles below are a collection of things I've either found useful, felt were worth sharing, or needed to get out of my head. Please don't judge too harshly, many of these weren't meant for others' eyes."
+          )}
+        </p>
+      </div>
+    </div>
+    <hr class="w-full my-8 border-gray-300" />
+  </div>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-10 row-gap-8 lg:grid-cols-5">
+      <div class="flex flex-col space-y-8 lg:col-span-4">
+        {results.length ? (
+          results.map((post) => {
+            const date = post.data.updated_at ?? post.data.published;
+            return (
+              <div class="mb-10 pb-10 border-b border-stone-200">
+                <time datetime={date.toISOString()} class="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+                  {formatDate(date)}
+                </time>
+                <div class="mb-3">
+                  <a href={`/blog/${post.data.category}/${post.slug}/`} aria-label="Article" class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-400">
+                    <p class="font-sans text-xl font-extrabold leading-none tracking-tight lg:text-2xl">
+                      {post.data.title}
+                    </p>
+                  </a>
+                </div>
+                <p class="mb-4 text-base text-gray-700 md:text-lg">
+                  {post.data.short_intro}
+                </p>
+                <Author />
+              </div>
+            );
+          })
+        ) : (
+          <div class="mb-2 pb-10 border-b border-stone-200">
+            <p>There are currently no articles in this category. Instead, maybe see if there is something in our latest articles that interests you.</p>
+            <BlogSegment block_title="Latest Articles" />
+          </div>
+        )}
+      </div>
+      <div class="lg:col-span-1">
+        <div>
+          <h2 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Blog Categories</h2>
+          <div class="max-w-lg space-y-3 sm:mx-auto lg:max-w-xl">
+            {categories.map((cat) => {
+              const count = allPosts.filter((p) => p.data.category === cat.seo_link).length;
+              if (count === 0) return null;
+              return (
+                <div class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110 border-stone-200">
+                  <a href={`/blog/${cat.seo_link}/`} title={cat.title} class="text-gray-800">
+                    {cat.title} ({count})
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Up slot="up" />
+  <Footer slot="footer" />
+</BaseLayout>

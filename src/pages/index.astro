@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Up from '../components/Up.astro';
+import Tagline from '../components/Tagline.astro';
+import PortfolioSegment from '../components/PortfolioSegment.astro';
+import BlogSegment from '../components/BlogSegment.astro';
+import { site } from '../data/site.ts';
+---
+<BaseLayout meta_title={site.meta_title} meta_description={site.meta_description}>
+  <Header slot="header" currentPath="/" />
+  <div slot="dropdown"></div>
+
+  <Tagline />
+  <PortfolioSegment block_title="My Latest Projects" />
+  <BlogSegment block_title="My Latest Blog Articles" />
+
+  <Up slot="up" />
+  <Footer slot="footer" />
+</BaseLayout>

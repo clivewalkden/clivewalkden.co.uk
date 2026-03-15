@@ -1,0 +1,49 @@
+---
+import { sortedExperience, careerStart } from '../data/experience.ts';
+import Title from './Title.astro';
+
+interface Props {
+  block_title?: string;
+}
+
+const { block_title } = Astro.props;
+
+const now = new Date();
+const totalYears = (now.getTime() - careerStart.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
+
+function getColour(length: number): string {
+  const perc = (length / totalYears) * 100;
+  if (perc === 0) return 'blue';
+  if (perc < 33) return 'red';
+  if (perc > 66) return 'green';
+  return 'yellow';
+}
+---
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  {block_title && <Title block_title={block_title} />}
+
+  <div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
+    {sortedExperience.map((exp) => {
+      const perc = exp.length === 0 ? 100 : Math.min(Math.round((exp.length / totalYears) * 100), 100);
+      const colour = getColour(exp.length);
+      return (
+        <div>
+          <div class="bg-white rounded-lg w-4/5 shadow block p-4 m-auto">
+            <div>
+              {exp.title}
+              {!exp.in_use && <span class="italic text-xs"> (Not in use currently)</span>}
+            </div>
+            <div class="w-full h-6 bg-gray-400 rounded-full mt-3">
+              <div
+                class={`h-full text-center text-s text-white bg-${colour}-500 rounded-full`}
+                style={`width: ${perc}%`}
+              >
+                {exp.length === 0 ? 'Still Learning' : `${exp.length} Years`}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>

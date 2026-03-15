@@ -1,24 +1,44 @@
-# CliveWalkden Jigsaw site
+# clivewalkden.co.uk
 
 [![StyleCI](https://github.styleci.io/repos/145961530/shield?branch=master)](https://github.styleci.io/repos/145961530?branch=master)
 
-A static version of my site for simpler hosting. 
+Personal portfolio and blog site built with [Astro](https://astro.build), Tailwind CSS v4, and Pagefind search.
 
-## Local Building
-Run `./vendor/bin/jigsaw serve` to have the files run locally. To compile the local tailwind files you'll need to run `npm run watch` as well.
+## Development
 
-To build the site files  you can run `./vendor/bin/jigsaw build` and it will produce the files ready for serving.
+Install dependencies:
+```sh
+npm install
+```
 
-## Production Build
-To produce the final production files you can run `npm run prod`. The files will be output in a `build_local` folder.
+Start the dev server:
+```sh
+npm run dev
+```
+
+## Build
+
+Produce the static output in `dist/`:
+```sh
+npm run build
+```
+
+Preview the production build locally:
+```sh
+npm run preview
+```
+
+## Stack
+
+- **Astro** — static site generator
+- **Tailwind CSS v4** — CSS-first utility framework
+- **Pagefind** — post-build search index
+- **Sirv CDN** — image hosting and optimisation
 
 ## Hosting
-The site is hosted on Cloudflare pages and auto deploys when pushed. Master branch goes to production and other branches go to [https://development.clivewalkden-co-uk.pages.dev/](https://development.clivewalkden-co-uk.pages.dev/)
+
+The site is hosted on Cloudflare Pages and auto-deploys on push. The `master` branch goes to production; other branches deploy to [https://development.clivewalkden-co-uk.pages.dev/](https://development.clivewalkden-co-uk.pages.dev/)
 
 ## Changelog
-To see the changelog open [CHANGELOG.md](./CHANGELOG.md)
 
-## TODO
-- Add build.sh to speed up the process.
-- Add all portfolio pieces
-- Sort out new content
+See [CHANGELOG.md](./CHANGELOG.md)

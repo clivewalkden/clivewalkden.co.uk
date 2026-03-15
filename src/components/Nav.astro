@@ -1,0 +1,32 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+function navClass(path: string): string {
+  const isActive =
+    (path === '' && currentPath === '/') ||
+    (path !== '' && currentPath.includes(`/${path}`));
+  return isActive
+    ? 'inline-block py-2 px-4 text-white no-underline'
+    : 'inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4';
+}
+---
+<nav class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 justify-end" id="nav-content">
+  <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+    <li class="mr-3">
+      <a href="/" class={navClass('')}>Home</a>
+    </li>
+    <li class="mr-3">
+      <a href="/portfolio/" class={navClass('portfolio')}>Portfolio</a>
+    </li>
+    <li class="fmr-3">
+      <a href="/blog/" class={navClass('blog')}>Blog</a>
+    </li>
+    <li class="mr-3">
+      <a href="/about/" class={navClass('about')}>About</a>
+    </li>
+  </ul>
+</nav>

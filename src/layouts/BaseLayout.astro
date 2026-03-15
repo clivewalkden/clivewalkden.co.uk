@@ -1,0 +1,61 @@
+---
+import { site } from '../data/site.ts';
+import '../styles/main.css';
+
+interface Props {
+  meta_title?: string;
+  meta_description?: string;
+  canonical?: string;
+  is404?: boolean;
+}
+
+const {
+  meta_title = site.meta_title,
+  meta_description = site.meta_description,
+  canonical,
+  is404 = false,
+} = Astro.props;
+
+const canonicalUrl = canonical ?? Astro.url.href;
+const isHomepage = Astro.url.pathname === '/';
+const showCanonical = !isHomepage && !is404;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics 4 -->
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${site.gafourtag}`}></script>
+    <script define:vars={{ gaId: site.gafourtag }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gaId);
+    </script>
+    <!-- Sirv CDN -->
+    <link rel="preconnect" href="https://scripts.sirv.com" crossorigin>
+    <link rel="preconnect" href="https://clivewalkden.sirv.com" crossorigin>
+    <link rel="dns-prefetch" href="https://scripts.sirv.com">
+    <link rel="dns-prefetch" href="https://clivewalkden.sirv.com">
+    <script src="https://scripts.sirv.com/sirv.nospin.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {showCanonical && <link rel="canonical" href={canonicalUrl}>}
+    <meta name="description" content={meta_description}>
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <title>{meta_title}</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+  </head>
+  <body class="text-gray-900 font-default antialiased leading-normal tracking-normal">
+    <slot name="dropdown" />
+    <slot name="header" />
+    <div role="main" class="container shadow-lg mx-auto bg-white mt-24 md:mt-28">
+      <slot />
+    </div>
+    <slot name="up" />
+    <slot name="footer" />
+  </body>
+</html>

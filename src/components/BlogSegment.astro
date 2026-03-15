@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import { sirvImage } from '../utils/image.ts';
+import { getCategoryBySeoLink } from '../data/categories.ts';
+import Author from './Author.astro';
+import Title from './Title.astro';
+
+interface Props {
+  block_title?: string;
+  excludeId?: number | string;
+}
+
+const { block_title, excludeId } = Astro.props;
+
+const allPosts = await getCollection('posts', (p) => !p.data.hide);
+const sorted = allPosts.sort((a, b) => {
+  const dateA = a.data.updated_at ?? a.data.published;
+  const dateB = b.data.updated_at ?? b.data.published;
+  return dateB.getTime() - dateA.getTime();
+});
+const articles = sorted.filter((p) => p.data.id !== excludeId).slice(0, 3);
+---
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  {block_title && <Title block_title={block_title} />}
+
+  <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+    {articles.map((post) => {
+      const category = getCategoryBySeoLink(post.data.category);
+      const date = post.data.updated_at ?? post.data.published;
+      const imgSrc = post.data.hero
+        ? sirvImage(`/assets/images/blog/articles/${post.data.hero}`, 595, 335, {
+            title: post.data.title,
+            alt: post.data.meta_title,
+            class: 'object-cover w-full h-64',
+          })
+        : sirvImage(
+            `/assets/images/blog/categories/${post.data.category}.jpg`,
+            595,
+            335,
+            {
+              title: category?.title ?? '',
+              alt: category?.meta_title ?? '',
+              class: 'object-cover w-full h-64',
+            }
+          );
+      return (
+        <div class="flex flex-col overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border border-stone-200">
+          <Fragment set:html={imgSrc} />
+          <div class="flex flex-col flex-1 p-5">
+            <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+              <a
+                href={`/blog/${post.data.category}/`}
+                class="transition-colors duration-200 text-title hover:text-yellow-700"
+                aria-label="Category"
+                title={category?.title}
+              >
+                {category?.title}
+              </a>
+              <span class="text-gray-600">
+                — <time datetime={date.toISOString()}>
+                  {date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </time>
+              </span>
+            </p>
+            <a
+              href={`/blog/${post.data.category}/${post.slug}/`}
+              aria-label="Article"
+              title={post.data.meta_title}
+              class="inline-block mb-3 font-sans text-xl font-bold tracking-tight sm:text-2xl sm:leading-none text-title transition-colors duration-200 hover:text-yellow-400"
+            >
+              {post.data.title}
+            </a>
+            <p class="mb-5 text-gray-700">{post.data.short_intro}</p>
+            <div class="mt-auto"><Author /></div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>

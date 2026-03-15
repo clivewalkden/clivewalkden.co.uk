@@ -1,0 +1,18 @@
+---
+import { categories } from '../../../data/categories.ts';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  return categories.map((cat) => ({
+    params: { category: cat.seo_link },
+    props: { category: cat },
+  }));
+}
+
+const { category } = Astro.props;
+---
+<BlogLayout
+  meta_title={category.meta_title}
+  meta_description={category.meta_description}
+  category={category}
+/>

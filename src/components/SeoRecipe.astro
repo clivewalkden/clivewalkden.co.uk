@@ -1,0 +1,62 @@
+---
+interface Ingredient {
+  amount: string;
+  ingredient: string;
+}
+
+interface Props {
+  title: string;
+  published: Date;
+  image_main: string;
+  intro?: string;
+  prepTime?: string;
+  cookTime?: string;
+  totalTime?: string;
+  meta_keywords?: string;
+  servings: number;
+  category?: string;
+  cuisine?: string;
+  ingredients: Ingredient[];
+  method: string[];
+  url: string;
+}
+
+const { title, published, image_main, intro, prepTime, cookTime, totalTime, meta_keywords, servings, category, cuisine, ingredients, method, url } = Astro.props;
+
+const steps = method.map((step, i) => ({
+  '@type': 'HowToStep',
+  text: step,
+  url: `${url}#step${i + 1}`,
+}));
+
+const recipeIngredients = ingredients.map((ing) => `${ing.amount} ${ing.ingredient}`);
+
+const seoData = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: title,
+  image: {
+    '@type': 'imageObject',
+    url: `https://www.clivewalkden.co.uk/assets/images/recipes/${image_main}`,
+    height: '600',
+    width: '800',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Clive Walkden',
+    url: 'https://clivewalkden.co.uk/about/',
+  },
+  datePublished: published.toISOString(),
+  description: intro ?? '',
+  prepTime: prepTime ?? '',
+  cookTime: cookTime ?? '',
+  totalTime: totalTime ?? '',
+  keywords: meta_keywords ?? '',
+  recipeYield: String(servings),
+  recipeCategory: category ?? '',
+  recipeCuisine: cuisine ?? '',
+  recipeIngredient: recipeIngredients,
+  recipeInstructions: steps,
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(seoData, null, 2)} />
