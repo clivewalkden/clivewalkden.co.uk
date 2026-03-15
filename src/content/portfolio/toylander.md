@@ -1,5 +1,6 @@
 ---
 id: 53
+type: website
 title: Magento 2 Website Build for Toylander
 client: Toylander
 status: Rebuilt on Shopify

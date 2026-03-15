@@ -1,5 +1,6 @@
 ---
 id: 5
+type: website
 title: PHP Ecommerce and Content Management System Build for UberRC
 client: UberRC
 status: Rebuilt and Moved Away

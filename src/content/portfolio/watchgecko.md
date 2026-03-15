@@ -1,5 +1,6 @@
 ---
 id: 1
+type: website
 title: Magento 2 Site build for WatchGecko
 client: WatchGecko
 status: Rebuilt

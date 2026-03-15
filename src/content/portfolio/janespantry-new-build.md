@@ -1,5 +1,6 @@
 ---
 id: 2
+type: website
 title: Bespoke Ecommerce build for Janes Pantry
 client: Janes Pantry
 status: Live

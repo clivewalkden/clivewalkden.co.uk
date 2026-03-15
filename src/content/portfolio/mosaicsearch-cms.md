@@ -1,5 +1,6 @@
 ---
 id: 25
+type: website
 title: Bespoke CMS and Ecommerce build for Mosaic Search
 client: Mosaic Search
 status: Rebuilt

@@ -1,5 +1,6 @@
 ---
 id: 33
+type: website
 title: Bespoke CMS Build for VCS Security
 client: VSC Security
 status: Rebuilt

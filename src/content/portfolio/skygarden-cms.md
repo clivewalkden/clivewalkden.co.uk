@@ -1,5 +1,6 @@
 ---
 id: 11
+type: website
 title: Bespoke CMS and Ecommerce build for Sky Garden
 client: Sky Garden
 status: Rebuilt

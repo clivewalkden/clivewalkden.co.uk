@@ -1,5 +1,6 @@
 ---
 id: 55
+type: website
 title: Magento 2 Site build for Sensory Direct
 client: Sensory Direct
 status: Live

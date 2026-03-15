@@ -1,5 +1,6 @@
 ---
 id: 20240626
+type: website
 title: Magento 2 Hyvä Themes build for Smart Home Sounds
 client: Smart Home Sounds
 status: Live

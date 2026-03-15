@@ -11,7 +11,8 @@ interface Props {
 const { block_title, excludeId } = Astro.props;
 
 const allPortfolio = await getCollection('portfolio');
-const sorted = allPortfolio.sort((a, b) => b.data.launched.getTime() - a.data.launched.getTime());
+const websites = allPortfolio.filter(s => s.data.type === 'website');
+const sorted = websites.sort((a, b) => b.data.launched.getTime() - a.data.launched.getTime());
 const sites = sorted.filter((p) => p.data.id !== excludeId).slice(0, 3);
 ---
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">

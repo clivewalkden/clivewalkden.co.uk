@@ -1,5 +1,6 @@
 ---
 id: 41
+type: website
 title: Magento 1 Site build for Orangetree Toys
 client: Orangetree Toys
 status: Rebuilt and Moved Away

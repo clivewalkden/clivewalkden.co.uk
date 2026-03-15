@@ -7,7 +7,22 @@ import Footer from '../../components/Footer.astro';
 import Up from '../../components/Up.astro';
 
 const allPortfolio = await getCollection('portfolio');
-const portfolio = allPortfolio.sort((a, b) => b.data.launched.getTime() - a.data.launched.getTime());
+const sorted = allPortfolio.sort((a, b) => b.data.launched.getTime() - a.data.launched.getTime());
+
+const websites     = sorted.filter(s => s.data.type === 'website');
+const applications = sorted.filter(s => s.data.type === 'application');
+const modules      = sorted.filter(s => s.data.type === 'module');
+
+function renderCard(site: typeof sorted[number]) {
+  const imgClass = `object-cover w-full h-56 md:h-44 xl:h-56`;
+  const imgHtml = sirvImage(`/assets/images/portfolio/${site.data.image_main}`, 390, 220, {
+    title: site.data.title,
+    alt: site.data.title,
+    class: imgClass,
+    resize: true,
+  });
+  return imgHtml;
+}
 ---
 <BaseLayout
   meta_title="Portfolio of websites and plugins / modules"
@@ -26,41 +41,86 @@ const portfolio = allPortfolio.sort((a, b) => b.data.launched.getTime() - a.data
       </p>
       <hr class="w-full my-8 border-gray-300" />
     </div>
-    <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
-      {portfolio.map((site) => {
-        // GitHub/CLI items use object-contain; traditional sites use object-cover
-        const hasGithub = !!(site as any).data?.github_user;
-        const imgClass = `object-cover w-full h-56 md:h-44 xl:h-56`;
-        const imgHtml = sirvImage(`/assets/images/portfolio/${site.data.image_main}`, 390, 220, {
-          title: site.data.title,
-          alt: site.data.title,
-          class: imgClass,
-          resize: true,
-        });
-        return (
-          <a href={`/portfolio/${site.id}/`} aria-label="View Item">
-            <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-              <Fragment set:html={imgHtml} />
-              <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p class="mb-4 text-lg font-bold text-gray-100">{site.data.title}</p>
-                <p class="text-sm tracking-wide text-gray-300">
-                  {site.data.intro}
-                </p>
-                {site.data.technologies?.length ? (
-                  <div class="flex flex-wrap justify-starts items-center mt-4">
-                    {site.data.technologies.map((tech) => (
-                      <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-yellow-400 rounded-2xl mb-1.5">
-                        #{tech}
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
+
+    {websites.length > 0 && (
+      <>
+        <h2 class="mb-6 font-sans text-2xl font-bold tracking-tight text-gray-900">Websites</h2>
+        <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
+          {websites.map((site) => (
+            <a href={`/portfolio/${site.id}/`} aria-label="View Item">
+              <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                <Fragment set:html={renderCard(site)} />
+                <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                  <p class="mb-4 text-lg font-bold text-gray-100">{site.data.title}</p>
+                  <p class="text-sm tracking-wide text-gray-300">{site.data.intro}</p>
+                  {site.data.technologies?.length ? (
+                    <div class="flex flex-wrap justify-starts items-center mt-4">
+                      {site.data.technologies.map((tech) => (
+                        <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-yellow-400 rounded-2xl mb-1.5">#{tech}</div>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
               </div>
-            </div>
-          </a>
-        );
-      })}
-    </div>
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+
+    {applications.length > 0 && (
+      <>
+        <hr class="w-full my-8 border-gray-300" />
+        <h2 class="mb-6 font-sans text-2xl font-bold tracking-tight text-gray-900">Applications</h2>
+        <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
+          {applications.map((site) => (
+            <a href={`/portfolio/${site.id}/`} aria-label="View Item">
+              <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                <Fragment set:html={renderCard(site)} />
+                <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                  <p class="mb-4 text-lg font-bold text-gray-100">{site.data.title}</p>
+                  <p class="text-sm tracking-wide text-gray-300">{site.data.intro}</p>
+                  {site.data.technologies?.length ? (
+                    <div class="flex flex-wrap justify-starts items-center mt-4">
+                      {site.data.technologies.map((tech) => (
+                        <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-yellow-400 rounded-2xl mb-1.5">#{tech}</div>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+
+    {modules.length > 0 && (
+      <>
+        <hr class="w-full my-8 border-gray-300" />
+        <h2 class="mb-6 font-sans text-2xl font-bold tracking-tight text-gray-900">Modules</h2>
+        <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
+          {modules.map((site) => (
+            <a href={`/portfolio/${site.id}/`} aria-label="View Item">
+              <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                <Fragment set:html={renderCard(site)} />
+                <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                  <p class="mb-4 text-lg font-bold text-gray-100">{site.data.title}</p>
+                  <p class="text-sm tracking-wide text-gray-300">{site.data.intro}</p>
+                  {site.data.technologies?.length ? (
+                    <div class="flex flex-wrap justify-starts items-center mt-4">
+                      {site.data.technologies.map((tech) => (
+                        <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-yellow-400 rounded-2xl mb-1.5">#{tech}</div>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </>
+    )}
   </div>
 
   <Up slot="up" />

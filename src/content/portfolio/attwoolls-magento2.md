@@ -1,5 +1,6 @@
 ---
 id: 57
+type: website
 title: Magento 2 Site Build for Attwoolls
 client: Attwoolls Outdoors
 status: Live

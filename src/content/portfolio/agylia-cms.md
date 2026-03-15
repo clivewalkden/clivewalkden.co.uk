@@ -1,5 +1,6 @@
 ---
 id: 46
+type: website
 title: PHP Content Management System Build for Agylia
 client: Agylia
 status: No Longer Available

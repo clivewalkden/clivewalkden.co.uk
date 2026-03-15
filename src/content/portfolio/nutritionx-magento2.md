@@ -1,5 +1,6 @@
 ---
 id: 56
+type: website
 title: Magento 2 Site build for NutritionX
 client: NutritionX
 status: Live

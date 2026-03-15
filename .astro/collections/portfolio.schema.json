@@ -12,6 +12,14 @@
         }
       ]
     },
+    "type": {
+      "type": "string",
+      "enum": [
+        "website",
+        "application",
+        "module"
+      ]
+    },
     "title": {
       "type": "string"
     },
@@ -116,6 +124,7 @@
   },
   "required": [
     "id",
+    "type",
     "title",
     "status",
     "launched",

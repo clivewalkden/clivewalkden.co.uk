@@ -1,5 +1,6 @@
 ---
 id: 20230829
+type: website
 title: Magento 2 Hyvä Themes build for Austin Pedal Cars
 client: Burlen
 status: Live

@@ -1,5 +1,6 @@
 ---
 id: 20221026
+type: module
 title: Jigsaw Sitemap Generator Plugin
 status: Live
 url: https://github.com/clivewalkden/jigsaw-sitemap

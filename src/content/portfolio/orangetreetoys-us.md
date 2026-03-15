@@ -1,5 +1,6 @@
 ---
 id: 41
+type: website
 title: Magento 1 United States Store Addition for Orangetree Toys
 client: Orangetree Toys
 status: Rebuilt and Moved Away

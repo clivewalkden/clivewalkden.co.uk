@@ -1,5 +1,6 @@
 ---
 id: 60
+type: website
 title: Magento 2 Site build for Cotswold Collections
 client: Cotswold Collections
 status: Live

@@ -1,5 +1,6 @@
 ---
 id: 29
+type: website
 title: Bespoke CMS build for McCarthy Marland
 client: McCarthy Marland
 status: Rebuilt

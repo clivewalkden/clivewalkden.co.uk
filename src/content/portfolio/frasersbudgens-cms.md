@@ -1,5 +1,6 @@
 ---
 id: 11
+type: website
 title: Bespoke CMS and members area build for Frasers Budgens
 client: Frasers Budgens
 status: Live

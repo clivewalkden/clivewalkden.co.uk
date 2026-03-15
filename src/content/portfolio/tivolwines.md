@@ -1,5 +1,6 @@
 ---
 id: 54
+type: website
 title: Magento 2 Site Build for Tivoli Wines
 client: Tivoli Wines
 status: Live

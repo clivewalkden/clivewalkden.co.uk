@@ -1,5 +1,6 @@
 ---
 id: 1
+type: website
 title: Jigsaw Static Website Build for Myself
 client: Clive Walkden
 status: Updated and Live
