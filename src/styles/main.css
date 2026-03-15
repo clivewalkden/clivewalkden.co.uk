@@ -11,7 +11,7 @@
 }
 
 /* Force safelist dynamic experience bar colours */
-@source "inline(bg-red-500 bg-yellow-500 bg-green-500 bg-blue-500)";
+@source inline("bg-red-500 bg-yellow-500 bg-green-500 bg-blue-500");
 
 /* Pagefind UI theming */
 #pagefind-search {

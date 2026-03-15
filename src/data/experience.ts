@@ -50,6 +50,7 @@ export const experience: ExperienceItem[] = [
   { title: 'Git', start: '2011-02-19', in_use: true, length: diffInYears('2011-02-19') },
   { title: 'Composer', start: '2013-05-06', in_use: true, length: diffInYears('2013-05-06') },
   { title: 'TailwindCSS', start: '2020-05-22', in_use: true, length: diffInYears('2020-05-22') },
+  { title: 'Astro', start: '2025-11-29', in_use: true, length: diffInYears('2025-11-29') },
 ];
 
 // Sort by in_use desc, then length desc (matching Jigsaw sort: ['-in_use', '-length'])
