@@ -1,5 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image, getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -8,6 +10,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SeoBlog from '../components/SeoBlog.astro';
 import BlogSegment from '../components/BlogSegment.astro';
 import { getCategoryBySeoLink } from '../data/categories.ts';
+import authorImg from '../assets/images/clive-walkden.jpg';
 
 interface Props {
   post: CollectionEntry<'posts'>;
@@ -20,6 +23,15 @@ const { data } = post;
 
 const category = getCategoryBySeoLink(data.category);
 const updated = !!data.first_published;
+
+const articleImages = import.meta.glob<{ default: ImageMetadata }>('../assets/images/blog/articles/*.{png,jpg,jpeg,gif,webp,avif}', { eager: true });
+const categoryImages = import.meta.glob<{ default: ImageMetadata }>('../assets/images/blog/categories/*.{png,jpg,jpeg,gif,webp,avif}', { eager: true });
+
+const bgImageSrc = data.hero
+  ? articleImages[`../assets/images/blog/articles/${data.hero}`]?.default
+  : categoryImages[`../assets/images/blog/categories/${data.category}.jpg`]?.default;
+
+const bgImage = bgImageSrc ? await getImage({ src: bgImageSrc }) : null;
 
 function formatDate(d: Date): string {
   return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -56,13 +68,10 @@ function isoDate(d: Date): string {
       </div>
     </div>
 
-    {data.hero ? (
-      <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-12 rounded bg-center"
-           style={`background-image:url('/assets/images/blog/articles/${data.hero}'); height: 75vh;`}></div>
-    ) : (
-      <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-12 rounded bg-center"
-           style={`background-image:url('/assets/images/blog/categories/${data.category}.jpg'); height: 75vh;`}></div>
-    )}
+    <div
+      class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-12 rounded bg-center"
+      style={bgImage ? `background-image:url('${bgImage.src}'); height: 75vh;` : 'height: 75vh;'}
+    ></div>
 
     <div class="container max-w-5xl mx-auto -mt-32">
       <div class="mx-0 sm:mx-6">
@@ -71,7 +80,7 @@ function isoDate(d: Date): string {
         </div>
 
         <div class="flex w-full items-center font-sans p-8 md:p-8">
-          <img class="w-10 h-10 rounded-full mr-4" src="/assets/images/clive-walkden.jpg" alt="Avatar of Clive Walkden">
+          <Image class="w-10 h-10 rounded-full mr-4" src={authorImg} width={40} height={40} alt="Avatar of Clive Walkden" />
           <div class="flex-1">
             <p class="text-base font-bold text-base md:text-xl leading-none">Clive Walkden</p>
             <p class="text-sm md:text-base">

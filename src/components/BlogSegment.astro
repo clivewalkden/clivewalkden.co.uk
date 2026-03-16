@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import { sirvImage } from '../utils/image.ts';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { getCategoryBySeoLink } from '../data/categories.ts';
 import Author from './Author.astro';
 import Title from './Title.astro';
@@ -19,6 +20,9 @@ const sorted = allPosts.sort((a, b) => {
   return dateB.getTime() - dateA.getTime();
 });
 const articles = sorted.filter((p) => p.data.id !== excludeId).slice(0, 3);
+
+const articleImages = import.meta.glob<{ default: ImageMetadata }>('../assets/images/blog/articles/*.{png,jpg,jpeg,gif,webp,avif}', { eager: true });
+const categoryImages = import.meta.glob<{ default: ImageMetadata }>('../assets/images/blog/categories/*.{png,jpg,jpeg,gif,webp,avif}', { eager: true });
 ---
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
   {block_title && <Title block_title={block_title} />}
@@ -28,24 +32,21 @@ const articles = sorted.filter((p) => p.data.id !== excludeId).slice(0, 3);
       const category = getCategoryBySeoLink(post.data.category);
       const date = post.data.updated_at ?? post.data.published;
       const imgSrc = post.data.hero
-        ? sirvImage(`/assets/images/blog/articles/${post.data.hero}`, 595, 335, {
-            title: post.data.title,
-            alt: post.data.meta_title,
-            class: 'object-cover w-full h-64',
-          })
-        : sirvImage(
-            `/assets/images/blog/categories/${post.data.category}.jpg`,
-            595,
-            335,
-            {
-              title: category?.title ?? '',
-              alt: category?.meta_title ?? '',
-              class: 'object-cover w-full h-64',
-            }
-          );
+        ? articleImages[`../assets/images/blog/articles/${post.data.hero}`]?.default
+        : categoryImages[`../assets/images/blog/categories/${post.data.category}.jpg`]?.default;
       return (
         <div class="flex flex-col overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border border-stone-200">
-          <Fragment set:html={imgSrc} />
+          <div class={`flex items-center justify-center h-64 bg-white`}>
+            {imgSrc && (
+                <Image
+                    src={imgSrc}
+                    width={382}
+                    alt={post.data.meta_title}
+                    title={post.data.title}
+                    class="object-contain w-full h-full"
+                />
+            )}
+          </div>
           <div class="flex flex-col flex-1 p-5">
             <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
               <a

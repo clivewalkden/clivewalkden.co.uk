@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import { sirvImage } from '../../utils/image.ts';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -8,6 +9,8 @@ import Up from '../../components/Up.astro';
 
 const allRecipes = await getCollection('recipes');
 const recipes = allRecipes.sort((a, b) => b.data.id - a.data.id);
+
+const recipeImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/images/recipes/*.{png,jpg,jpeg,gif,webp,avif}', { eager: true });
 ---
 <BaseLayout
   meta_title="Frequently used Recipes"
@@ -28,15 +31,19 @@ const recipes = allRecipes.sort((a, b) => b.data.id - a.data.id);
     </div>
     <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2">
       {recipes.map((recipe) => {
-        const imgHtml = sirvImage(`/assets/images/recipes/${recipe.data.image_main}`, 400, 250, {
-          alt: recipe.data.meta_title,
-          class: 'object-cover w-full h-42 md:h-56 xl:h-64',
-          resize: true,
-        });
+        const imgSrc = recipeImages[`../../assets/images/recipes/${recipe.data.image_main}`]?.default;
         return (
           <a href={`/recipes/${recipe.id}/`} aria-label="View Item">
             <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-              <Fragment set:html={imgHtml} />
+              {imgSrc && (
+                <Image
+                  src={imgSrc}
+                  width={400}
+                  height={250}
+                  alt={recipe.data.meta_title}
+                  class="object-cover w-full h-42 md:h-56 xl:h-64"
+                />
+              )}
               <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p class="mb-4 text-lg font-bold text-gray-100">{recipe.data.title}</p>
                 <p class="text-sm tracking-wide text-gray-300">

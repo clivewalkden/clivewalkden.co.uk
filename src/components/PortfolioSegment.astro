@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import { sirvImage } from '../utils/image.ts';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import Title from './Title.astro';
 
 interface Props {
@@ -13,27 +14,29 @@ const { block_title, excludeId } = Astro.props;
 const allPortfolio = await getCollection('portfolio');
 const sorted = allPortfolio.sort((a, b) => b.data.launched.getTime() - a.data.launched.getTime());
 const sites = sorted.filter((p) => p.data.id !== excludeId).slice(0, 3);
+
+const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../assets/images/portfolio/*.{png,jpg,jpeg,gif,webp,avif}', { eager: true });
 ---
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:py-20">
   {block_title && <Title block_title={block_title} />}
 
   <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
     {sites.map((site) => {
-      const imgHtml = sirvImage(
-        `/assets/images/portfolio/${site.data.image_main}`,
-        382,
-        256,
-        {
-          title: site.data.client ?? site.data.title,
-          alt: site.data.client ?? site.data.title,
-          class: 'object-cover w-full h-64',
-          resize: true,
-        }
-      );
+      const imgSrc = portfolioImages[`../assets/images/portfolio/${site.data.image_main}`]?.default;
       return (
         <div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border border-stone-200">
           <a href={`/portfolio/${site.id}/`} aria-label="Article" title={site.data.meta_title} class="inline-block transition-colors duration-200 hover:text-yellow-400 w-full">
-            <Fragment set:html={imgHtml} />
+            <div class={`flex items-center justify-center h-64 ${site.data.type === 'application' ? 'bg-primary' : 'bg-white'}`}>
+              {imgSrc && (
+                <Image
+                  src={imgSrc}
+                  width={382}
+                  alt={site.data.client ?? site.data.title}
+                  title={site.data.client ?? site.data.title}
+                  class="object-contain w-full h-full"
+                />
+              )}
+            </div>
           </a>
           <div class="p-5">
             <a

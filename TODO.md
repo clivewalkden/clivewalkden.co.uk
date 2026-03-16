@@ -72,10 +72,6 @@ Several of the Go CLI tools and Magento 2 modules have minimal descriptions (two
 The `@astrojs/sitemap` integration generates a sitemap but without `lastmod` dates or `changefreq` hints. These can be populated using the `updated_at` field already present in the blog post schema and equivalent dates on portfolio and recipe entries.
 **Benefit:** Helps search engines prioritise recrawling recently updated content rather than treating all pages equally.
 
-### Migrate to Astro Image component
-Images are currently served through the Sirv CDN via a manual utility function (`src/utils/image.ts`) that constructs query strings. Astro's native `<Image />` component could handle format conversion (WebP/AVIF), responsive `srcset`, and `sizes` automatically for locally-stored images.
-**Benefit:** Removes the manual image URL construction, improves build-time optimisation, and reduces dependence on Sirv for anything other than the hosted originals.
-
 ### Related posts by technology on portfolio pages
 Portfolio items already store a `technologies` array. These values overlap with blog post categories. A "Related Reading" block that links to blog posts tagged with the same technologies (e.g., a Magento 2 module page linking to Magento 2 blog posts) would add useful cross-links.
 **Benefit:** Increases time on site, improves internal linking for SEO, and helps visitors see the depth of knowledge behind a portfolio item.

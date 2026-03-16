@@ -1,5 +1,6 @@
 ---
-import { sirvImage } from '../utils/image.ts';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
 interface Props {
   author_name?: string;
@@ -13,16 +14,20 @@ const {
   author_image = 'clive-walkden.png',
 } = Astro.props;
 
-const avatarHtml = sirvImage(`/assets/images/${author_image}`, 40, 40, {
-  title: '',
-  alt: 'avatar',
-  class: 'object-cover w-10 h-10 rounded-full shadow-sm',
-  resize: true,
-});
+const authorImages = import.meta.glob<{ default: ImageMetadata }>('../assets/images/*.{png,jpg,jpeg,gif,webp,avif}', { eager: true });
+const avatarSrc = authorImages[`../assets/images/${author_image}`]?.default;
 ---
 <div class="flex items-center">
   <a href={author_url} aria-label="Author" title="Author" class="mr-3">
-    <Fragment set:html={avatarHtml} />
+    {avatarSrc && (
+      <Image
+        src={avatarSrc}
+        width={40}
+        height={40}
+        alt="avatar"
+        class="object-cover w-10 h-10 rounded-full shadow-sm"
+      />
+    )}
   </a>
   <div>
     <a href={author_url} aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-yellow-400">{author_name}</a>
