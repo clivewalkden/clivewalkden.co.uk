@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Up from '../components/Up.astro';
 import PortfolioSegment from '../components/PortfolioSegment.astro';
+import GitHubStats from '../components/GitHubStats.astro';
 
 interface Props {
   item: CollectionEntry<'portfolio'>;
@@ -52,12 +53,38 @@ const endStr = data.finished
             <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
               Description</h3>
             <slot />
-            {!data.finished && data.url && (
-              <a class="px-4 py-2 my-5 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
-                 href={data.url} target="_blank" title={`Launch ${data.title}`}
-                 rel={data.seo ? undefined : 'external nofollow'}>
-                View site
-              </a>
+            {data.type === 'application' ? (
+              <div class="flex flex-wrap gap-3 my-5">
+                {data.url && (
+                  <a class="px-4 py-2 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
+                     href={data.url} target="_blank" title={`View ${data.title} on GitHub`}
+                     rel="external nofollow">
+                    View application
+                  </a>
+                )}
+                {data.docs && (
+                  <a class="px-4 py-2 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
+                     href={data.docs} target="_blank" title={`View ${data.title} documentation`}
+                     rel="external nofollow">
+                    View docs
+                  </a>
+                )}
+                {data.issues && (
+                  <a class="px-4 py-2 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
+                     href={data.issues} target="_blank" title={`View ${data.title} issues`}
+                     rel="external nofollow">
+                    View issues
+                  </a>
+                )}
+              </div>
+            ) : (
+              !data.finished && data.url && (
+                <a class="px-4 py-2 my-5 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
+                   href={data.url} target="_blank" title={`Launch ${data.title}`}
+                   rel={data.seo ? undefined : 'external nofollow'}>
+                  View site
+                </a>
+              )
             )}
           </div>
           <div class="w-full grid grid-cols-2 gap-8">
@@ -67,14 +94,29 @@ const endStr = data.finished
                 {data.client}
               </div>
             )}
-            <div>
-              <h4 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Year</h4>
-              {startStr} - {endStr}
-            </div>
-            <div>
-              <h4 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Site Status</h4>
-              {data.status}
-            </div>
+            {data.type === 'website' && (
+                <div>
+                  <h4 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Year</h4>
+                  {startStr} - {endStr}
+                </div>
+                <div>
+                  <h4 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Site Status</h4>
+                  {data.status}
+                </div>
+            )}
+            {data.supported_versions && data.supported_versions.length > 0 && (
+              <div class="col-span-2">
+                <h4 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Works with</h4>
+                <div class="flex flex-wrap gap-2">
+                  {data.supported_versions.map((v) => (
+                    <span class="px-2 py-1 text-sm bg-gray-800 text-white rounded">{v}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+            {data.type === 'application' && data.github_user && data.github_repo && (
+              <GitHubStats github_user={data.github_user} github_repo={data.github_repo} />
+            )}
           </div>
         </div>
       </div>
@@ -82,7 +124,7 @@ const endStr = data.finished
 
     {(data.technologies?.length || data.infrastructure?.length) && (
       <div>
-        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:py-20">
           <div class="grid grid-cols-6 gap-2">
             {data.technologies?.length ? (
               <div class="col-span-2">
@@ -103,7 +145,6 @@ const endStr = data.finished
           </div>
         </div>
         {data.summary?.length && (
-          <>
             <hr />
             <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 content">
               <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">Summary</h3>
@@ -111,7 +152,6 @@ const endStr = data.finished
                 {data.summary.map((s) => <li>{s}</li>)}
               </ul>
             </div>
-          </>
         )}
       </div>
     )}

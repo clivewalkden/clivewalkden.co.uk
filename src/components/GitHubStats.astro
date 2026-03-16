@@ -1,0 +1,103 @@
+---
+interface Props {
+  github_user: string;
+  github_repo: string;
+}
+const { github_user, github_repo } = Astro.props;
+---
+<div
+  class="col-span-2"
+  data-github-user={github_user}
+  data-github-repo={github_repo}
+  data-github-stats
+>
+  <h4 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
+    GitHub Stats
+  </h4>
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <div class="text-xs font-bold uppercase text-gray-700 mb-1">Latest Version</div>
+      <div class="text-sm text-gray-900 animate-pulse" data-stat="version">Loading…</div>
+    </div>
+    <div>
+      <div class="text-xs font-bold uppercase text-gray-700 mb-1">Licence</div>
+      <div class="text-sm text-gray-900 animate-pulse" data-stat="license">Loading…</div>
+    </div>
+    <div>
+      <div class="text-xs font-bold uppercase text-gray-700 mb-1">Last Release</div>
+      <div class="text-sm text-gray-900 animate-pulse" data-stat="date">Loading…</div>
+    </div>
+    <div>
+      <div class="text-xs font-bold uppercase text-gray-700 mb-1">Downloads</div>
+      <div class="text-sm text-gray-900 animate-pulse" data-stat="downloads">Loading…</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const container = document.querySelector('[data-github-stats]') as HTMLElement | null;
+  if (container) {
+    const user = container.dataset.githubUser;
+    const repo = container.dataset.githubRepo;
+    const base = `https://api.github.com/repos/${user}/${repo}`;
+    const headers = { Accept: 'application/vnd.github+json' };
+
+    const versionEl  = container.querySelector('[data-stat="version"]') as HTMLElement;
+    const licenseEl  = container.querySelector('[data-stat="license"]') as HTMLElement;
+    const dateEl     = container.querySelector('[data-stat="date"]') as HTMLElement;
+    const downloadEl = container.querySelector('[data-stat="downloads"]') as HTMLElement;
+
+    function set(el: HTMLElement, text: string) {
+      el.classList.remove('animate-pulse');
+      el.textContent = text;
+    }
+
+    async function loadStats() {
+      try {
+        const [repoRes, latestRes, allRes] = await Promise.all([
+          fetch(base, { headers }),
+          fetch(`${base}/releases/latest`, { headers }),
+          fetch(`${base}/releases?per_page=100`, { headers }),
+        ]);
+
+        const repoData = repoRes.ok ? await repoRes.json() : null;
+        set(licenseEl, repoData?.license?.spdx_id ?? '—');
+
+        if (latestRes.status === 404) {
+          set(versionEl,  'No releases yet');
+          set(dateEl,     '—');
+          set(downloadEl, '—');
+          return;
+        }
+
+        if (!latestRes.ok || !allRes.ok) throw new Error('GitHub API error');
+
+        const latest = await latestRes.json();
+        const all    = await allRes.json();
+
+        set(versionEl, latest.tag_name ?? 'Unknown');
+
+        const releaseDate = latest.published_at
+          ? new Date(latest.published_at).toLocaleDateString('en-GB', {
+              day: 'numeric', month: 'long', year: 'numeric',
+            })
+          : '—';
+        set(dateEl, releaseDate);
+
+        const totalDownloads = Array.isArray(all)
+          ? all.reduce((sum, r) =>
+              sum + (r.assets ?? []).reduce((s: number, a: any) => s + (a.download_count ?? 0), 0), 0)
+          : 0;
+        set(downloadEl, totalDownloads.toLocaleString('en-GB'));
+
+      } catch {
+        set(versionEl,  'Unavailable');
+        set(licenseEl,  '—');
+        set(dateEl,     '—');
+        set(downloadEl, '—');
+      }
+    }
+
+    loadStats();
+  }
+</script>

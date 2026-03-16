@@ -41,6 +41,11 @@ const portfolio = defineCollection({
     meta_title: z.string(),
     meta_description: z.string(),
     seo: z.boolean().default(false),
+    github_user: z.string().optional().nullable(),
+    github_repo: z.string().optional().nullable(),
+    docs: z.string().optional().nullable(),
+    issues: z.string().optional().nullable(),
+    supported_versions: z.array(z.string()).optional().default([]),
   }),
 });
 

@@ -118,6 +118,53 @@
       "default": false,
       "type": "boolean"
     },
+    "github_user": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "github_repo": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "docs": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "issues": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "supported_versions": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "$schema": {
       "type": "string"
     }
@@ -135,7 +182,8 @@
     "intro",
     "meta_title",
     "meta_description",
-    "seo"
+    "seo",
+    "supported_versions"
   ],
   "additionalProperties": false
 }
