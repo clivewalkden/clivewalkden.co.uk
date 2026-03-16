@@ -1,5 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://clivewalkden.co.uk/sitemap.xml
-Sitemap: https://clivewalkden.co.uk/sitemap_images.xml
