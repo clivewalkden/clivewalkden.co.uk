@@ -24,10 +24,6 @@ Blog posts have a `BlogPosting` schema and recipes have a `Recipe` schema, but p
 There is no `/rss.xml` or `/feed.xml`. Astro ships with an official `@astrojs/rss` package that requires minimal setup. A dev blog without a feed misses readers who use RSS readers (Feedly, Reeder, NetNewsWire), and some aggregators and content discovery tools rely on feeds.
 **Benefit:** Expands reach to RSS-driven audiences and enables syndication to aggregator sites.
 
-### robots.txt
-There is no `robots.txt` in the project. Cloudflare Pages will not auto-generate one. Without it, crawlers have no explicit guidance and tools like Google Search Console flag the absence.
-**Benefit:** Gives crawlers clear instructions, prevents any admin or draft pages from being indexed in future, and satisfies Search Console requirements.
-
 ---
 
 ## Medium Priority
