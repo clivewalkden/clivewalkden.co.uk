@@ -30,10 +30,6 @@ These items improve user experience, content discoverability, and code quality.
 The recipes section is only linked from the footer. The nav currently has Home, Portfolio, Blog, and About. Recipes is a distinct content section and deserves a nav entry.
 **Benefit:** Visitors are more likely to discover the recipes section. The footer-only link suggests it is an afterthought rather than a first-class section of the site.
 
-### Show applications and modules on the homepage
-`PortfolioSegment.astro` filters to `type: website` only. This means the four open-source CLI tools — which now have live GitHub stats and are arguably the most technically interesting work on the site — are invisible on the homepage.
-**Benefit:** Applications and modules get exposure to first-time visitors without them having to navigate to the full portfolio page. Consider showing one item from each type, or the three most recently launched items regardless of type.
-
 ### Blog post estimated reading time
 None of the post metadata or layouts calculate or display reading time. A rough calculation of `Math.ceil(wordCount / 200)` minutes is straightforward to add at build time in `PostLayout.astro`.
 **Benefit:** Sets reader expectations before they commit to an article and is a standard UX pattern on developer blogs.
