@@ -1,0 +1,36 @@
+---
+id: 20250316-golang-repo2txt
+type: application
+title: repo2txt codebase documentation generator
+status: Live
+url: https://github.com/clivewalkden/repo2txt-cli
+launched: 2026-03-06
+finished:
+featured: false
+image_main: repo2txt-cli.png
+image_small: repo2txt-cli.png
+intro: Working with AI coding assistants often means wrestling with context — copying files one by one, losing structure, and wasting time. repo2txt solves that problem cleanly.
+meta_title: repo2txt - Convert Any Code Repo for AI | CLI Tool
+meta_description: repo2txt is a Go CLI tool that converts a code repository into a single structured document, perfect for feeding into LLMs and AI assistants.
+github_user: clivewalkden
+github_repo: repo2txt-cli
+docs: https://github.com/clivewalkden/flux-cli/blob/main/README.md
+issues: https://github.com/clivewalkden/flux-cli/issues
+supported_versions: [Linux, macOS, Windows]
+---
+
+A lightweight command-line tool that converts an entire code repository into a single, structured document — ready for LLM consumption.
+
+  Whether you're feeding a codebase into an AI assistant, creating a snapshot for review, or generating documentation, repo2txt does the heavy lifting. It walks your project directory, renders a clear file tree, and
+  outputs every relevant file into one clean document.
+
+  Key features:
+
+  - Outputs to plain text, Markdown, or Word (.docx) formats
+  - Renders a Unicode file tree for at-a-glance structure
+  - Intelligent binary file detection — only includes what matters
+  - Built-in ignores for common noise (.git, node_modules, vendor, and more)
+  - Configurable via CLI flags or a simple repo2txt.yaml config file
+  - Cross-platform: macOS, Linux, and Windows
+
+  Built with Go for speed and simplicity. Available via Homebrew on macOS.
