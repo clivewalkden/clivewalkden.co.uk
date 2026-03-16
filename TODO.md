@@ -8,10 +8,6 @@ Improvements and updates grouped by priority. Each item notes the benefit it bri
 
 These items have a direct impact on SEO, discoverability, or fix existing bugs.
 
-### Fix Nav.astro spacing typo
-The Blog nav item has a class of `fmr-3` instead of `mr-3`, which means the spacing rule is silently ignored.
-**Benefit:** Restores correct horizontal spacing between nav items, particularly on mobile.
-
 ### Open Graph & Twitter Card meta tags
 `BaseLayout.astro` only sets `<meta name="description">` and a canonical URL. There are no `og:title`, `og:description`, `og:image`, `og:type`, or `twitter:card` tags. Every share to LinkedIn, Twitter/X, Slack, Discord, or iMessage generates a blank or broken preview card.
 **Benefit:** Properly formatted social sharing cards increase click-through rates when content is shared and give the site a professional appearance in social feeds.
