@@ -9,16 +9,37 @@ finished:
 featured: false
 image_main: anvil-cli.png
 image_small: anvil-cli.png
-intro: Magento 2 Local Docker environment control and template syncronisation.
-meta_title: Anvil Magento 2 Docker Application
-meta_description: Magento 2 Local Docker environment control and template syncronisation.
+intro: A Go CLI tool for Magento 2 developers to manage local Docker environments, synchronise templates and run Magento commands from a single interface.
+meta_title: Anvil CLI — Magento 2 Docker Development Environment Manager
+meta_description: Anvil is a Go CLI tool for managing Magento 2 local Docker environments — start containers, synchronise templates and run Magento commands from one place.
 github_user: clivewalkden
 github_repo: anvil-cli
 docs: https://github.com/clivewalkden/anvil-cli/blob/main/README.md
 issues: https://github.com/clivewalkden/anvil-cli/issues
 supported_versions: [Linux, macOS, Windows]
+technologies: [Go, Docker, Magento 2, CLI]
+summary:
+  [
+    Start - stop and restart local Docker containers for Magento 2 development,
+    Synchronise environment templates to keep local and upstream configs in step,
+    Run Magento CLI commands directly through the Anvil interface,
+    Single binary with no runtime dependencies — works on Linux - macOS and Windows,
+    Reduces the context-switching overhead of managing multiple docker compose and bin/magento commands,
+  ]
 ---
 
-<p>This application is used to control the local development environment docker containers, the templates they use and running of Magento commands.</p>
-<p>It is a command line interface (CLI) application that allows developers to manage their Magento 2 development environment with ease.</p>
-<p>It provides a simple and intuitive interface for managing the local development environment, including starting and stopping containers, running Magento commands, and synchronizing templates.</p>
+Managing a Magento 2 local development environment involves juggling several tools at once — Docker Compose to control containers, `bin/magento` for application commands, and manual file copying to keep environment templates in sync. Anvil was built to collapse those separate workflows into a single, consistent CLI.
+
+Anvil is written in Go and ships as a self-contained binary, meaning it requires no runtime installation beyond the binary itself. It targets Magento 2 developers who work across multiple projects and need a reliable, scriptable way to manage their local Docker setup without remembering project-specific commands.
+
+## Key features
+
+**Container management** — start, stop and restart the Docker containers that make up the local Magento 2 stack. Anvil wraps the underlying Docker Compose calls so you never need to navigate to the correct compose file manually.
+
+**Template synchronisation** — keeps your local environment configuration files in step with the project's source templates. When upstream templates change, Anvil detects and applies the difference, preventing configuration drift between developers on the same project.
+
+**Magento command runner** — run `bin/magento` commands through Anvil without needing to exec into the container yourself. Useful for cache flushes, reindexing and setup upgrades as part of a repeatable local workflow.
+
+## Why Go
+
+Go was chosen for its single-binary output and cross-platform support. The resulting binary runs on Linux, macOS and Windows without requiring a language runtime, making it straightforward to distribute and include in onboarding documentation for new developers joining a project.

@@ -6,7 +6,19 @@ Improvements and updates grouped by priority. Each item notes the benefit it bri
 
 ## High Priority
 
-These items have a direct impact on SEO, discoverability, or fix existing bugs.
+These items have a direct impact on SEO, performance, or fix real bugs.
+
+### Remove Sirv CDN script and preconnects from BaseLayout
+`BaseLayout.astro` still loads `sirv.nospin.js` and has four Sirv preconnect/dns-prefetch hints. The image migration removed all `sirvImage()` usage, so this external script now loads on every page for no reason.
+**Benefit:** Removes a render-blocking third-party script and two unnecessary DNS lookups from every page.
+
+### Fix `justify-starts` typo in portfolio/index.astro
+`justify-starts` is not a valid Tailwind class — it should be `justify-start`. This appears three times (lines ~61, 101, 141) in the technology tag rows for Websites, Applications, and Modules sections, meaning the tags are not aligned correctly.
+**Benefit:** Restores correct flex alignment on technology tag lists across all portfolio sections.
+
+### Empty `aria-label` on Tagline portfolio link
+In `Tagline.astro` line 38, the Portfolio anchor has `aria-label=""` — an empty label is worse than none, as it gives screen readers nothing to announce.
+**Benefit:** Screen reader users can understand the purpose of the link.
 
 ### JSON-LD schema for Portfolio items
 Blog posts have a `BlogPosting` schema and recipes have a `Recipe` schema, but portfolio items have no structured data at all. A `SoftwareApplication` or `CreativeWork` schema would allow Google to understand and surface the projects correctly.
@@ -20,31 +32,43 @@ There is no `/rss.xml` or `/feed.xml`. Astro ships with an official `@astrojs/rs
 
 ## Medium Priority
 
-These items improve user experience, content discoverability, and code quality.
+These items improve user experience, accessibility, content discoverability, and code quality.
+
+### Mobile navigation accessibility
+The hamburger toggle (`Header.astro` line 20) has no `aria-label`, no `aria-expanded` attribute, no focus trap while the menu is open, and no close button inside the drawer. This is a WCAG 2.1 AA failure.
+**Benefit:** Keyboard and screen reader users can properly navigate and dismiss the mobile menu.
+
+### Add breadcrumbs to portfolio item pages
+Blog posts and recipes both show breadcrumb navigation, but portfolio item pages (`PortfolioLayout.astro`) have none. Users lose navigation context when arriving at a portfolio item directly.
+**Benefit:** Consistent navigation and an additional internal link layer for SEO.
+
+### Fix hardcoded image URLs in structured data
+`SeoBlog.astro` (line 15) and `SeoRecipe.astro` (line 40) build image URLs by concatenating hardcoded `https://www.clivewalkden.co.uk/assets/images/...` strings rather than using `site.baseUrl`. If the domain or path ever changes, schema markup silently breaks.
+**Benefit:** Schema image URLs stay correct and are maintained from a single source of truth.
+
+### Add preconnect hint for Boxicons CDN
+`BaseLayout.astro` has preconnect hints for Google Fonts but not for `https://unpkg.com` which serves the Boxicons CSS on every page. This causes an unnecessary connection delay.
+**Benefit:** Slightly faster icon font load, consistent with how Google Fonts is handled.
 
 ### Add Recipes to the primary navigation
 The recipes section is only linked from the footer. The nav currently has Home, Portfolio, Blog, and About. Recipes is a distinct content section and deserves a nav entry.
-**Benefit:** Visitors are more likely to discover the recipes section. The footer-only link suggests it is an afterthought rather than a first-class section of the site.
+**Benefit:** Visitors are more likely to discover the recipes section.
 
 ### Blog post estimated reading time
 None of the post metadata or layouts calculate or display reading time. A rough calculation of `Math.ceil(wordCount / 200)` minutes is straightforward to add at build time in `PostLayout.astro`.
 **Benefit:** Sets reader expectations before they commit to an article and is a standard UX pattern on developer blogs.
 
 ### Improve the 404 page
-The current `404.astro` is a minimal placeholder. It does not include the Pagefind search widget, no suggestions of where to go, and no link to the blog or portfolio.
-**Benefit:** Reduces bounce rate when visitors land on a dead link. Offering search and navigation suggestions converts a dead end into a usable page.
-
-### Mobile navigation accessibility
-The hamburger toggle opens the menu but there is no close button inside the open drawer, no focus trap while the menu is open, and no `aria-expanded` attribute on the toggle. This is a WCAG 2.1 AA failure.
-**Benefit:** Keyboard and screen reader users can properly navigate and dismiss the mobile menu. Improves accessibility compliance.
+The current `404.astro` is a minimal placeholder with no Pagefind search widget, no suggestions of where to go, and no links to the blog or portfolio.
+**Benefit:** Reduces bounce rate when visitors land on a dead link.
 
 ### Review and consolidate legacy blog categories
-The category list includes PS3, PSP, Xbox, Wii, Bitcoin, and Android — categories with few or no active posts that are unlikely to receive new content. They appear in the category sidebar on every blog page.
-**Benefit:** A tighter, more relevant category list reduces noise in the sidebar, improves the blog's perceived focus, and makes category navigation more useful. Old posts can be recategorised to General or left in a hidden/archived state.
+The category list includes PS3, PSP, Xbox, Wii, Bitcoin, and Android — categories with few or no active posts unlikely to receive new content. They appear in the category sidebar on every blog page.
+**Benefit:** A tighter category list reduces noise in the sidebar and improves the blog's perceived focus.
 
 ### Remove `.styleci.yml`
 This file is a leftover from the previous Laravel-based site. StyleCI is a PHP code style tool and has no relevance to an Astro/TypeScript project.
-**Benefit:** Keeps the repository clean and avoids confusion for anyone who looks at the project config.
+**Benefit:** Keeps the repository clean and avoids confusion.
 
 ---
 
@@ -53,21 +77,25 @@ This file is a leftover from the previous Laravel-based site. StyleCI is a PHP c
 Longer-term improvements that would add polish or new functionality.
 
 ### Dark mode
-The site uses a fixed light colour palette with a yellow accent (`#ffae00`). Adding a dark mode via a `prefers-color-scheme` media query and a Tailwind `dark:` variant would require a design pass but is now much more straightforward with Tailwind CSS v4.
-**Benefit:** A large proportion of developers browse in dark mode by default. Providing it is a quality signal on a developer portfolio.
+The site uses a fixed light colour palette with a yellow accent (`#ffae00`). Adding a dark mode via a `prefers-color-scheme` media query and a Tailwind `dark:` variant would require a design pass but is now more straightforward with Tailwind CSS v4.
+**Benefit:** A large proportion of developers browse in dark mode. Providing it is a quality signal on a developer portfolio.
+
+### Extract shared date formatting utility
+`formatDate()` is defined separately in `PostLayout.astro`, `BlogLayout.astro`, and potentially elsewhere. It should live in a single `src/utils/date.ts` file.
+**Benefit:** Single point of change if the date format ever needs updating.
 
 ### Expand the Recipes section
-There are currently only two recipes. The section has a full schema implementation (`SeoRecipe.astro`), a recipe layout, and a listing page — the infrastructure is solid. It just needs content.
-**Benefit:** A more populated recipes section adds personality to the site and gives visitors a reason to return for non-technical content.
+There are currently only two recipes. The section has a full schema implementation, a recipe layout, and a listing page — the infrastructure is solid. It just needs content.
+**Benefit:** A more populated recipes section adds personality to the site and gives visitors a reason to return.
 
 ### Add more portfolio content for applications and modules
-Several of the Go CLI tools and Magento 2 modules have minimal descriptions (two or three sentences). Adding context — problem being solved, technical approach, lessons learned — makes these entries more useful to visitors evaluating skills.
+Several of the Go CLI tools and Magento 2 modules have minimal descriptions. Adding context — problem being solved, technical approach, lessons learned — makes these entries more useful to visitors evaluating skills.
 **Benefit:** More detailed portfolio entries better demonstrate expertise and give search engines richer content to index.
 
 ### Sitemap `lastmod` and `changefreq`
-The `@astrojs/sitemap` integration generates a sitemap but without `lastmod` dates or `changefreq` hints. These can be populated using the `updated_at` field already present in the blog post schema and equivalent dates on portfolio and recipe entries.
-**Benefit:** Helps search engines prioritise recrawling recently updated content rather than treating all pages equally.
+The `@astrojs/sitemap` integration generates a sitemap but without `lastmod` dates or `changefreq` hints. These can be populated using the `updated_at` field already present in the blog post schema.
+**Benefit:** Helps search engines prioritise recrawling recently updated content.
 
 ### Related posts by technology on portfolio pages
-Portfolio items already store a `technologies` array. These values overlap with blog post categories. A "Related Reading" block that links to blog posts tagged with the same technologies (e.g., a Magento 2 module page linking to Magento 2 blog posts) would add useful cross-links.
-**Benefit:** Increases time on site, improves internal linking for SEO, and helps visitors see the depth of knowledge behind a portfolio item.
+Portfolio items already store a `technologies` array that overlaps with blog post categories. A "Related Reading" block linking to blog posts tagged with the same technologies would add useful cross-links.
+**Benefit:** Increases time on site, improves internal linking for SEO, and helps visitors see depth of knowledge.
