@@ -1,3 +1,25 @@
+# [1.4.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.3.4...v1.4.0) (2026-03-16)
+
+
+### Bug Fixes
+
+* add .astro to .gitignore to prevent build artifacts from being tracked ([63ff6d4](https://github.com/clivewalkden/clivewalkden.co.uk/commit/63ff6d48a6350a30a12e27c8e240ea0d24eb6091))
+* add Astro to experience list and fix CSS source syntax ([d983dc1](https://github.com/clivewalkden/clivewalkden.co.uk/commit/d983dc1bfb8115c7de7dfca53b548ddf839a3d2f))
+* **astro:** add content configuration for posts, portfolio, and recipes collections ([84a4d64](https://github.com/clivewalkden/clivewalkden.co.uk/commit/84a4d649ef566bd674d305515c3ff7666a62e634))
+* **deps:** update dependency nesbot/carbon to v2.72.6 [security] ([cd5b1b9](https://github.com/clivewalkden/clivewalkden.co.uk/commit/cd5b1b94c239ae0734365c5ec7adbd58459cae61))
+* New blog post error with colon in the title ([ed5a831](https://github.com/clivewalkden/clivewalkden.co.uk/commit/ed5a8314c1c118ea0c57ecd8d04a3c289e4b0fda))
+* update build script to include pagefind for site generation ([1006ca8](https://github.com/clivewalkden/clivewalkden.co.uk/commit/1006ca836cc291c3e30c10ce4828396f8aa28b61))
+* update links to use IDs instead of slugs for blog, portfolio, and recipe items ([68f8391](https://github.com/clivewalkden/clivewalkden.co.uk/commit/68f83914e37c2698567d8046f7ef07dbf68b9e17))
+
+
+### Features
+
+* add GitHub metadata fields and integrate GitHub stats component in portfolio layout ([cf2d111](https://github.com/clivewalkden/clivewalkden.co.uk/commit/cf2d11199585ef22407f8f67f12b4dcc0895beb4))
+* add new CLI applications and update existing plugin types ([992ac05](https://github.com/clivewalkden/clivewalkden.co.uk/commit/992ac05b041d12fa803cd691bdb5d8b2a382a2ee))
+* add type field to portfolio items and update filtering in portfolio display ([c7b694f](https://github.com/clivewalkden/clivewalkden.co.uk/commit/c7b694f80ad454b65dac1f987fef0ccc57e281d6))
+* add TypeScript configuration and integrate semantic-release for automated versioning ([f961f81](https://github.com/clivewalkden/clivewalkden.co.uk/commit/f961f81c02de8968274d493fa1a49824519bb3c1))
+* updated to use Astro Framework ([beeb4bc](https://github.com/clivewalkden/clivewalkden.co.uk/commit/beeb4bc859311516bacd11f11a092d15b69fce02))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
