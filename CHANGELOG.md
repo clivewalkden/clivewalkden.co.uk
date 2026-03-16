@@ -1,3 +1,19 @@
+# [1.5.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.4.1...v1.5.0) (2026-03-16)
+
+
+### Bug Fixes
+
+* adjust max-width for portfolio layout ([3e9ca41](https://github.com/clivewalkden/clivewalkden.co.uk/commit/3e9ca417297be082cfe0d7c33a123f2e673d59e3))
+* correct spacing typo in Blog nav item ([9c8e2eb](https://github.com/clivewalkden/clivewalkden.co.uk/commit/9c8e2eb3a2023cc7c5970babc2e150532a7de939))
+* update image references for Anvil and Flux applications ([379ea25](https://github.com/clivewalkden/clivewalkden.co.uk/commit/379ea252b4f2936b6b0d89aacc0cbb31cc6e0c46))
+* update portfolio sorting and adjust max-width for layout ([10748a1](https://github.com/clivewalkden/clivewalkden.co.uk/commit/10748a1ae7d07558c946ea82b952296b505a6fa2))
+
+
+### Features
+
+* add Open Graph and Twitter Card meta tags for improved social sharing ([d107b85](https://github.com/clivewalkden/clivewalkden.co.uk/commit/d107b85138a0d3267bbe2c1c0cb926a1669895be))
+* migrate image handling to Astro's Image component for improved optimization ([4ecbb4c](https://github.com/clivewalkden/clivewalkden.co.uk/commit/4ecbb4c81ad7f7717436710f79b5e9ace9627f2b))
+
 ## [1.4.1](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.4.0...v1.4.1) (2026-03-16)
 
 
