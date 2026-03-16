@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.4.0...v1.4.1) (2026-03-16)
+
+
+### Bug Fixes
+
+* update humans.txt and add robots.txt generation ([0dcab92](https://github.com/clivewalkden/clivewalkden.co.uk/commit/0dcab92d4fb788853fc43a4f0dde5db0f4f99a2d))
+
 # [1.4.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.3.4...v1.4.0) (2026-03-16)
 
 
