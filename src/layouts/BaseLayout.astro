@@ -7,6 +7,8 @@ interface Props {
   meta_description?: string;
   canonical?: string;
   is404?: boolean;
+  og_image?: string;
+  og_type?: string;
 }
 
 const {
@@ -14,6 +16,8 @@ const {
   meta_description = site.meta_description,
   canonical,
   is404 = false,
+  og_image = `${site.baseUrl}/assets/images/website-code.jpg`,
+  og_type = 'website',
 } = Astro.props;
 
 const canonicalUrl = canonical ?? Astro.url.href;
@@ -41,6 +45,19 @@ const showCanonical = !isHomepage && !is404;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {showCanonical && <link rel="canonical" href={canonicalUrl}>}
     <meta name="description" content={meta_description}>
+    <!-- Open Graph -->
+    <meta property="og:type" content={og_type}>
+    <meta property="og:url" content={canonicalUrl}>
+    <meta property="og:title" content={meta_title}>
+    <meta property="og:description" content={meta_description}>
+    <meta property="og:image" content={og_image}>
+    <meta property="og:site_name" content="Clive Walkden">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@clivewalkden">
+    <meta name="twitter:title" content={meta_title}>
+    <meta name="twitter:description" content={meta_description}>
+    <meta name="twitter:image" content={og_image}>
     <link rel="icon" href="/favicon.ico">
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
     <title>{meta_title}</title>

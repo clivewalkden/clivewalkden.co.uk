@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
+import { site } from '../data/site.ts';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Up from '../components/Up.astro';
@@ -14,12 +15,13 @@ interface Props {
 const { item } = Astro.props;
 const { data } = item;
 
+const ogImage = `${site.baseUrl}/assets/images/portfolio/${data.image_main}`;
 const startStr = data.launched.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
 const endStr = data.finished
   ? data.finished.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
   : 'present';
 ---
-<BaseLayout meta_title={data.meta_title} meta_description={data.meta_description}>
+<BaseLayout meta_title={data.meta_title} meta_description={data.meta_description} og_image={ogImage} og_type="article">
   <Header slot="header" currentPath={Astro.url.pathname} />
   <div slot="dropdown"></div>
 

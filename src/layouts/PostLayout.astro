@@ -10,6 +10,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SeoBlog from '../components/SeoBlog.astro';
 import BlogSegment from '../components/BlogSegment.astro';
 import { getCategoryBySeoLink } from '../data/categories.ts';
+import { site } from '../data/site.ts';
 import authorImg from '../assets/images/clive-walkden.jpg';
 
 interface Props {
@@ -33,6 +34,9 @@ const bgImageSrc = data.hero
 
 const bgImage = bgImageSrc ? await getImage({ src: bgImageSrc }) : null;
 
+const ogImageFile = data.hero ? data.hero : `${data.category}.jpg`;
+const ogImage = `${site.baseUrl}/assets/images/blog/articles/${ogImageFile}`;
+
 function formatDate(d: Date): string {
   return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 }
@@ -40,7 +44,7 @@ function isoDate(d: Date): string {
   return d.toISOString();
 }
 ---
-<BaseLayout meta_title={data.meta_title} meta_description={data.meta_description}>
+<BaseLayout meta_title={data.meta_title} meta_description={data.meta_description} og_image={ogImage} og_type="article">
   <Header slot="header" currentPath={Astro.url.pathname} />
   <div slot="dropdown"></div>
 

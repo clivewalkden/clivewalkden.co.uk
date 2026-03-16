@@ -8,10 +8,6 @@ Improvements and updates grouped by priority. Each item notes the benefit it bri
 
 These items have a direct impact on SEO, discoverability, or fix existing bugs.
 
-### Open Graph & Twitter Card meta tags
-`BaseLayout.astro` only sets `<meta name="description">` and a canonical URL. There are no `og:title`, `og:description`, `og:image`, `og:type`, or `twitter:card` tags. Every share to LinkedIn, Twitter/X, Slack, Discord, or iMessage generates a blank or broken preview card.
-**Benefit:** Properly formatted social sharing cards increase click-through rates when content is shared and give the site a professional appearance in social feeds.
-
 ### JSON-LD schema for Portfolio items
 Blog posts have a `BlogPosting` schema and recipes have a `Recipe` schema, but portfolio items have no structured data at all. A `SoftwareApplication` or `CreativeWork` schema would allow Google to understand and surface the projects correctly.
 **Benefit:** Improved search appearance for portfolio items and consistency across the site's three main content types.
