@@ -2,8 +2,12 @@
 interface Props {
   github_user: string;
   github_repo: string;
+  title?: string;
+  url?: string;
+  docs?: string;
+  issues?: string;
 }
-const { github_user, github_repo } = Astro.props;
+const { github_user, github_repo, title, url, docs, issues } = Astro.props;
 ---
 <div
   class="col-span-2"
@@ -14,24 +18,47 @@ const { github_user, github_repo } = Astro.props;
   <h4 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
     GitHub Stats
   </h4>
-  <div class="grid grid-cols-2 gap-4">
-    <div>
-      <div class="text-xs font-bold uppercase text-gray-700 mb-1">Latest Version</div>
+  <div class="flex flex-col gap-2">
+
+    <div class="grid grid-cols-2">
+      <div class="text-xs font-bold uppercase text-gray-700">Latest Version</div>
       <div class="text-sm text-gray-900 animate-pulse" data-stat="version">Loading…</div>
     </div>
-    <div>
-      <div class="text-xs font-bold uppercase text-gray-700 mb-1">Licence</div>
+    <div class="grid grid-cols-2">
+      <div class="text-xs font-bold uppercase text-gray-700">Licence</div>
       <div class="text-sm text-gray-900 animate-pulse" data-stat="license">Loading…</div>
     </div>
-    <div>
-      <div class="text-xs font-bold uppercase text-gray-700 mb-1">Last Release</div>
+    <div class="grid grid-cols-2">
+      <div class="text-xs font-bold uppercase text-gray-700">Last Release</div>
       <div class="text-sm text-gray-900 animate-pulse" data-stat="date">Loading…</div>
     </div>
-    <div>
-      <div class="text-xs font-bold uppercase text-gray-700 mb-1">Downloads</div>
+    <div class="grid grid-cols-2">
+      <div class="text-xs font-bold uppercase text-gray-700">Downloads</div>
       <div class="text-sm text-gray-900 animate-pulse" data-stat="downloads">Loading…</div>
     </div>
   </div>
+  {(url || docs || issues) && (
+    <div class="flex flex-wrap gap-3 mt-5">
+      {url && (
+        <a class="px-4 py-2 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
+           href={url} target="_blank" title={`View ${title} on GitHub`} rel="external nofollow">
+          View application
+        </a>
+      )}
+      {docs && (
+        <a class="px-4 py-2 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
+           href={docs} target="_blank" title={`View ${title} documentation`} rel="external nofollow">
+          View docs
+        </a>
+      )}
+      {issues && (
+        <a class="px-4 py-2 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
+           href={issues} target="_blank" title={`View ${title} issues`} rel="external nofollow">
+          View issues
+        </a>
+      )}
+    </div>
+  )}
 </div>
 
 <script>
