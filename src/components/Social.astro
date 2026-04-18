@@ -8,7 +8,7 @@ interface Props {
 
 const { title, icon, href, effect } = Astro.props;
 ---
-<a href={href} title={title} target="_blank" rel="external me"
+<a href={href} title={title} target="_blank" rel="external me" aria-label="View on {title}"
    class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-title transition duration-200 hover:bg-yellow-700">
   <i class={`bx bx-sm ${icon} ${effect ?? ''}`}></i>
 </a>
