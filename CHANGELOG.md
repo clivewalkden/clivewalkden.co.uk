@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.6.0...v1.6.1) (2026-04-18)
+
+
+### Bug Fixes
+
+* update documentation links for repo2txt-cli ([f0228dd](https://github.com/clivewalkden/clivewalkden.co.uk/commit/f0228ddda4dd642ee70f870c80c2b1416f0ec6ac))
+
 # [1.6.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.5.0...v1.6.0) (2026-04-18)
 
 
