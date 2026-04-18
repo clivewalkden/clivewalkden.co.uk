@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.5.0...v1.6.0) (2026-04-18)
+
+
+### Features
+
+* add loading prop to Author component and optimize image loading strategy across layouts ([52c68f2](https://github.com/clivewalkden/clivewalkden.co.uk/commit/52c68f20d294e901736f63c94a4629981cb6c05e))
+
 # [1.5.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.4.1...v1.5.0) (2026-03-16)
 
 
