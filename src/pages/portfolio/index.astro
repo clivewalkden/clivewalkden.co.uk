@@ -15,6 +15,11 @@ const applications = sorted.filter(s => s.data.type === 'application');
 const modules      = sorted.filter(s => s.data.type === 'module');
 
 const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/images/portfolio/*.{png,jpg,jpeg,gif,webp,avif}', { eager: true });
+
+const EAGER_COUNT = 9;
+const websitesOffset     = 0;
+const applicationsOffset = websites.length;
+const modulesOffset      = websites.length + applications.length;
 ---
 <BaseLayout
   meta_title="Portfolio of websites and plugins / modules"
@@ -38,7 +43,7 @@ const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../../asse
       <>
         <h2 class="mb-6 font-sans text-2xl font-bold tracking-tight text-gray-900">Websites</h2>
         <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
-          {websites.map((site) => {
+          {websites.map((site, index) => {
             const imgSrc = portfolioImages[`../../assets/images/portfolio/${site.data.image_main}`]?.default;
             return (
               <a href={`/portfolio/${site.id}/`} aria-label="View Item">
@@ -50,6 +55,7 @@ const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../../asse
                         width={390}
                         alt={site.data.title}
                         title={site.data.title}
+                        loading={websitesOffset + index < EAGER_COUNT ? 'eager' : 'lazy'}
                         class="object-contain w-full h-full"
                       />
                     )}
@@ -78,7 +84,7 @@ const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../../asse
         <hr class="w-full my-8 border-gray-300" />
         <h2 class="mb-6 font-sans text-2xl font-bold tracking-tight text-gray-900">Applications</h2>
         <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
-          {applications.map((site) => {
+          {applications.map((site, index) => {
             const imgSrc = portfolioImages[`../../assets/images/portfolio/${site.data.image_main}`]?.default;
             return (
               <a href={`/portfolio/${site.id}/`} aria-label="View Item">
@@ -90,6 +96,7 @@ const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../../asse
                         width={390}
                         alt={site.data.title}
                         title={site.data.title}
+                        loading={applicationsOffset + index < EAGER_COUNT ? 'eager' : 'lazy'}
                         class="object-contain w-full h-full"
                       />
                     )}
@@ -118,7 +125,7 @@ const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../../asse
         <hr class="w-full my-8 border-gray-300" />
         <h2 class="mb-6 font-sans text-2xl font-bold tracking-tight text-gray-900">Modules</h2>
         <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 gap-y-6">
-          {modules.map((site) => {
+          {modules.map((site, index) => {
             const imgSrc = portfolioImages[`../../assets/images/portfolio/${site.data.image_main}`]?.default;
             return (
               <a href={`/portfolio/${site.id}/`} aria-label="View Item">
@@ -130,6 +137,7 @@ const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../../asse
                         width={390}
                         alt={site.data.title}
                         title={site.data.title}
+                        loading={modulesOffset + index < EAGER_COUNT ? 'eager' : 'lazy'}
                         class="object-contain w-full h-full"
                       />
                     )}

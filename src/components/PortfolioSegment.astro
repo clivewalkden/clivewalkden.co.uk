@@ -33,6 +33,7 @@ const portfolioImages = import.meta.glob<{ default: ImageMetadata }>('../assets/
                   width={382}
                   alt={site.data.client ?? site.data.title}
                   title={site.data.client ?? site.data.title}
+                  loading="eager"
                   class="object-contain w-full h-full"
                 />
               )}

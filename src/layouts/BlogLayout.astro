@@ -36,7 +36,7 @@ function formatDate(d: Date): string {
   <Header slot="header" currentPath={Astro.url.pathname} />
   <div slot="dropdown"></div>
 
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col lg:flex-row">
       <div class="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
         <h1 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
@@ -62,7 +62,7 @@ function formatDate(d: Date): string {
     <div class="grid gap-10 row-gap-8 lg:grid-cols-5">
       <div class="flex flex-col space-y-8 lg:col-span-4">
         {results.length ? (
-          results.map((post) => {
+          results.map((post, index) => {
             const date = post.data.updated_at ?? post.data.published;
             return (
               <div class="mb-10 pb-10 border-b border-stone-200">
@@ -79,7 +79,7 @@ function formatDate(d: Date): string {
                 <p class="mb-4 text-base text-gray-700 md:text-lg">
                   {post.data.short_intro}
                 </p>
-                <Author />
+                <Author loading={index < 2 ? 'eager' : 'lazy'} />
               </div>
             );
           })
