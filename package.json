@@ -12,7 +12,7 @@
         "@tailwindcss/vite": "^4.1.0",
         "astro": "^6.1.5",
         "pagefind": "^1.5.2",
-        "tailwindcss": "^4.2.2"
+        "tailwindcss": "^4.2.4"
     },
     "devDependencies": {
         "@semantic-release/changelog": "^6.0.0",
