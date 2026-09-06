@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.6.1...v1.7.0) (2026-09-06)
+
+
+### Features
+
+* **apps:** add Cairn app landing and privacy pages ([4d1ffd7](https://github.com/clivewalkden/clivewalkden.co.uk/commit/4d1ffd7c5dd340e50feb279a265087799af01051))
+
 ## [1.6.1](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.6.0...v1.6.1) (2026-04-18)
 
 

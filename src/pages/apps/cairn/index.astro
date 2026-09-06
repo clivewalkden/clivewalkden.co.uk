@@ -1,0 +1,332 @@
+---
+import { Image } from 'astro:assets';
+import { site } from '../../../data/site.ts';
+import dashboardImg from '../../../assets/images/cairn/cairn-home-screen.png';
+import heartRateImg from '../../../assets/images/cairn/cairn-heart-rate-page.png';
+import sleepImg from '../../../assets/images/cairn/cairn-sleep-page.png';
+import historyImg from '../../../assets/images/cairn/cairn-history.png';
+
+const meta_title = 'Cairn — Body-measurement tracker for Android & Wear OS';
+const meta_description = 'Cairn tracks weight, body composition, heart rate and sleep in Android Health Connect. No account, no analytics, no network calls — everything stays on your device.';
+const canonicalUrl = 'https://clivewalkden.co.uk/apps/cairn/';
+const ogImage = `${site.baseUrl}/assets/images/cairn/cairn-home-screen.png`;
+
+const screenshots = [
+  { src: dashboardImg, alt: 'Cairn dashboard showing weight, BMI, body fat %, body water %, heart rate and sleep', caption: 'Dashboard' },
+  { src: heartRateImg, alt: "Cairn heart rate detail screen with today's min, average and max, and a full readings graph", caption: 'Heart rate' },
+  { src: sleepImg, alt: 'Cairn sleep detail screen showing last night’s duration and a two-week trend', caption: 'Sleep' },
+  { src: historyImg, alt: 'Cairn history screen listing past heart-rate sessions and measurements', caption: 'History' },
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href={canonicalUrl}>
+    <meta name="description" content={meta_description}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={canonicalUrl}>
+    <meta property="og:title" content={meta_title}>
+    <meta property="og:description" content={meta_description}>
+    <meta property="og:image" content={ogImage}>
+    <meta property="og:site_name" content="Cairn">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={meta_title}>
+    <meta name="twitter:description" content={meta_description}>
+    <meta name="twitter:image" content={ogImage}>
+    <link rel="icon" href="/favicon.ico">
+    <title>{meta_title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cream: #FAF6F0;
+        --ink: #3A2E27;
+        --ink-soft: #6b5d53;
+        --terracotta: #C97C5D;
+        --terracotta-deep: #a85f42;
+        --sage: #8CA394;
+        --sand: #E8C9A0;
+        --rule: #e4d7c6;
+        --card: #ffffff;
+        --dashboard-bg: #1c1815;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --cream: #2A2521;
+          --ink: #F0E6DC;
+          --ink-soft: #cbbfb4;
+          --terracotta: #d99677;
+          --terracotta-deep: #e8b299;
+          --sage: #a3bcac;
+          --sand: #6b5a42;
+          --rule: #423a33;
+          --card: #332c27;
+        }
+      }
+      :root[data-theme="dark"] {
+        --cream: #2A2521;
+        --ink: #F0E6DC;
+        --ink-soft: #cbbfb4;
+        --terracotta: #d99677;
+        --terracotta-deep: #e8b299;
+        --sage: #a3bcac;
+        --sand: #6b5a42;
+        --rule: #423a33;
+        --card: #332c27;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--cream);
+        color: var(--ink);
+        font-family: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; display: block; }
+      h1, h2 {
+        font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+        font-optical-sizing: auto;
+        color: var(--ink);
+        text-wrap: balance;
+      }
+      a { color: var(--terracotta-deep); }
+
+      .page {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+
+      /* Masthead — same three-stone mark as the privacy policy page */
+      .masthead { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+      .mark { width: 46px; height: 46px; position: relative; flex-shrink: 0; }
+      .mark .stone {
+        position: absolute; left: 50%; border-radius: 999px;
+        transform-origin: center;
+      }
+      .mark .stone.base  { width: 40px; height: 13px; bottom: 2px;  transform: translateX(-50%); background: var(--terracotta); }
+      .mark .stone.mid   { width: 28px; height: 11px; bottom: 15px; transform: translateX(-50%); background: var(--sage); }
+      .mark .stone.top   { width: 17px; height: 9px;  bottom: 26px; transform: translateX(-50%) rotate(-7deg); background: var(--sand); }
+
+      .wordmark { font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: 0.2px; }
+      .tagline { color: var(--ink-soft); font-size: 14.5px; margin-top: 2px; }
+
+      /* Hero */
+      .hero { margin-top: 56px; max-width: 560px; }
+      .hero h1 { font-size: 40px; font-weight: 600; margin: 0 0 18px; }
+      .hero p { font-size: 18px; margin: 0 0 14px; }
+      .hero .lede strong { color: var(--terracotta-deep); font-weight: 700; }
+
+      .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 30px; }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 11px 18px;
+        border-radius: 999px;
+        background: var(--card);
+        border: 1px solid var(--rule);
+        color: var(--ink-soft);
+      }
+      .badge .dot {
+        width: 7px; height: 7px; border-radius: 999px;
+        background: var(--sage);
+        flex-shrink: 0;
+        animation: pulse 2.2s ease-in-out infinite;
+      }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 11px 20px;
+        border-radius: 999px;
+        background: transparent;
+        border: 1px solid var(--terracotta-deep);
+        color: var(--terracotta-deep);
+        text-decoration: none;
+      }
+      .btn-secondary:hover { background: color-mix(in srgb, var(--terracotta) 12%, transparent); }
+
+      /* Screenshot strip */
+      .shots {
+        margin-top: 64px;
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 6px 6px 18px;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+      }
+      .shot { flex: 0 0 auto; width: 200px; scroll-snap-align: start; text-align: center; }
+      .shot-frame {
+        border-radius: 22px;
+        overflow: hidden;
+        background: var(--dashboard-bg);
+        border: 1px solid var(--rule);
+        box-shadow: 0 12px 30px -14px rgba(58, 46, 39, 0.35);
+      }
+      .shot-frame img { width: 100%; height: auto; }
+      .shot-caption { margin-top: 10px; font-size: 13.5px; color: var(--ink-soft); font-weight: 600; }
+
+      /* Feature grid */
+      section { margin-top: 72px; }
+      section h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 0 28px;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+      }
+      .feature {
+        background: var(--card);
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        padding: 20px 22px;
+      }
+      .feature h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 0 8px;
+        color: var(--ink);
+      }
+      .feature h3::before {
+        content: '';
+        display: inline-block;
+        width: 7px; height: 7px;
+        border-radius: 999px;
+        background: var(--sage);
+        margin-right: 9px;
+        transform: translateY(-2px);
+      }
+      .feature p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+
+      /* Privacy callout, same voice as the policy page */
+      .privacy-callout {
+        margin-top: 72px;
+        background: var(--card);
+        border: 1px solid var(--rule);
+        border-left: 3px solid var(--sage);
+        border-radius: 4px;
+        padding: 26px 28px;
+      }
+      .privacy-callout h2 { font-size: 20px; margin: 0 0 10px; }
+      .privacy-callout p { margin: 0 0 14px; font-size: 15px; }
+      .privacy-callout p:last-child { margin-bottom: 0; }
+      .privacy-callout a { font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+
+      footer {
+        margin-top: 56px;
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+      footer a { color: var(--terracotta-deep); text-decoration: none; border-bottom: 1px solid currentColor; }
+      footer a:hover { opacity: 0.75; }
+
+      @media (max-width: 520px) {
+        .hero h1 { font-size: 32px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+
+      <div class="masthead">
+        <div class="mark">
+          <div class="stone base"></div>
+          <div class="stone mid"></div>
+          <div class="stone top"></div>
+        </div>
+        <div>
+          <div class="wordmark">Cairn</div>
+          <div class="tagline">Body-measurement tracker for Android &amp; Wear OS</div>
+        </div>
+      </div>
+
+      <div class="hero">
+        <h1>Track your body. Nothing else.</h1>
+        <p class="lede">
+          Cairn logs weight, body composition and heart rate straight into <strong>Android
+          Health Connect</strong>, and reads your watch's own steps, sleep and activity back
+          for context. <strong>No account, no analytics, no network calls</strong> &mdash; it
+          never leaves your two devices.
+        </p>
+        <div class="cta-row">
+          <span class="badge"><span class="dot"></span> Coming soon to Google Play</span>
+          <a class="btn-secondary" href="/apps/cairn/privacy/">Read the privacy policy</a>
+        </div>
+      </div>
+
+      <div class="shots" role="list" aria-label="Cairn screenshots">
+        {screenshots.map((shot) => (
+          <div class="shot" role="listitem">
+            <div class="shot-frame">
+              <Image src={shot.src} alt={shot.alt} width={280} loading="eager" />
+            </div>
+            <div class="shot-caption">{shot.caption}</div>
+          </div>
+        ))}
+      </div>
+
+      <section>
+        <h2>What it tracks</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <h3>Weight, BMI &amp; body composition</h3>
+            <p>Log a weigh-in and see BMI, body fat % and body water % trend over time.</p>
+          </div>
+          <div class="feature">
+            <h3>Quick-log from your wrist</h3>
+            <p>Add a measurement from the Wear OS app without reaching for your phone.</p>
+          </div>
+          <div class="feature">
+            <h3>Continuous heart rate</h3>
+            <p>Optional, watch-driven monitoring with today's min/avg/max and a full readings graph &mdash; on by choice, off by default.</p>
+          </div>
+          <div class="feature">
+            <h3>Sleep, steps &amp; calories, for context</h3>
+            <p>Cairn reads &mdash; never writes &mdash; the sleep, steps and activity data your watch already recorded.</p>
+          </div>
+          <div class="feature">
+            <h3>Full history</h3>
+            <p>Every past measurement and heart-rate session, at a glance.</p>
+          </div>
+          <div class="feature">
+            <h3>Metric or Imperial</h3>
+            <p>kg and cm, or lb and ft/in &mdash; whichever you think in.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="privacy-callout">
+        <h2>Built on Health Connect, not a server</h2>
+        <p>
+          Everything Cairn reads or writes lives in Android Health Connect, on your device.
+          There's no account to create and no cloud to sync to, so there's nothing about you
+          for a server to hold in the first place.
+        </p>
+        <p>
+          <a href="/apps/cairn/privacy/">Read the full privacy policy &rarr;</a>
+        </p>
+      </div>
+
+      <footer>
+        Questions about Cairn &mdash; <a href="mailto:clivewalkden@gmail.com">clivewalkden@gmail.com</a>
+      </footer>
+
+    </div>
+  </body>
+</html>
