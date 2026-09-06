@@ -1,0 +1,333 @@
+---
+const meta_title = 'Cairn Privacy Policy';
+const meta_description = 'Privacy policy for Cairn, a body-measurement tracker for Android & Wear OS. Cairn makes no network calls — everything stays in Health Connect, on your device.';
+const canonicalUrl = 'https://clivewalkden.co.uk/apps/cairn/privacy/';
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href={canonicalUrl}>
+    <meta name="description" content={meta_description}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={canonicalUrl}>
+    <meta property="og:title" content={meta_title}>
+    <meta property="og:description" content={meta_description}>
+    <meta property="og:site_name" content="Cairn">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content={meta_title}>
+    <meta name="twitter:description" content={meta_description}>
+    <link rel="icon" href="/favicon.ico">
+    <title>{meta_title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cream: #FAF6F0;
+        --ink: #3A2E27;
+        --ink-soft: #6b5d53;
+        --terracotta: #C97C5D;
+        --terracotta-deep: #a85f42;
+        --sage: #8CA394;
+        --sand: #E8C9A0;
+        --rule: #e4d7c6;
+        --card: #ffffff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --cream: #2A2521;
+          --ink: #F0E6DC;
+          --ink-soft: #cbbfb4;
+          --terracotta: #d99677;
+          --terracotta-deep: #e8b299;
+          --sage: #a3bcac;
+          --sand: #6b5a42;
+          --rule: #423a33;
+          --card: #332c27;
+        }
+      }
+      :root[data-theme="dark"] {
+        --cream: #2A2521;
+        --ink: #F0E6DC;
+        --ink-soft: #cbbfb4;
+        --terracotta: #d99677;
+        --terracotta-deep: #e8b299;
+        --sage: #a3bcac;
+        --sand: #6b5a42;
+        --rule: #423a33;
+        --card: #332c27;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--cream);
+        color: var(--ink);
+        font-family: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; }
+      h1, h2 {
+        font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+        font-optical-sizing: auto;
+        color: var(--ink);
+        text-wrap: balance;
+      }
+
+      .page {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+
+      /* Masthead: a small CSS rendering of the three-stone mark, same silhouette as the app icon */
+      .masthead { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+      .mark { width: 46px; height: 46px; position: relative; flex-shrink: 0; }
+      .mark .stone {
+        position: absolute; left: 50%; border-radius: 999px;
+        transform-origin: center;
+      }
+      .mark .stone.base   { width: 40px; height: 13px; bottom: 2px;  transform: translateX(-50%); background: var(--terracotta); }
+      .mark .stone.mid    { width: 28px; height: 11px; bottom: 15px; transform: translateX(-50%); background: var(--sage); }
+      .mark .stone.top     { width: 17px; height: 9px;  bottom: 26px; transform: translateX(-50%) rotate(-7deg); background: var(--sand); }
+
+      .wordmark { font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: 0.2px; }
+      .tagline { color: var(--ink-soft); font-size: 14.5px; margin-top: 2px; }
+
+      .updated {
+        font-variant-numeric: tabular-nums;
+        color: var(--ink-soft);
+        font-size: 13px;
+        margin-top: 22px;
+        padding-top: 18px;
+        border-top: 1px solid var(--rule);
+      }
+
+      .lede {
+        font-size: 18px;
+        margin-top: 34px;
+        color: var(--ink);
+      }
+      .lede strong { color: var(--terracotta-deep); font-weight: 700; }
+
+      section { margin-top: 44px; }
+      section h2 {
+        font-size: 21px;
+        font-weight: 600;
+        margin: 0 0 14px;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      section h2::before {
+        content: '';
+        width: 7px; height: 7px;
+        border-radius: 999px;
+        background: var(--sage);
+        display: inline-block;
+        transform: translateY(-2px);
+      }
+      section p { margin: 0 0 14px; color: var(--ink); }
+      section p:last-child { margin-bottom: 0; }
+      section ul { margin: 0 0 14px; padding-left: 22px; }
+      section li { margin-bottom: 8px; }
+      section li:last-child { margin-bottom: 0; }
+
+      code, .rt {
+        font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+        font-size: 0.9em;
+        background: var(--sand);
+        color: var(--ink);
+        padding: 0.1em 0.4em;
+        border-radius: 4px;
+      }
+      :root:not([data-theme="light"]) code, :root:not([data-theme="light"]) .rt { color: var(--ink); }
+
+      /* Data-flow reference table — the one structural device that earns its place here: every
+         record type this app can touch, mapped to whether Cairn writes it and where it can go. */
+      .flow-table {
+        margin-top: 16px;
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--card);
+      }
+      .flow-row {
+        display: grid;
+        grid-template-columns: 1.4fr 0.85fr 0.75fr;
+        gap: 10px;
+        padding: 12px 16px;
+        align-items: center;
+      }
+      .flow-row + .flow-row { border-top: 1px solid var(--rule); }
+      .flow-head {
+        font-size: 11.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--ink-soft);
+        background: transparent;
+      }
+      .flow-row .rtype { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; }
+      .pill {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .pill.write { background: color-mix(in srgb, var(--terracotta) 22%, transparent); color: var(--terracotta-deep); }
+      .pill.read  { background: color-mix(in srgb, var(--sage) 28%, transparent); color: var(--ink); }
+      .pill.no    { background: transparent; color: var(--ink-soft); }
+
+      .callout {
+        margin-top: 16px;
+        padding: 16px 18px;
+        background: var(--card);
+        border-left: 3px solid var(--sage);
+        border-radius: 4px;
+        font-size: 15px;
+      }
+      .callout p { margin: 0; }
+
+      footer {
+        margin-top: 56px;
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+      footer a { color: var(--terracotta-deep); text-decoration: none; border-bottom: 1px solid currentColor; }
+      footer a:hover { opacity: 0.75; }
+
+      @media (max-width: 480px) {
+        .flow-row { grid-template-columns: 1fr; gap: 4px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+
+      <div class="masthead">
+        <div class="mark">
+          <div class="stone base"></div>
+          <div class="stone mid"></div>
+          <div class="stone top"></div>
+        </div>
+        <div>
+          <div class="wordmark">Cairn</div>
+          <div class="tagline">Body-measurement tracker for Android &amp; Wear OS</div>
+        </div>
+      </div>
+
+      <h1 style="font-size: 32px; margin: 30px 0 0;">Privacy Policy</h1>
+      <div class="updated">Last updated 6 September 2026</div>
+
+      <p class="lede">
+        Cairn has <strong>no account, no analytics, and makes no network calls of any kind.</strong> Everything
+        it reads or writes lives in <strong>Android Health Connect</strong>, on your device,
+        under your control. Nothing about you or your health ever reaches us, because there's no
+        server for it to reach.
+      </p>
+
+      <section>
+        <h2>What Cairn stores</h2>
+        <p>Only when you log or edit an entry yourself &mdash; from the phone app or the watch quick-log:</p>
+        <ul>
+          <li>Weight, height, body fat %, and body water (stored as a derived mass)</li>
+          <li>Heart rate, if you turn on continuous monitoring on the watch &mdash; delivered by
+            Wear OS's own Health Services in the background, in small batches, and off again the
+            moment you disable it from the watch app's home screen</li>
+        </ul>
+        <p>Deleting an entry in Cairn deletes the matching Health Connect records with it. Nothing
+          is retained anywhere else &mdash; there is nowhere else.</p>
+      </section>
+
+      <section>
+        <h2>What Cairn reads</h2>
+        <p>The fields above, to keep its own copy in sync with Health Connect, plus a handful of
+          figures it displays for context but never writes itself: steps, active and total calories,
+          exercise sessions and distance, and sleep sessions. Sleep in particular is never captured
+          by Cairn &mdash; it's read from whatever your watch's own software already recorded.</p>
+      </section>
+
+      <section>
+        <h2>Where each record type goes</h2>
+        <p>A record-by-record account, since "your data" means different things depending which
+          figure you mean:</p>
+        <div class="flow-table">
+          <div class="flow-row flow-head">
+            <div>Health Connect record</div>
+            <div>Cairn's role</div>
+            <div>Leaves this device?</div>
+          </div>
+          <div class="flow-row"><div class="rtype">WeightRecord</div><div><span class="pill write">Writes</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">HeightRecord</div><div><span class="pill write">Writes</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">BodyFatRecord</div><div><span class="pill write">Writes</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">BodyWaterMassRecord</div><div><span class="pill write">Writes</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">HeartRateRecord</div><div><span class="pill write">Writes*</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">StepsRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">ActiveCaloriesBurnedRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">TotalCaloriesBurnedRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">ExerciseSessionRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">DistanceRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">SleepSessionRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+        </div>
+        <p style="margin-top: 12px; font-size: 13.5px; color: var(--ink-soft);">
+          * Only while continuous heart-rate monitoring is switched on, on the watch, by you.
+        </p>
+      </section>
+
+      <section>
+        <h2>What Cairn never does</h2>
+        <ul>
+          <li>No account or sign-in of any kind</li>
+          <li>No analytics, crash reporting, or advertising SDKs</li>
+          <li>No network calls &mdash; nothing is uploaded, synced to a server, or shared with a
+            third party, ever</li>
+          <li>No location data collected or requested</li>
+        </ul>
+        <div class="callout">
+          <p>The phone and watch talk to each other only over Wear OS's own on-device Data Layer
+            &mdash; a weigh-in on the watch and a heart-rate batch both travel exactly as far as
+            your own two devices, and no further.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Your controls</h2>
+        <ul>
+          <li><strong>Permissions</strong> can be reviewed or revoked any time in Health Connect
+            (Android's own app) or in your device's app permissions settings.</li>
+          <li><strong>Continuous heart rate</strong> is off by default and is switched on and off
+            from the watch app's own home screen, not buried in a settings menu.</li>
+          <li><strong>Deleting an entry</strong> in Cairn removes its Health Connect record with it.
+            Uninstalling Cairn does not delete records already written to Health Connect &mdash;
+            that data belongs to Health Connect, and you can review or clear it there directly, or
+            from Health Connect's own "Data and access" screen, independent of Cairn.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Children's privacy</h2>
+        <p>Cairn is not directed at children and does not knowingly collect data from anyone under
+          13. As it collects nothing beyond your own device's Health Connect store in the first
+          place, this is a description of behaviour, not a data-handling exception.</p>
+      </section>
+
+      <section>
+        <h2>Changes to this policy</h2>
+        <p>If Cairn's data handling ever changes, this page will change first, with the date above
+          updated to match. Given the app's own no-network-calls design, that's expected to be rare.</p>
+      </section>
+
+      <footer>
+        Questions about this policy or how Cairn handles data &mdash; <a href="mailto:clivewalkden@gmail.com">clivewalkden@gmail.com</a>
+      </footer>
+
+    </div>
+  </body>
+</html>
