@@ -44,12 +44,12 @@ const endStr = data.finished
             <h3 class="mb-5 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-l sm:leading-none">
               Description</h3>
             <slot />
-            {data.type !== 'application' && (
+            {(data.type !== 'application' || !(data.github_user && data.github_repo)) && (
               !data.finished && data.url && (
                 <a class="px-4 py-2 my-5 inline-block rounded bg-gray-800 text-white italic hover:bg-primary"
                    href={data.url} target="_blank" title={`Launch ${data.title}`}
                    rel={data.seo ? undefined : 'external nofollow'}>
-                  View site
+                  {data.type === 'application' ? 'View application' : 'View site'}
                 </a>
               )
             )}
