@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.7.0...v1.7.1) (2026-09-06)
+
+
+### Bug Fixes
+
+* **deps:** update astro monorepo to v7 ([d066eb1](https://github.com/clivewalkden/clivewalkden.co.uk/commit/d066eb13336b700aa190a6717b9e499c2bf65aea))
+
 # [1.7.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.6.1...v1.7.0) (2026-09-06)
 
 
