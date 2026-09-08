@@ -2,7 +2,7 @@
 id: 20260906-cairn-android
 type: application
 title: Cairn — Body-measurement Tracker for Android & Wear OS
-status: In development
+status: Closed testing
 url: /apps/cairn/
 launched: 2026-09-06
 finished:
@@ -49,3 +49,9 @@ Cairn has no account, no analytics and makes no network calls of any kind — th
 your data to reach in the first place. See the [Cairn app page](/apps/cairn/) for screenshots and
 the [full privacy policy](/apps/cairn/privacy/) for a record-by-record breakdown of what it reads
 and writes.
+
+## Try it
+
+Cairn is currently in closed testing on Google Play — sign up on the
+[Play Store listing](https://play.google.com/store/apps/details?id=com.clivewalkden.cairn) to get
+access.

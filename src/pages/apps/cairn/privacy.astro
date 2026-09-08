@@ -1,4 +1,6 @@
 ---
+import cairnMarkRaw from '../../../assets/images/cairn/cairn.svg?raw';
+
 const meta_title = 'Cairn Privacy Policy';
 const meta_description = 'Privacy policy for Cairn, a body-measurement tracker for Android & Wear OS. Cairn makes no network calls — everything stays in Health Connect, on your device.';
 const canonicalUrl = 'https://clivewalkden.co.uk/apps/cairn/privacy/';
@@ -83,16 +85,10 @@ const canonicalUrl = 'https://clivewalkden.co.uk/apps/cairn/privacy/';
         padding: 64px 24px 96px;
       }
 
-      /* Masthead: a small CSS rendering of the three-stone mark, same silhouette as the app icon */
+      /* Masthead: the app's own icon mark */
       .masthead { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
-      .mark { width: 46px; height: 46px; position: relative; flex-shrink: 0; }
-      .mark .stone {
-        position: absolute; left: 50%; border-radius: 999px;
-        transform-origin: center;
-      }
-      .mark .stone.base   { width: 40px; height: 13px; bottom: 2px;  transform: translateX(-50%); background: var(--terracotta); }
-      .mark .stone.mid    { width: 28px; height: 11px; bottom: 15px; transform: translateX(-50%); background: var(--sage); }
-      .mark .stone.top     { width: 17px; height: 9px;  bottom: 26px; transform: translateX(-50%) rotate(-7deg); background: var(--sand); }
+      .mark { width: 46px; height: 46px; flex-shrink: 0; }
+      .mark svg { width: 100%; height: 100%; display: block; }
 
       .wordmark { font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: 0.2px; }
       .tagline { color: var(--ink-soft); font-size: 14.5px; margin-top: 2px; }
@@ -212,11 +208,7 @@ const canonicalUrl = 'https://clivewalkden.co.uk/apps/cairn/privacy/';
     <div class="page">
 
       <div class="masthead">
-        <div class="mark">
-          <div class="stone base"></div>
-          <div class="stone mid"></div>
-          <div class="stone top"></div>
-        </div>
+        <div class="mark" set:html={cairnMarkRaw} />
         <div>
           <div class="wordmark">Cairn</div>
           <div class="tagline">Body-measurement tracker for Android &amp; Wear OS</div>
