@@ -10,7 +10,7 @@
         "@astrojs/mdx": "^8.0.1",
         "@astrojs/sitemap": "^3.7.2",
         "@tailwindcss/vite": "^4.1.0",
-        "astro": "^7.3.2",
+        "astro": "^7.3.5",
         "pagefind": "^1.5.2",
         "tailwindcss": "^4.3.2"
     },
