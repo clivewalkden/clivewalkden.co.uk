@@ -1,22 +1,30 @@
 ---
 import { Image } from 'astro:assets';
 import { site } from '../../../data/site.ts';
-import cairnMarkRaw from '../../../assets/images/cairn/cairn.svg?raw';
-import dashboardImg from '../../../assets/images/cairn/cairn-home-screen.png';
-import heartRateImg from '../../../assets/images/cairn/cairn-heart-rate-page.png';
-import sleepImg from '../../../assets/images/cairn/cairn-sleep-page.png';
-import historyImg from '../../../assets/images/cairn/cairn-history.png';
+import iconImg from '../../../assets/images/trailhead/trailhead-icon.png';
+import todayImg from '../../../assets/images/trailhead/trailhead-today.png';
+import progressGlanceImg from '../../../assets/images/trailhead/trailhead-progress-glance.png';
+import libraryImg from '../../../assets/images/trailhead/trailhead-library.png';
+import programmeImg from '../../../assets/images/trailhead/trailhead-programme.png';
+import guidedWorkoutImg from '../../../assets/images/trailhead/trailhead-guided-workout.png';
+import progressImg from '../../../assets/images/trailhead/trailhead-progress.png';
+import whatsNewImg from '../../../assets/images/trailhead/trailhead-whats-new.png';
+import settingsImg from '../../../assets/images/trailhead/trailhead-settings.png';
 
-const meta_title = 'Cairn — Body-measurement tracker for Android & Wear OS';
-const meta_description = 'Cairn tracks weight, body composition, heart rate and sleep in Android Health Connect. No account, no analytics, no network calls — everything stays on your device.';
-const canonicalUrl = 'https://clivewalkden.co.uk/apps/cairn/';
-const ogImage = `${site.baseUrl}/assets/images/cairn/cairn-home-screen.png`;
+const meta_title = 'Trailhead — Workout-programme Tracker for Android';
+const meta_description = 'Trailhead keeps you to a workout programme: it lines up your next session, reminds you on training days, and tracks progress in sessions, not dates. No account, no analytics, no adverts.';
+const canonicalUrl = 'https://clivewalkden.co.uk/apps/trailhead/';
+const ogImage = `${site.baseUrl}/assets/images/trailhead/trailhead-feature-graphic.png`;
 
 const screenshots = [
-  { src: dashboardImg, alt: 'Cairn dashboard showing weight, BMI, body fat %, body water %, heart rate and sleep', caption: 'Dashboard' },
-  { src: heartRateImg, alt: "Cairn heart rate detail screen with today's min, average and max, and a full readings graph", caption: 'Heart rate' },
-  { src: sleepImg, alt: 'Cairn sleep detail screen showing last night’s duration and a two-week trend', caption: 'Sleep' },
-  { src: historyImg, alt: 'Cairn history screen listing past heart-rate sessions and measurements', caption: 'History' },
+  { src: todayImg, alt: 'Trailhead Today card showing the next session, Shoulders & Triceps, its exercises, and Start activity and Done buttons', caption: 'Today' },
+  { src: progressGlanceImg, alt: 'Trailhead home screen with four progress tiles: sessions this week, week streak, how far through the programme, and weight change since the start', caption: 'Home' },
+  { src: libraryImg, alt: 'Trailhead programme library with filters for focus, equipment, difficulty and length', caption: 'Library' },
+  { src: programmeImg, alt: 'Trailhead programme detail for the 8-week upper-body builder, showing progress, phases and sessions', caption: 'Programme' },
+  { src: guidedWorkoutImg, alt: 'Trailhead guided workout showing a rest countdown and the next exercise, dumbbell shoulder press', caption: 'Guided workout' },
+  { src: progressImg, alt: 'Trailhead progress screen with weekly consistency bars and weight and body fat trends', caption: 'Progress' },
+  { src: whatsNewImg, alt: "Trailhead What's new screen listing programmes available to download", caption: "What's new" },
+  { src: settingsImg, alt: 'Trailhead settings with the programme updates switch, reminders and backup', caption: 'Settings' },
 ];
 ---
 <!DOCTYPE html>
@@ -31,7 +39,7 @@ const screenshots = [
     <meta property="og:title" content={meta_title}>
     <meta property="og:description" content={meta_description}>
     <meta property="og:image" content={ogImage}>
-    <meta property="og:site_name" content="Cairn">
+    <meta property="og:site_name" content="Trailhead">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content={meta_title}>
     <meta name="twitter:description" content={meta_description}>
@@ -52,7 +60,7 @@ const screenshots = [
         --sand: #E8C9A0;
         --rule: #e4d7c6;
         --card: #ffffff;
-        --dashboard-bg: #1c1815;
+        --dashboard-bg: #f3e9df;
       }
       @media (prefers-color-scheme: dark) {
         :root:not([data-theme="light"]) {
@@ -111,10 +119,10 @@ const screenshots = [
       .breadcrumb a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid currentColor; }
       .breadcrumb a:hover { color: var(--terracotta-deep); }
 
-      /* Masthead — the app's own icon mark, same file as the privacy policy page */
+      /* Masthead — the app's own icon, same file as the privacy policy page */
       .masthead { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
-      .mark { width: 46px; height: 46px; flex-shrink: 0; }
-      .mark svg { width: 100%; height: 100%; display: block; }
+      .mark { width: 46px; height: 46px; flex-shrink: 0; border-radius: 10px; overflow: hidden; }
+      .mark img { width: 100%; height: 100%; display: block; }
 
       .wordmark { font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: 0.2px; }
       .tagline { color: var(--ink-soft); font-size: 14.5px; margin-top: 2px; }
@@ -126,20 +134,25 @@ const screenshots = [
       .hero .lede strong { color: var(--terracotta-deep); font-weight: 700; }
 
       .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 30px 0; }
-      .btn-primary {
+      .status-pill {
         display: inline-flex;
         align-items: center;
         gap: 8px;
         font-size: 14px;
-        font-weight: 700;
-        padding: 12px 22px;
+        font-weight: 600;
+        padding: 11px 18px;
         border-radius: 999px;
-        background: var(--terracotta-deep);
-        border: 1px solid var(--terracotta-deep);
-        color: #fff;
-        text-decoration: none;
+        background: var(--card);
+        border: 1px solid var(--rule);
+        color: var(--ink-soft);
       }
-      .btn-primary:hover { background: var(--terracotta); border-color: var(--terracotta); }
+      .status-pill .dot {
+        width: 7px; height: 7px; border-radius: 999px;
+        background: var(--sage);
+        flex-shrink: 0;
+        animation: pulse 2.2s ease-in-out infinite;
+      }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
       .btn-secondary {
         display: inline-flex;
         align-items: center;
@@ -153,11 +166,6 @@ const screenshots = [
         text-decoration: none;
       }
       .btn-secondary:hover { background: color-mix(in srgb, var(--terracotta) 12%, transparent); }
-      .testing-note {
-        margin-top: 14px;
-        font-size: 13.5px;
-        color: var(--ink-soft);
-      }
 
       /* Screenshot strip */
       .shots {
@@ -248,32 +256,33 @@ const screenshots = [
   <body>
     <div class="page">
 
-      <div class="breadcrumb"><a href="/">clivewalkden.co.uk</a> / <a href="/apps/">Apps</a> / Cairn</div>
+      <div class="breadcrumb"><a href="/">clivewalkden.co.uk</a> / <a href="/apps/">Apps</a> / Trailhead</div>
 
       <div class="masthead">
-        <div class="mark" set:html={cairnMarkRaw} />
+        <div class="mark">
+          <Image src={iconImg} alt="Trailhead app icon" width={92} height={92} />
+        </div>
         <div>
-          <div class="wordmark">Cairn</div>
-          <div class="tagline">Body-measurement tracker for Android &amp; Wear OS</div>
+          <div class="wordmark">Trailhead</div>
+          <div class="tagline">Workout-programme tracker for Android &mdash; the companion to Cairn</div>
         </div>
       </div>
 
       <div class="hero">
-        <h1>Track your body. Nothing else.</h1>
+        <h1>Pick a programme. Keep showing up.</h1>
         <p class="lede">
-          Cairn logs weight, body composition and heart rate straight into <strong>Android
-          Health Connect</strong>, and reads your watch's own steps, sleep and activity back
-          for context. <strong>No account, no analytics, no network calls</strong> &mdash; it
-          never leaves your two devices.
+          Trailhead lines up your next session, reminds you on your training days, and counts
+          progress in <strong>sessions, not dates</strong> &mdash; so a missed day loses nothing. <strong>No
+          account, no analytics, no adverts</strong> &mdash; your progress and
+          measurements never leave your phone.
         </p>
         <div class="cta-row">
-          <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.clivewalkden.cairn" target="_blank" rel="noopener">Join the closed test on Google Play</a>
-          <a class="btn-secondary" href="/apps/cairn/privacy/">Read the privacy policy</a>
+          <span class="status-pill"><span class="dot"></span> In development &mdash; closed testing coming soon</span>
+          <a class="btn-secondary" href="/apps/trailhead/privacy/">Read the privacy policy</a>
         </div>
-        <p class="testing-note">Cairn is in closed testing &mdash; sign up on the Play Store page above to get access.</p>
       </div>
 
-      <div class="shots" role="list" aria-label="Cairn screenshots">
+      <div class="shots" role="list" aria-label="Trailhead screenshots">
         {screenshots.map((shot) => (
           <div class="shot" role="listitem">
             <div class="shot-frame">
@@ -285,50 +294,50 @@ const screenshots = [
       </div>
 
       <section>
-        <h2>What it tracks</h2>
+        <h2>What it does</h2>
         <div class="feature-grid">
           <div class="feature">
-            <h3>Weight, BMI &amp; body composition</h3>
-            <p>Log a weigh-in and see BMI, body fat % and body water % trend over time.</p>
+            <h3>A real programme library</h3>
+            <p>Abs, Arms, Legs, military conditioning and more, in Easy/Tough/Extreme and 4- or 8-week lengths. A few ship in the app; the rest are an opt-in download.</p>
           </div>
           <div class="feature">
-            <h3>Quick-log from your wrist</h3>
-            <p>Add a measurement from the Wear OS app without reaching for your phone.</p>
+            <h3>A Today card that remembers your place</h3>
+            <p>Next session, its steps and form cues, Done or Not today. Undo is exact, and you choose whether to move on or repeat a week at the end of each phase.</p>
           </div>
           <div class="feature">
-            <h3>Continuous heart rate</h3>
-            <p>Optional, watch-driven monitoring with today's min/avg/max and a full readings graph &mdash; on by choice, off by default.</p>
+            <h3>Guided workouts</h3>
+            <p>A timer for each exercise, a rest countdown with beeps, pause or end any time. Optionally saves the finished workout to Health Connect &mdash; off by default.</p>
           </div>
           <div class="feature">
-            <h3>Sleep, steps &amp; calories, for context</h3>
-            <p>Cairn reads &mdash; never writes &mdash; the sleep, steps and activity data your watch already recorded.</p>
+            <h3>Reminders that stay quiet when earned</h3>
+            <p>A daily notification on your training days, silent if you've already trained. Mark a session done straight from the notification.</p>
           </div>
           <div class="feature">
-            <h3>Full history</h3>
-            <p>Every past measurement and heart-rate session, at a glance.</p>
+            <h3>Progress without guilt</h3>
+            <p>Weekly consistency and streaks &mdash; a week still in progress never breaks one &mdash; plus weight, body fat and height trends read from Health Connect.</p>
           </div>
           <div class="feature">
-            <h3>Metric or Imperial</h3>
-            <p>kg and cm, or lb and ft/in &mdash; whichever you think in.</p>
+            <h3>Your own backup</h3>
+            <p>Save progress to a file you choose and restore it after reinstalling or switching phones. There is deliberately no cloud backup.</p>
           </div>
         </div>
       </section>
 
       <div class="privacy-callout">
-        <h2>Built on Health Connect, not a server</h2>
+        <h2>Private by design</h2>
         <p>
-          Everything Cairn reads or writes lives in Android Health Connect, on your device.
-          There's no account to create and no cloud to sync to, so there's nothing about you
-          for a server to hold in the first place.
+          Trailhead has no account, no adverts and no analytics. Your progress and measurements
+          stay on your phone. The only thing it uses the internet for is an optional, off-by-default
+          check for new programmes, which sends nothing about you.
         </p>
         <p>
-          <a href="/apps/cairn/privacy/">Read the full privacy policy &rarr;</a>
+          <a href="/apps/trailhead/privacy/">Read the full privacy policy &rarr;</a>
         </p>
       </div>
 
       <footer>
-        Questions about Cairn &mdash; <a href="mailto:clivewalkden@gmail.com">clivewalkden@gmail.com</a>
-        <div class="pairs-with">Pairs well with <a href="/apps/trailhead/">Trailhead</a>, a workout-programme tracker for Android.</div>
+        Questions about Trailhead &mdash; <a href="mailto:clivewalkden@gmail.com">clivewalkden@gmail.com</a>
+        <div class="pairs-with">Pairs well with <a href="/apps/cairn/">Cairn</a>, a body-measurement tracker for Android &amp; Wear OS.</div>
       </footer>
 
     </div>

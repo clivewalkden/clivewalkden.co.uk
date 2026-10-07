@@ -1,0 +1,448 @@
+---
+import { Image } from 'astro:assets';
+import iconImg from '../../../assets/images/trailhead/trailhead-icon.png';
+
+const meta_title = 'Trailhead Privacy Policy';
+const meta_description = 'Privacy policy for Trailhead, a workout-programme tracker for Android. No account, no analytics, no adverts — progress and measurements stay on your phone.';
+const canonicalUrl = 'https://clivewalkden.co.uk/apps/trailhead/privacy/';
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href={canonicalUrl}>
+    <meta name="description" content={meta_description}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={canonicalUrl}>
+    <meta property="og:title" content={meta_title}>
+    <meta property="og:description" content={meta_description}>
+    <meta property="og:site_name" content="Trailhead">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content={meta_title}>
+    <meta name="twitter:description" content={meta_description}>
+    <link rel="icon" href="/favicon.ico">
+    <title>{meta_title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cream: #FAF6F0;
+        --ink: #3A2E27;
+        --ink-soft: #6b5d53;
+        --terracotta: #C97C5D;
+        --terracotta-deep: #a85f42;
+        --sage: #8CA394;
+        --sand: #E8C9A0;
+        --rule: #e4d7c6;
+        --card: #ffffff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --cream: #2A2521;
+          --ink: #F0E6DC;
+          --ink-soft: #cbbfb4;
+          --terracotta: #d99677;
+          --terracotta-deep: #e8b299;
+          --sage: #a3bcac;
+          --sand: #6b5a42;
+          --rule: #423a33;
+          --card: #332c27;
+        }
+      }
+      :root[data-theme="dark"] {
+        --cream: #2A2521;
+        --ink: #F0E6DC;
+        --ink-soft: #cbbfb4;
+        --terracotta: #d99677;
+        --terracotta-deep: #e8b299;
+        --sage: #a3bcac;
+        --sand: #6b5a42;
+        --rule: #423a33;
+        --card: #332c27;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--cream);
+        color: var(--ink);
+        font-family: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; }
+      h1, h2 {
+        font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+        font-optical-sizing: auto;
+        color: var(--ink);
+        text-wrap: balance;
+      }
+
+      .page {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+
+      .breadcrumb {
+        font-size: 13.5px;
+        color: var(--ink-soft);
+        margin-bottom: 28px;
+      }
+      .breadcrumb a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid currentColor; }
+      .breadcrumb a:hover { color: var(--terracotta-deep); }
+
+      /* Masthead: the app's own icon */
+      .masthead { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+      .mark { width: 46px; height: 46px; flex-shrink: 0; border-radius: 10px; overflow: hidden; }
+      .mark img { width: 100%; height: 100%; display: block; }
+
+      .wordmark { font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: 0.2px; }
+      .tagline { color: var(--ink-soft); font-size: 14.5px; margin-top: 2px; }
+
+      .updated {
+        font-variant-numeric: tabular-nums;
+        color: var(--ink-soft);
+        font-size: 13px;
+        margin-top: 22px;
+        padding-top: 18px;
+        border-top: 1px solid var(--rule);
+      }
+
+      .lede {
+        font-size: 18px;
+        margin-top: 34px;
+        color: var(--ink);
+      }
+      .lede strong { color: var(--terracotta-deep); font-weight: 700; }
+
+      section { margin-top: 44px; }
+      section h2 {
+        font-size: 21px;
+        font-weight: 600;
+        margin: 0 0 14px;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      section h2::before {
+        content: '';
+        width: 7px; height: 7px;
+        border-radius: 999px;
+        background: var(--sage);
+        display: inline-block;
+        transform: translateY(-2px);
+      }
+      section p { margin: 0 0 14px; color: var(--ink); }
+      section p:last-child { margin-bottom: 0; }
+      section ul { margin: 0 0 14px; padding-left: 22px; }
+      section li { margin-bottom: 8px; }
+      section li:last-child { margin-bottom: 0; }
+
+      code, .rt {
+        font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+        font-size: 0.9em;
+        background: var(--sand);
+        color: var(--ink);
+        padding: 0.1em 0.4em;
+        border-radius: 4px;
+      }
+      :root:not([data-theme="light"]) code, :root:not([data-theme="light"]) .rt { color: var(--ink); }
+
+      /* Data-flow reference table, same device as the Cairn policy so the two pair visually */
+      .flow-table {
+        margin-top: 16px;
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--card);
+      }
+      .flow-row {
+        display: grid;
+        grid-template-columns: 1.4fr 0.85fr 0.75fr;
+        gap: 10px;
+        padding: 12px 16px;
+        align-items: center;
+      }
+      .flow-row + .flow-row { border-top: 1px solid var(--rule); }
+      .flow-head {
+        font-size: 11.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--ink-soft);
+        background: transparent;
+      }
+      .flow-row .rtype { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; }
+      .pill {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .pill.write { background: color-mix(in srgb, var(--terracotta) 22%, transparent); color: var(--terracotta-deep); }
+      .pill.read  { background: color-mix(in srgb, var(--sage) 28%, transparent); color: var(--ink); }
+      .pill.no    { background: transparent; color: var(--ink-soft); }
+
+      /* Permissions table: permission -> why */
+      .perm-table {
+        margin-top: 16px;
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--card);
+      }
+      .perm-row {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 14px;
+        padding: 12px 16px;
+        align-items: start;
+      }
+      .perm-row + .perm-row { border-top: 1px solid var(--rule); }
+      .perm-row .pname { font-weight: 700; font-size: 14px; }
+      .perm-row .pwhy { font-size: 14px; color: var(--ink-soft); }
+
+      .callout {
+        margin-top: 16px;
+        padding: 16px 18px;
+        background: var(--card);
+        border-left: 3px solid var(--sage);
+        border-radius: 4px;
+        font-size: 15px;
+      }
+      .callout p { margin: 0; }
+
+      footer {
+        margin-top: 56px;
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+      footer a { color: var(--terracotta-deep); text-decoration: none; border-bottom: 1px solid currentColor; }
+      footer a:hover { opacity: 0.75; }
+
+      @media (max-width: 480px) {
+        .flow-row { grid-template-columns: 1fr; gap: 4px; }
+        .perm-row { grid-template-columns: 1fr; gap: 4px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+
+      <div class="breadcrumb"><a href="/">clivewalkden.co.uk</a> / <a href="/apps/">Apps</a> / <a href="/apps/trailhead/">Trailhead</a> / Privacy Policy</div>
+
+      <div class="masthead">
+        <div class="mark">
+          <Image src={iconImg} alt="Trailhead app icon" width={92} height={92} />
+        </div>
+        <div>
+          <div class="wordmark">Trailhead</div>
+          <div class="tagline">Workout-programme tracker for Android</div>
+        </div>
+      </div>
+
+      <h1 style="font-size: 32px; margin: 30px 0 0;">Privacy Policy</h1>
+      <div class="updated">Last updated 7 October 2026</div>
+
+      <p class="lede">
+        Trailhead runs on your phone and has <strong>no account, no analytics and no adverts</strong>,
+        and nothing you do in it is sent to Clive Walkden or anyone else. By default it does not use
+        the internet at all. If you turn on Check for new programmes, it uses the internet only to
+        fetch programmes, and <strong>sends nothing about you</strong>.
+      </p>
+
+      <section>
+        <h2>The short version</h2>
+        <ul>
+          <li>Trailhead reads your weight, body fat and height from Health Connect so it can show how they change as you train. It only reads them. It never writes or changes them.</li>
+          <li>If you switch it on, Trailhead saves each guided workout you finish to Health Connect as an exercise session. It is off until you turn it on.</li>
+          <li>Your programme progress is stored on your phone, and only there. You can save a backup of it to a file you choose, and restore from it. Trailhead never sends that file anywhere.</li>
+          <li>Trailhead only uses the internet if you turn on Check for new programmes. It is off until you do. It then reads a public list of programmes and downloads programmes when you ask, and sends nothing about you or your progress.</li>
+          <li>Nothing is sold, shared or used for advertising.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Where each record type goes</h2>
+        <p>A record-by-record account of what Trailhead touches in Health Connect:</p>
+        <div class="flow-table">
+          <div class="flow-row flow-head">
+            <div>Health Connect record</div>
+            <div>Trailhead's role</div>
+            <div>Leaves this device?</div>
+          </div>
+          <div class="flow-row"><div class="rtype">WeightRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">BodyFatRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">HeightRecord</div><div><span class="pill read">Reads only</span></div><div><span class="pill no">Never</span></div></div>
+          <div class="flow-row"><div class="rtype">ExerciseSessionRecord</div><div><span class="pill write">Writes*</span></div><div><span class="pill no">Never</span></div></div>
+        </div>
+        <p style="margin-top: 12px; font-size: 13.5px; color: var(--ink-soft);">
+          * Only if you turn on Save to Health Connect before a workout. Trailhead never changes your
+          weight, body fat or height &mdash; those three are read-only, always.
+        </p>
+      </section>
+
+      <section>
+        <h2>What Trailhead reads from Health Connect</h2>
+        <p>With your permission, Trailhead reads three things: your weight, your body fat percentage
+          and your height. It does not read anything else, such as heart rate, sleep or location.</p>
+        <p>Trailhead also asks to read past Health Connect data. Without that, Android only lets an
+          app see records from the 30 days before you first allowed it, which can hide a height you
+          recorded months ago &mdash; in Cairn, for instance.</p>
+        <p>These readings show your starting point, save a before-and-after snapshot when you begin a
+          programme, finish each phase and finish the programme, and show how they've changed on the
+          Progress screen. Nothing else. You can stop this at any time in Health Connect by removing
+          Trailhead's permissions; Trailhead keeps working without them, you just won't see body
+          measurements.</p>
+      </section>
+
+      <section>
+        <h2>What Trailhead writes to Health Connect</h2>
+        <p>Trailhead can save the guided workouts you do to Health Connect as exercise sessions. This
+          is off by default, and only starts if you turn on Save to Health Connect before a workout.</p>
+        <p>Each saved session has the workout's name, its start and end time, a type such as strength
+          training or calisthenics, and a short note of which programme and session it was and how many
+          exercises you finished. Nothing else is written, and Trailhead never changes your weight,
+          body fat or height.</p>
+        <p>Once a session is in Health Connect it belongs to Health Connect and to you. Other apps
+          you've allowed to read exercise data can see it. You can delete it in Health Connect at any
+          time, and removing Trailhead does not delete it.</p>
+      </section>
+
+      <section>
+        <h2>Backing up your progress</h2>
+        <p>Trailhead is left out of Android's cloud backup on purpose, so reinstalling or setting up a
+          new phone from scratch would normally lose your progress. Open Settings (the cog at the top
+          of the home screen), tap Back up, and choose where to save the file, for example Downloads
+          or your Drive. To bring it back, tap Restore and pick that file.</p>
+        <p>The backup file contains your programme runs, the sessions you marked done or skipped, and
+          your body-measurement snapshots &mdash; not your settings. It's plain text and is not
+          encrypted, so keep it somewhere private.</p>
+        <p>Trailhead only writes the file when you ask, only to the place you choose, and never sends
+          it anywhere. Restoring replaces what's in Trailhead with what's in the file, and asks you to
+          confirm first.</p>
+      </section>
+
+      <section>
+        <h2>Checking for new programmes</h2>
+        <p>Trailhead comes with a few programmes. More are published at <code>trailhead.clivewalkden.co.uk</code>,
+          hosted by Cloudflare, and Trailhead can check that
+          site for new and updated programmes and download them. This is off until you turn it on,
+          from the question on the home screen or the switch in Settings, and you can turn it off
+          again at any time.</p>
+        <p>When it's on, Trailhead reads a list of programmes when you open the app, at most once a
+          day, and when you tap Check now. It downloads a programme only when you ask. Everything it
+          downloads is checked first: the list is digitally signed, and a file that doesn't match its
+          signature or fingerprint is thrown away.</p>
+        <div class="callout">
+          <p>What's sent is an ordinary request for a public file. It carries no name, progress,
+            measurements, settings or identifier of any kind. As with any website, the host's servers
+            can see your phone's internet address and the time of the request &mdash; Trailhead doesn't
+            use that, and adds no cookies, accounts, analytics or advertising.</p>
+        </div>
+        <p style="margin-top: 12px;">Stored on your phone: the programmes you download, a note of when
+          Trailhead last checked, and which new programmes you've dismissed. Turn the setting off and
+          Trailhead stops connecting; programmes already downloaded stay until you clear Trailhead's
+          storage or uninstall it.</p>
+      </section>
+
+      <section>
+        <h2>What Trailhead stores on your phone</h2>
+        <ul>
+          <li>Which programme you're doing and when you started it</li>
+          <li>Each session you mark as done or skip, and each phase decision to move on or repeat a week</li>
+          <li>The body-measurement snapshots described above</li>
+          <li>Your settings: reminders, saving workouts to Health Connect, checking for new programmes</li>
+          <li>Programmes you've downloaded, and which new ones you've dismissed</li>
+        </ul>
+        <p>All of it stays in the app's private storage, is not sent anywhere, and is excluded from
+          Android's cloud backup. A direct phone-to-phone transfer can carry it to a new device.</p>
+      </section>
+
+      <section>
+        <h2>Notifications</h2>
+        <p>If you switch on reminders, Trailhead shows a notification on your training days at the
+          time you choose, created on your phone by an alarm on your phone. Its buttons, Mark done and
+          Not today, only update the progress stored on your phone.</p>
+      </section>
+
+      <section>
+        <h2>What Trailhead does not do</h2>
+        <ul>
+          <li>No account or sign-in</li>
+          <li>No internet use unless you turn on Check for new programmes, and then only to fetch programmes &mdash; never your progress, measurements, settings or backup files</li>
+          <li>No advertising, analytics or crash-reporting tools</li>
+          <li>No selling or sharing your information, and no using it to show you adverts</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Permissions Trailhead asks for</h2>
+        <div class="perm-table">
+          <div class="perm-row">
+            <div class="pname">Health Connect: read</div>
+            <div class="pwhy">Weight, body fat, height, and past data &mdash; to show your measurements and progress.</div>
+          </div>
+          <div class="perm-row">
+            <div class="pname">Health Connect: write</div>
+            <div class="pwhy">Exercise sessions, only if you switch on saving workouts, to record the workouts you finish.</div>
+          </div>
+          <div class="perm-row">
+            <div class="pname">Notifications</div>
+            <div class="pwhy">To show your training reminders.</div>
+          </div>
+          <div class="perm-row">
+            <div class="pname">Run at start-up</div>
+            <div class="pwhy">To set your reminder alarm again after your phone restarts.</div>
+          </div>
+          <div class="perm-row">
+            <div class="pname">Internet</div>
+            <div class="pwhy">Only to check for and download programmes, and only if you turn on Check for new programmes.</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Your choices and deleting your data</h2>
+        <ul>
+          <li><strong>Reminders</strong> can be switched off in Trailhead at any time.</li>
+          <li><strong>Internet use</strong> stops as soon as you switch off Check for new programmes in Settings.</li>
+          <li><strong>Measurements and saved workouts</strong> stop if you remove Trailhead's permissions in Health Connect, or switch off Save to Health Connect in the app.</li>
+          <li><strong>Deleting everything</strong> Trailhead has stored: clear its storage in your phone's settings, or uninstall it. This doesn't delete any backup file you made.</li>
+          <li>Your weight, body fat and height records belong to Health Connect and to you &mdash; Trailhead never changes them, and removing Trailhead doesn't delete them. Workouts it saved to Health Connect stay there until you delete them yourself.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Health information</h2>
+        <p>Trailhead is not medical advice. Check with a doctor or other health professional before
+          starting a new exercise programme, particularly if you have a health condition, an injury, or
+          you're unsure whether exercise is right for you. Stop and seek advice if you feel pain or
+          unwell.</p>
+      </section>
+
+      <section>
+        <h2>Children's privacy</h2>
+        <p>Trailhead is not designed for children under 13.</p>
+      </section>
+
+      <section>
+        <h2>Changes to this policy</h2>
+        <p>If Trailhead ever changes in a way that affects your privacy, this policy will be updated
+          first and the date above will change. Trailhead will not start collecting or sending
+          information without telling you here.</p>
+      </section>
+
+      <footer>
+        Questions about this policy or how Trailhead handles data &mdash; <a href="mailto:clivewalkden@gmail.com">clivewalkden@gmail.com</a>
+      </footer>
+
+    </div>
+  </body>
+</html>
