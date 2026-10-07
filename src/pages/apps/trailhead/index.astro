@@ -2,21 +2,29 @@
 import { Image } from 'astro:assets';
 import { site } from '../../../data/site.ts';
 import iconImg from '../../../assets/images/trailhead/trailhead-icon.png';
-import homeImg from '../../../assets/images/trailhead/trailhead-home.png';
-import libraryImg from '../../../assets/images/trailhead/trailhead-library.png';
 import todayImg from '../../../assets/images/trailhead/trailhead-today.png';
-import newProgrammesImg from '../../../assets/images/trailhead/trailhead-new-programmes.png';
+import progressGlanceImg from '../../../assets/images/trailhead/trailhead-progress-glance.png';
+import libraryImg from '../../../assets/images/trailhead/trailhead-library.png';
+import programmeImg from '../../../assets/images/trailhead/trailhead-programme.png';
+import guidedWorkoutImg from '../../../assets/images/trailhead/trailhead-guided-workout.png';
+import progressImg from '../../../assets/images/trailhead/trailhead-progress.png';
+import whatsNewImg from '../../../assets/images/trailhead/trailhead-whats-new.png';
+import settingsImg from '../../../assets/images/trailhead/trailhead-settings.png';
 
 const meta_title = 'Trailhead — Workout-programme Tracker for Android';
 const meta_description = 'Trailhead keeps you to a workout programme: it lines up your next session, reminds you on training days, and tracks progress in sessions, not dates. No account, no analytics, no adverts.';
 const canonicalUrl = 'https://clivewalkden.co.uk/apps/trailhead/';
-const ogImage = `${site.baseUrl}/assets/images/trailhead/trailhead-home.png`;
+const ogImage = `${site.baseUrl}/assets/images/trailhead/trailhead-feature-graphic.png`;
 
 const screenshots = [
-  { src: homeImg, alt: 'Trailhead home screen with the opt-in question for checking new programmes and the reminders section', caption: 'Home' },
+  { src: todayImg, alt: 'Trailhead Today card showing the next session, Shoulders & Triceps, its exercises, and Start activity and Done buttons', caption: 'Today' },
+  { src: progressGlanceImg, alt: 'Trailhead home screen with four progress tiles: sessions this week, week streak, how far through the programme, and weight change since the start', caption: 'Home' },
   { src: libraryImg, alt: 'Trailhead programme library with filters for focus, equipment, difficulty and length', caption: 'Library' },
-  { src: todayImg, alt: "Trailhead Today card mid-session, showing the current exercise, sets and a Start activity button", caption: 'Today' },
-  { src: newProgrammesImg, alt: 'Trailhead home screen showing a banner for newly available programmes to download', caption: 'New programmes' },
+  { src: programmeImg, alt: 'Trailhead programme detail for the 8-week upper-body builder, showing progress, phases and sessions', caption: 'Programme' },
+  { src: guidedWorkoutImg, alt: 'Trailhead guided workout showing a rest countdown and the next exercise, dumbbell shoulder press', caption: 'Guided workout' },
+  { src: progressImg, alt: 'Trailhead progress screen with weekly consistency bars and weight and body fat trends', caption: 'Progress' },
+  { src: whatsNewImg, alt: "Trailhead What's new screen listing programmes available to download", caption: "What's new" },
+  { src: settingsImg, alt: 'Trailhead settings with the programme updates switch, reminders and backup', caption: 'Settings' },
 ];
 ---
 <!DOCTYPE html>
