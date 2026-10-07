@@ -85,6 +85,14 @@ const canonicalUrl = 'https://clivewalkden.co.uk/apps/cairn/privacy/';
         padding: 64px 24px 96px;
       }
 
+      .breadcrumb {
+        font-size: 13.5px;
+        color: var(--ink-soft);
+        margin-bottom: 28px;
+      }
+      .breadcrumb a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid currentColor; }
+      .breadcrumb a:hover { color: var(--terracotta-deep); }
+
       /* Masthead: the app's own icon mark */
       .masthead { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
       .mark { width: 46px; height: 46px; flex-shrink: 0; }
@@ -206,6 +214,8 @@ const canonicalUrl = 'https://clivewalkden.co.uk/apps/cairn/privacy/';
   </head>
   <body>
     <div class="page">
+
+      <div class="breadcrumb"><a href="/">clivewalkden.co.uk</a> / <a href="/apps/">Apps</a> / <a href="/apps/cairn/">Cairn</a> / Privacy Policy</div>
 
       <div class="masthead">
         <div class="mark" set:html={cairnMarkRaw} />
