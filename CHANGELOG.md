@@ -1,3 +1,13 @@
+# [1.8.0](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.7.1...v1.8.0) (2026-10-07)
+
+
+### Features
+
+* **apps:** add Trailhead app pages and apps hub ([fb7a499](https://github.com/clivewalkden/clivewalkden.co.uk/commit/fb7a499e7668724aadb924d109f691d34a676104))
+* **apps:** refresh Trailhead screenshots and fix privacy wording ([7d925dd](https://github.com/clivewalkden/clivewalkden.co.uk/commit/7d925dd8319ec75775c63ecf02f3598b1d45da37))
+* **cairn:** add closed testing CTA and use real app icon in marks ([4b6a331](https://github.com/clivewalkden/clivewalkden.co.uk/commit/4b6a3311c97e76ffb2719aa09dceeae386e2efa7))
+* **portfolio:** add Cairn Android app to portfolio ([a18e16e](https://github.com/clivewalkden/clivewalkden.co.uk/commit/a18e16e35bea4b7bf61088cc65f490af94499240))
+
 ## [1.7.1](https://github.com/clivewalkden/clivewalkden.co.uk/compare/v1.7.0...v1.7.1) (2026-09-06)
 
 
